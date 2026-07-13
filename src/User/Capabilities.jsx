@@ -122,7 +122,7 @@ function Capabilities() {
           {/* BOTTOM RIGHT */}
 
           <div className="Capability BottomRightCard">
-            <FaBolt className="CapabilityIcon" />
+            {/* <FaBolt className="CapabilityIcon" /> */}
             <div className="CapabilityBox">
               {/* Rapid Implementation */}
             </div>
