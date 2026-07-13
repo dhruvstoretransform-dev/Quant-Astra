@@ -1,14 +1,14 @@
 import React from "react";
 
 
-import {
-  FaRobot,
-  FaHandshake,
-  FaUniversity,
-  FaBolt,
-  FaProjectDiagram,
-  FaChartLine,
-} from "react-icons/fa";
+// import {
+//   FaRobot,
+//   FaHandshake,
+//   FaUniversity,
+//   FaBolt,
+//   FaProjectDiagram,
+//   FaChartLine,
+// } from "react-icons/fa";
 
 import logo from "./Group.png"; // Replace with your Quant Astra logo
 
