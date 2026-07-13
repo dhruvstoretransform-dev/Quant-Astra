@@ -1,3 +1,6 @@
+/* navbar section start from here  */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
 .navbar-container {
     display: flex;
@@ -65,57 +68,140 @@
 
 /* Mobile */
 
+
+/* ==========================================
+            TABLET
+========================================== */
+
+@media (max-width:992px){
+
+.navbar-container{
+
+    padding:18px 30px;
+
+}
+
+.navbar-nav-links{
+
+    gap:24px;
+
+}
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
 @media (max-width:768px){
 
-    .navbar-container{
+.navbar-container{
 
-        padding:20px;
+    position:relative;
 
-        position:relative;
+    padding:18px 20px;
 
-    }
+}
 
-    .navbar-toggle{
+.navbar-logo img{
 
-        display:block;
+    width:120px;
 
-    }
+}
 
-    .navbar-nav-links{
+/* Show hamburger */
 
-        display:none;
+.navbar-toggle{
 
-        position:absolute;
+    display:block;
 
-        top:80px;
+    font-size:32px;
 
-        left:0;
+    color:#ffffff;
 
-        width:100%;
+    cursor:pointer;
 
-        background:#000;
+    z-index:1001;
 
-        flex-direction:column;
+}
 
-        text-align:center;
+/* Hide menu by default */
 
-        padding:20px 0;
+.navbar-nav-links{
 
-        gap:25px;
+    display:none;
 
-    }
+}
 
-    .navbar-nav-links.active{
+/* Show menu when active */
 
-        display:flex;
+.navbar-nav-links.active{
 
-    }
+    display:flex;
 
-    .navbar-consult-btn{
+    position:absolute;
 
-        display:none;
+    top:75px;
 
-    }
+    left:0;
+
+    width:100%;
+
+    background:#000;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:25px 0;
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    z-index:1000;
+
+}
+
+/* Menu items */
+
+.navbar-nav-links li{
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:16px;
+
+}
+
+/* Button */
+
+.navbar-consult-btn{
+
+    width:auto;
+
+    min-width:170px;
+
+    height:44px;
+
+    padding:10px 18px;
+
+    font-size:13px;
+
+    line-height:20px;
+
+    border-radius:8px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:0 auto;
+
+}
 
 }
 
@@ -961,7 +1047,7 @@ body{
       width:320px;
       max-width:320px;
 
-    height:320px;
+    /* height:320px; */
 
     background:#121316;
 
@@ -2175,18 +2261,15 @@ body{
 
 .CenterLogo{
 
-     width:180px;
+    width:140px;
 
-    height:180px;
+    height:140px;
 
-    margin:0 auto 20px;
 }
 
 .CenterLogo img{
 
-   width:170px;
-
-    height:auto;
+    width:120px;
 
 }
 
@@ -2256,6 +2339,9 @@ body{
 /* ==========================================
             MOBILE (768px)
 ========================================== */
+/* ==========================================
+            MOBILE (768px)
+========================================== */
 
 @media (max-width:768px){
 
@@ -2265,7 +2351,234 @@ body{
 
 }
 
-.CapabilitiesHeader{
+.CapabilitiesCircleWrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    overflow:hidden;
+
+}
+
+.CapabilitiesCircle{
+
+    position:relative;
+
+    width:90vw;
+
+    height:90vw;
+
+    max-width:520px;
+
+    max-height:520px;
+
+    margin:0 auto;
+
+    border-radius:50%;
+
+    background:#000;
+
+    box-shadow:
+        0 0 40px rgba(215,180,74,.18),
+        0 0 80px rgba(215,180,74,.10);
+
+}
+
+/* Rings */
+
+.Ring1{
+
+    width:70%;
+
+    height:70%;
+
+}
+
+.Ring2{
+
+    width:50%;
+
+    height:50%;
+
+}
+
+.Ring3{
+
+    width:30%;
+
+    height:30%;
+
+}
+
+/* Center Logo */
+
+.CenterLogo{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:110px;
+
+    height:110px;
+
+}
+
+.CenterLogo img{
+
+    width:100%;
+
+    height:auto;
+
+}
+}
+
+
+/* ==========================================
+            SMALL MOBILE (480px)
+========================================== */
+
+@media (max-width:480px){
+
+.CapabilitiesCircle{
+
+    width:95vw;
+
+    height:95vw;
+
+}
+
+.CenterLogo{
+
+    width:90px;
+
+    height:90px;
+
+}
+
+.CenterLogo img{
+
+    width:100%;
+
+}
+
+}
+
+
+
+/* auditform section started from here  */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Manrope",sans-serif;
+    background:#0B0D10;
+}
+
+/* ==========================================
+            SECTION
+========================================== */
+
+.AuditSection{
+
+    width:100%;
+    min-height:100vh;
+
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:80px 20px;
+
+    position:relative;
+
+}
+
+.AuditOverlay{
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/* ==========================================
+            CONTAINER
+========================================== */
+
+.AuditContainer{
+
+    width:100%;
+    max-width:900px;
+
+    background:rgba(16,17,20,.92);
+
+    border:1px solid rgba(215,180,74,.25);
+
+    border-radius:20px;
+
+    padding:60px;
+
+    position:relative;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.45);
+
+}
+
+/* ==========================================
+              LOGO
+========================================== */
+
+.AuditLogo{
+
+    position:absolute;
+
+    top:35px;
+    right:35px;
+
+}
+
+.AuditLogo img{
+
+    width:110px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    opacity:.9;
+
+}
+
+/* ==========================================
+              HEADER
+========================================== */
+
+.AuditHeader{
 
     text-align:center;
 
@@ -2273,25 +2586,374 @@ body{
 
 }
 
-.CapabilitiesTag{
+.AuditTag{
+
+    display:inline-block;
+
+    color:#D7B44A;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.AuditTitle{
+
+    color:#ffffff;
+
+    font-size:58px;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    margin-bottom:16px;
+
+}
+
+.AuditSubtitle{
+
+    color:#BFBFBF;
+
+    font-size:20px;
+
+    line-height:32px;
+
+    max-width:620px;
+
+    margin:0 auto;
+
+}
+
+
+/* ==========================================
+                FORM
+========================================== */
+
+.AuditForm{
+
+    width:100%;
+
+}
+
+.FormGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+    margin-bottom:24px;
+
+}
+
+.FormGroup{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.FormGroup label{
+
+    color:#D7B44A;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+}
+
+/* ==========================================
+              INPUTS
+========================================== */
+
+.FormGroup input,
+.FormGroup select,
+.FormGroup textarea{
+
+    width:100%;
+
+    background:#141519;
+
+    border:1px solid rgba(215,180,74,.30);
+
+    border-radius:10px;
+
+    color:#ffffff;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s ease;
+
+}
+
+.FormGroup input,
+.FormGroup select{
+
+    height:56px;
+
+    padding:0 18px;
+
+}
+
+.FormGroup textarea{
+
+    min-height:160px;
+
+    padding:18px;
+
+    resize:none;
+
+}
+
+/* Placeholder */
+
+.FormGroup input::placeholder,
+.FormGroup textarea::placeholder{
+
+    color:#888888;
+
+}
+
+.FormGroup select{
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    -moz-appearance:none;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+            INPUT FOCUS
+========================================== */
+
+.FormGroup input:focus,
+.FormGroup select:focus,
+.FormGroup textarea:focus{
+
+    border-color:#D7B44A;
+
+    box-shadow:0 0 12px rgba(215,180,74,.30);
+
+}
+
+/* ==========================================
+            FULL WIDTH
+========================================== */
+
+.FullWidth{
+
+    grid-column:1/-1;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================
+            BUTTON
+========================================== */
+
+.ButtonWrapper{
+
+    display:flex;
 
     justify-content:center;
 
-    font-size:14px;
+}
+
+.SubmitButton{
+
+    min-width:320px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(90deg,#C79A27,#E5C15C);
+
+    color:#111111;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+    box-shadow:0 10px 30px rgba(215,180,74,.35);
+
+}
+
+.SubmitButton:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 40px rgba(215,180,74,.45);
+
+}
+
+.SubmitButton:active{
+
+    transform:translateY(0);
+
+}
+
+
+/* ==========================================
+            TABLET (1024px)
+========================================== */
+
+@media (max-width:1024px){
+
+.AuditSection{
+
+    padding:60px 30px;
+
+}
+
+.AuditContainer{
+
+    max-width:800px;
+
+    padding:50px 40px;
+
+}
+
+.AuditLogo{
+
+    top:25px;
+
+    right:25px;
+
+}
+
+.AuditLogo img{
+
+    width:90px;
+
+}
+
+.AuditTitle{
+
+    font-size:46px;
+
+    line-height:56px;
+
+}
+
+.AuditSubtitle{
+
+    font-size:18px;
+
+    line-height:30px;
+
+}
+
+.FormGrid{
+
+    gap:20px;
+
+}
+
+.SubmitButton{
+
+    min-width:280px;
+
+}
+
+}
+
+
+/* ==========================================
+            MOBILE (768px)
+========================================== */
+
+@media (max-width:768px){
+
+.AuditSection{
+
+    padding:40px 16px;
+
+}
+
+.AuditContainer{
+
+    padding:35px 24px;
+
+    border-radius:16px;
+
+}
+
+.AuditLogo{
+
+    position:static;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+.AuditLogo img{
+
+    width:80px;
+
+}
+
+.AuditHeader{
+
+    margin-bottom:35px;
+
+}
+
+.AuditTag{
+
+    font-size:13px;
 
     letter-spacing:3px;
 
 }
 
-.CapabilitiesHeading{
+.AuditTitle{
 
     font-size:34px;
 
-    line-height:42px;
+    line-height:44px;
 
 }
 
-.CapabilitiesRight p{
+.AuditSubtitle{
 
     font-size:16px;
 
@@ -2299,117 +2961,48 @@ body{
 
 }
 
-/* Remove circular layout */
+.FormGrid{
 
-.CapabilitiesCircle{
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+}
+
+.FullWidth{
+
+    grid-column:auto;
+
+    margin-bottom:24px;
+
+}
+
+.FormGroup input,
+.FormGroup select{
+
+    height:52px;
+
+    font-size:15px;
+
+}
+
+.FormGroup textarea{
+
+    min-height:130px;
+
+    font-size:15px;
+
+}
+
+.SubmitButton{
 
     width:100%;
 
-    height:auto;
+    min-width:100%;
 
-    background:none;
+    height:54px;
 
-    border-radius:0;
-
-    box-shadow:none;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:25px;
-
-    padding:20px 0;
-
-}
-
-/* Hide rings */
-
-.Ring{
-
-    display:none;
-
-}
-
-/* Hide lines */
-
-.Line{
-
-    display:none;
-
-}
-
-/* Logo */
-
-.CenterLogo{
-
-    position:relative;
-
-    left:auto;
-
-    top:auto;
-
-    transform:none;
-
-    width:130px;
-
-    height:130px;
-
-    margin-bottom:20px;
-
-}
-
-.CenterLogo img{
-
-    width:120px;
-
-}
-
-/* All cards become normal */
-
-.Capability{
-
-    position:relative !important;
-
-    left:auto !important;
-
-    right:auto !important;
-
-    top:auto !important;
-
-    bottom:auto !important;
-
-    transform:none !important;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:12px;
-
-}
-
-.CapabilityIcon{
-
-    font-size:24px;
-
-}
-
-.CapabilityBox{
-
-    width:280px;
-
-    max-width:100%;
-
-    text-align:center;
-
-    font-size:16px;
-
-    padding:12px 16px;
+    font-size:14px;
 
 }
 
@@ -2422,13 +3015,33 @@ body{
 
 @media (max-width:480px){
 
-.CapabilitiesSection{
+.AuditSection{
 
-    padding:40px 16px;
+    padding:30px 12px;
 
 }
 
-.CapabilitiesHeading{
+.AuditContainer{
+
+    padding:28px 18px;
+
+}
+
+.AuditLogo img{
+
+    width:70px;
+
+}
+
+.AuditTag{
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+}
+
+.AuditTitle{
 
     font-size:28px;
 
@@ -2436,40 +3049,444 @@ body{
 
 }
 
-.CapabilitiesRight p{
+.AuditSubtitle{
 
     font-size:15px;
 
-    line-height:25px;
+    line-height:24px;
 
 }
 
-.CapabilityBox{
+.FormGroup label{
+
+    font-size:12px;
+
+    letter-spacing:1.5px;
+
+}
+
+.FormGroup input,
+.FormGroup select{
+
+    height:48px;
+
+    padding:0 14px;
+
+    font-size:14px;
+
+}
+
+.FormGroup textarea{
+
+    min-height:120px;
+
+    padding:14px;
+
+    font-size:14px;
+
+}
+
+.SubmitButton{
+
+    height:50px;
+
+    font-size:13px;
+
+}
+
+}
+
+
+/* FAQ section started from here */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Manrope",sans-serif;
+    background:#090B0E;
+}
+
+/* ==========================================
+                FAQ SECTION
+========================================== */
+
+.FAQSection{
+
+    position:relative;
 
     width:100%;
 
-    font-size:15px;
+    overflow:hidden;
 
-    padding:12px;
+    background:#090B0E;
 
-}
-
-.CenterLogo{
-
-    
-    width:150px;
-
-    height:150px;
+    padding:90px 64px 100px;
 
 }
 
-.CenterLogo img{
+/* ==========================================
+            LEFT BACKGROUND
+========================================== */
 
-    width:90px;
+.FAQLeftBg{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:320px;
+
+    height:auto;
+
+    z-index:1;
+
+    pointer-events:none;
 
 }
 
-.CapabilityIcon{
+/* ==========================================
+           RIGHT BACKGROUND
+========================================== */
+
+.FAQRightBg{
+
+    position:absolute;
+
+    right:0;
+
+    bottom:0;
+
+    width:340px;
+
+    height:auto;
+
+    z-index:1;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+              CONTAINER
+========================================== */
+
+.FAQContainer{
+
+    max-width:1280px;
+
+    margin:0 auto;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/* ==========================================
+                HEADER
+========================================== */
+
+.FAQHeader{
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+
+}
+
+/* ==========================================
+                TAG
+========================================== */
+
+.FAQTag{
+
+    display:inline-block;
+
+    color:#D7B44A;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================
+              HEADING
+========================================== */
+
+.FAQHeading{
+
+    color:#F5F5F5;
+
+    font-size:64px;
+
+    font-weight:700;
+
+    line-height:74px;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================
+            DESCRIPTION
+========================================== */
+
+.FAQDescription{
+
+    color:#B8B8B8;
+
+    font-size:22px;
+
+    font-weight:400;
+
+    line-height:38px;
+
+    max-width:760px;
+
+    margin:0 auto;
+
+}
+
+
+
+/* ==========================================
+                FAQ CARDS
+========================================== */
+
+.FAQCards{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+/* ==========================================
+                SINGLE CARD
+========================================== */
+
+.FAQCard{
+
+    width:100%;
+
+    background:#101216;
+
+    border:1px solid rgba(215,180,74,.12);
+
+    border-radius:12px;
+
+    padding:28px 30px;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    transition:all .35s ease;
+
+}
+
+.FAQCard:hover{
+
+    border-color:#D7B44A;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================
+                ICON
+========================================== */
+
+.FAQIcon{
+
+    width:32px;
+
+    height:32px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+    color:#D7B44A;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-top:2px;
+
+}
+
+/* ==========================================
+                CONTENT
+========================================== */
+
+.FAQContent{
+
+    flex:1;
+
+}
+
+/* ==========================================
+                QUESTION
+========================================== */
+
+.FAQQuestion{
+
+    color:#F4F4F4;
+
+    font-size:32px;
+
+    font-weight:500;
+
+    line-height:42px;
+
+    margin-bottom:14px;
+
+}
+
+/* ==========================================
+                ANSWER
+========================================== */
+
+.FAQAnswer{
+
+    color:#BDBDBD;
+
+    font-size:20px;
+
+    font-weight:400;
+
+    line-height:34px;
+
+    max-width:900px;
+
+}
+
+/* ==========================================
+            REMOVE LAST MARGIN
+========================================== */
+
+.FAQCard:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+/* ==========================================
+            TABLET (1024px)
+========================================== */
+
+@media (max-width:1024px){
+
+.FAQSection{
+
+    padding:70px 40px;
+
+}
+
+.FAQContainer{
+
+    max-width:100%;
+
+}
+
+.FAQHeader{
+
+    margin-bottom:50px;
+
+}
+
+.FAQHeading{
+
+    font-size:48px;
+
+    line-height:58px;
+
+}
+
+.FAQDescription{
+
+    font-size:18px;
+
+    line-height:30px;
+
+}
+
+.FAQLeftBg{
+
+    width:220px;
+
+}
+
+.FAQRightBg{
+
+    width:220px;
+
+}
+
+.FAQCards{
+
+    gap:20px;
+
+}
+
+.FAQCard{
+
+    padding:24px;
+
+}
+
+.FAQQuestion{
+
+    font-size:24px;
+
+    line-height:34px;
+
+}
+
+.FAQAnswer{
+
+    font-size:17px;
+
+    line-height:28px;
+
+}
+
+.FAQIcon{
+
+    width:28px;
+
+    height:28px;
 
     font-size:20px;
 
@@ -2477,3 +3494,1131 @@ body{
 
 }
 
+/* ==========================================
+            MOBILE (768px)
+========================================== */
+
+@media (max-width:768px){
+
+.FAQSection{
+
+    padding:50px 20px;
+
+}
+
+.FAQLeftBg{
+
+    width:140px;
+
+}
+
+.FAQRightBg{
+
+    width:140px;
+
+}
+
+.FAQHeader{
+
+    margin-bottom:40px;
+
+}
+
+.FAQTag{
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+}
+
+.FAQHeading{
+
+    font-size:34px;
+
+    line-height:42px;
+
+}
+
+.FAQDescription{
+
+    font-size:16px;
+
+    line-height:28px;
+
+}
+
+.FAQCards{
+
+    gap:16px;
+
+}
+
+.FAQCard{
+
+    padding:20px;
+
+    gap:14px;
+
+}
+
+.FAQIcon{
+
+    width:24px;
+
+    height:24px;
+
+    font-size:18px;
+
+}
+
+.FAQQuestion{
+
+    font-size:20px;
+
+    line-height:30px;
+
+}
+
+.FAQAnswer{
+
+    font-size:15px;
+
+    line-height:25px;
+
+}
+
+}
+
+/* ==========================================
+            SMALL MOBILE (480px)
+========================================== */
+
+@media (max-width:480px){
+
+.FAQSection{
+
+    padding:40px 16px;
+
+}
+
+.FAQLeftBg{
+
+    width:90px;
+
+}
+
+.FAQRightBg{
+
+    width:90px;
+
+}
+
+.FAQTag{
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+}
+
+.FAQHeading{
+
+    font-size:28px;
+
+    line-height:36px;
+
+}
+
+.FAQDescription{
+
+    font-size:14px;
+
+    line-height:24px;
+
+}
+
+.FAQCard{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    padding:18px;
+
+}
+
+.FAQIcon{
+
+    margin-bottom:8px;
+
+}
+
+.FAQQuestion{
+
+    font-size:18px;
+
+    line-height:28px;
+
+}
+
+.FAQAnswer{
+
+    font-size:14px;
+
+    line-height:22px;
+
+}
+
+}
+
+
+/* CTA section started from here   */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Manrope",sans-serif;
+    background:#0B0D10;
+}
+
+/* ==========================================
+                CTA SECTION
+========================================== */
+
+.CTASection{
+
+    width:100%;
+
+    background:#0B0D10;
+
+    padding:90px 64px;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+                CONTAINER
+========================================== */
+
+.CTAContainer{
+
+    max-width:1280px;
+
+    margin:0 auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+/* ==========================================
+                LEFT SIDE
+========================================== */
+
+.CTALeft{
+
+    flex:1;
+
+    max-width:620px;
+
+}
+
+/* ==========================================
+                TITLE
+========================================== */
+
+.CTATitle{
+
+    color:#F5F5F5;
+
+    font-size:72px;
+
+    font-weight:700;
+
+    line-height:82px;
+
+    margin-bottom:36px;
+
+}
+
+/* ==========================================
+            DESCRIPTION
+========================================== */
+
+.CTADescription{
+
+    color:#C7C2B9;
+
+    font-size:24px;
+
+    font-weight:400;
+
+    line-height:40px;
+
+    margin-bottom:50px;
+
+}
+
+/* ==========================================
+                RIGHT SIDE
+========================================== */
+
+.CTARight{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ==========================================
+                ROCKET
+========================================== */
+
+.RocketImage{
+
+    width:460px;
+
+    max-width:100%;
+
+    height:auto;
+
+    object-fit:contain;
+
+}
+
+/* ==========================================
+                BUTTON
+========================================== */
+
+.CTAButton{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:395px;
+
+    height:72px;
+
+    background:#D7B43F;
+
+    color:#1B1B1B;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    line-height:32px;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+    box-shadow:
+    0 0 18px rgba(215,180,63,.35),
+    0 0 35px rgba(215,180,63,.18);
+
+}
+
+/* ==========================================
+            BUTTON HOVER
+========================================== */
+
+.CTAButton:hover{
+
+    transform:translateY(-3px);
+
+    background:#E3BF48;
+
+    box-shadow:
+    0 0 25px rgba(215,180,63,.55),
+    0 0 45px rgba(215,180,63,.35);
+
+}
+
+/* ==========================================
+            BUTTON ACTIVE
+========================================== */
+
+.CTAButton:active{
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================
+            IMAGE ANIMATION
+========================================== */
+
+.RocketImage{
+
+    transition:transform .4s ease;
+
+}
+
+.RocketImage:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ==========================================
+            REMOVE OUTLINE
+========================================== */
+
+button{
+
+    outline:none;
+
+}
+
+/* ==========================================
+            TABLET (1024px)
+========================================== */
+
+@media (max-width:1024px){
+
+.CTASection{
+
+    padding:70px 40px;
+
+}
+
+.CTAContainer{
+
+    gap:40px;
+
+}
+
+.CTATitle{
+
+    font-size:54px;
+
+    line-height:64px;
+
+}
+
+.CTADescription{
+
+    font-size:20px;
+
+    line-height:34px;
+
+}
+
+.RocketImage{
+
+    width:360px;
+
+}
+
+.CTAButton{
+
+    width:320px;
+
+    height:64px;
+
+    font-size:20px;
+
+}
+
+}
+
+/* ==========================================
+            MOBILE (768px)
+========================================== */
+
+@media (max-width:768px){
+
+.CTASection{
+
+    padding:50px 20px;
+
+}
+
+.CTAContainer{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:40px;
+
+}
+
+.CTALeft{
+
+    max-width:100%;
+
+}
+
+.CTATitle{
+
+    font-size:40px;
+
+    line-height:50px;
+
+    margin-bottom:24px;
+
+}
+
+.CTADescription{
+
+    font-size:18px;
+
+    line-height:30px;
+
+    margin-bottom:35px;
+
+}
+
+.CTADescription br,
+.CTATitle br{
+
+    display:none;
+
+}
+
+.CTAButton{
+
+    width:100%;
+
+    max-width:340px;
+
+    height:58px;
+
+    font-size:18px;
+
+}
+
+.RocketImage{
+
+    width:280px;
+
+}
+
+}
+
+/* ==========================================
+            SMALL MOBILE (480px)
+========================================== */
+
+@media (max-width:480px){
+
+.CTASection{
+
+    padding:40px 16px;
+
+}
+
+.CTATitle{
+
+    font-size:30px;
+
+    line-height:40px;
+
+}
+
+.CTADescription{
+
+    font-size:16px;
+
+    line-height:26px;
+
+}
+
+.CTAButton{
+
+    width:100%;
+
+    height:54px;
+
+    font-size:16px;
+
+}
+
+.RocketImage{
+
+    width:220px;
+
+}
+
+}
+
+
+/* footer section start from here  */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Manrope",sans-serif;
+    background:#050505;
+}
+
+/* ==========================================
+                FOOTER SECTION
+========================================== */
+
+.FooterSection{
+
+    width:100%;
+
+    background:#050505;
+
+    padding:80px 64px 40px;
+
+    color:#ffffff;
+
+}
+
+/* ==========================================
+                CONTAINER
+========================================== */
+
+.FooterContainer{
+
+    max-width:1280px;
+
+    margin:0 auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:100px;
+
+}
+
+/* ==========================================
+                COLUMNS
+========================================== */
+
+.FooterColumn{
+
+    flex:1;
+
+}
+
+.FooterLeft{
+
+    max-width:360px;
+
+}
+
+/* ==========================================
+                LOGO
+========================================== */
+
+.FooterLogo{
+
+    width:170px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    margin-bottom:36px;
+
+}
+
+/* ==========================================
+                DESCRIPTION
+========================================== */
+
+.FooterDescription{
+
+    color:#D4D4D4;
+
+    font-size:18px;
+
+    font-weight:400;
+
+    line-height:34px;
+
+    margin-bottom:42px;
+
+}
+
+/* ==========================================
+                SOCIAL LINKS
+========================================== */
+
+.FooterSocial{
+
+    display:flex;
+
+    gap:32px;
+
+}
+
+.FooterSocial a{
+
+    color:#B8B8B8;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    transition:0.3s;
+
+}
+
+.FooterSocial a:hover{
+
+    color:#D7B44A;
+
+}
+
+/* ==========================================
+                COLUMN HEADING
+========================================== */
+
+.FooterHeading{
+
+    display:block;
+
+    color:#D7B44A;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:32px;
+
+}
+
+/* ==========================================
+                CONTACT LIST
+========================================== */
+
+.FooterList{
+
+    list-style:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.FooterList li{
+
+    color:#E6E6E6;
+
+    font-size:20px;
+
+    font-weight:400;
+
+    line-height:32px;
+
+    transition:.3s;
+
+}
+
+.FooterList li:hover{
+
+    color:#D7B44A;
+
+}
+
+/* ==========================================
+                ADDRESS
+========================================== */
+
+.FooterAddress{
+
+    margin-bottom:42px;
+
+}
+
+.FooterAddress p{
+
+    color:#E6E6E6;
+
+    font-size:20px;
+
+    font-weight:400;
+
+    line-height:36px;
+
+}
+
+/* ==========================================
+                STATUS
+========================================== */
+
+.FooterStatus{
+
+    display:inline-block;
+
+    color:#9B9B9B;
+
+    font-size:12px;
+
+    font-weight:500;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================
+                DIVIDER
+========================================== */
+
+.FooterDivider{
+
+    width:100%;
+
+    max-width:1280px;
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+
+    margin:70px auto 35px;
+
+}
+
+/* ==========================================
+                BOTTOM FOOTER
+========================================== */
+
+.FooterBottom{
+
+    max-width:1280px;
+
+    margin:0 auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+/* ==========================================
+                COPYRIGHT
+========================================== */
+
+.FooterCopyright{
+
+    color:#9F9F9F;
+
+    font-size:14px;
+
+    font-weight:400;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================
+                FOOTER LINKS
+========================================== */
+
+.FooterLinks{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+.FooterLinks a{
+
+    color:#9F9F9F;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    transition:.3s;
+
+}
+
+.FooterLinks a:hover{
+
+    color:#D7B44A;
+
+}
+
+/* ==========================================
+                RESPONSIVE
+========================================== */
+
+@media (max-width:992px){
+
+.FooterSection{
+
+    padding:60px 40px 30px;
+
+}
+
+.FooterContainer{
+
+    flex-direction:column;
+
+    gap:50px;
+
+}
+
+.FooterLeft{
+
+    max-width:100%;
+
+}
+
+.FooterBottom{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+.FooterLinks{
+
+    gap:24px;
+
+    flex-wrap:wrap;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.FooterSection{
+
+    padding:50px 20px 25px;
+
+}
+
+/* Center the first column */
+
+.FooterLeft{
+
+    max-width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+/* Center the logo */
+
+.FooterLogo{
+
+    width:150px;
+
+    margin:0 auto 30px;
+
+    display:block;
+
+}
+
+/* Center the description */
+
+.FooterDescription{
+
+    font-size:16px;
+
+    line-height:28px;
+
+    text-align:center;
+
+}
+
+/* Center social links */
+
+.FooterSocial{
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* Center other columns */
+
+.FooterColumn{
+
+    text-align:center;
+
+}
+
+.FooterHeading{
+
+    text-align:center;
+
+}
+
+.FooterList{
+
+    align-items:center;
+
+}
+
+.FooterAddress{
+
+    text-align:center;
+
+}
+
+.FooterBottom{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    gap:20px;
+
+}
+
+.FooterLinks{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.FooterSection{
+
+    padding:40px 16px 20px;
+
+}
+
+.FooterLogo{
+
+    width:130px;
+
+}
+
+.FooterDescription{
+
+    font-size:15px;
+
+    line-height:26px;
+
+}
+
+.FooterSocial{
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.FooterList li{
+
+    font-size:16px;
+
+}
+
+.FooterAddress p{
+
+    font-size:16px;
+
+}
+
+.FooterCopyright{
+
+    font-size:12px;
+
+    text-align:center;
+
+}
+
+.FooterLinks{
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.FooterLinks a{
+
+    font-size:12px;
+
+}
+
+}
