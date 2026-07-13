@@ -1,12 +1,10 @@
 import React from "react";
 
-import testimonialBg from "./Container.png";
-
 function Testimonials() {
   return (
     <section
       className="TestimonialsSection"
-      style={{ backgroundImage: `url(${testimonialBg})` }}
+      style={{ backgroundImage: `url(/images/Container.png)` }}
     >
       <div className="TestimonialsOverlay"></div>
 

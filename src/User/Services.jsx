@@ -1,20 +1,10 @@
 import React from "react";
 
-
-import serviceBg from "./service.png";
-
-import automationIcon from "./Overlay+Border.svg";
-import aiAgentIcon from "./ai agent.svg";
-import seoIcon from "./advance.svg";
-import marketingIcon from "./digital.svg";
-import ecommerceIcon from "./e-commerece.svg";
-import processIcon from "./process.svg";
-
 function Services() {
   return (
     <section
       className="ServicesSection"
-      style={{ backgroundImage: `url(${serviceBg})` }}
+      style={{ backgroundImage: `url(/images/service.png)` }}
     >
       <div className="ServicesOverlay"></div>
 
@@ -45,7 +35,7 @@ function Services() {
               <div className="ServicesIcon">
 
                 <img
-                  src={automationIcon}
+                  src="/images/Overlay+Border.svg"
                   alt="AI Business Automation"
                   className="ServicesIconImage"
                 />
@@ -95,7 +85,7 @@ function Services() {
               <div className="ServicesIcon">
 
                 <img
-                  src={aiAgentIcon}
+                  src="/images/ai agent.svg"
                   alt="AI Agents"
                   className="ServicesIconImage"
                 />
@@ -145,7 +135,7 @@ function Services() {
               <div className="ServicesIcon">
 
                 <img
-                  src={seoIcon}
+                  src="/images/advance.svg"
                   alt="Advanced SEO"
                   className="ServicesIconImage"
                 />
@@ -195,7 +185,7 @@ function Services() {
               <div className="ServicesIcon">
 
                 <img
-                  src={marketingIcon}
+                  src="/images/digital.svg"
                   alt="Digital Marketing"
                   className="ServicesIconImage"
                 />
@@ -245,7 +235,7 @@ function Services() {
               <div className="ServicesIcon">
 
                 <img
-                  src={ecommerceIcon}
+                  src="/images/e-commerece.svg"
                   alt="E-Commerce Solutions"
                   className="ServicesIconImage"
                 />
@@ -295,7 +285,7 @@ function Services() {
               <div className="ServicesIcon">
 
                 <img
-                  src={processIcon}
+                  src="/images/process.svg"
                   alt="Process Optimisation"
                   className="ServicesIconImage"
                 />

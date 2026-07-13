@@ -1,7 +1,5 @@
 import React from "react";
 
-import backgroundImage from "./industry.jpg";
-
 // Icons (using react-icons)
 import {
   FaGavel,
@@ -56,7 +54,7 @@ function Industries() {
     <section
       className="IndustriesSection"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(/images/industry.jpg)`,
       }}
     >
       <div className="IndustriesOverlay"></div>

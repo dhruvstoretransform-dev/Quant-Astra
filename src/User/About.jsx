@@ -1,13 +1,11 @@
 import React from "react";
 
-import aboutImage from "./About.png";
-
 function About() {
   return (
    <section className="aboutjsx-about">
 
     <div className="aboutjsx-about-left">
-        <img src={aboutImage} alt="About" />
+        <img src="/images/About.png" alt="About" />
     </div>
 
     <div className="aboutjsx-about-right">

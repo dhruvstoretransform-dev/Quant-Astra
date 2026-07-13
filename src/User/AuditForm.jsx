@@ -1,20 +1,16 @@
 import React from "react";
 
-
-import background from "./Auditform.png";
-import logo from "./shadow logo.png";
-
 const AuditForm = () => {
   return (
     <section
       className="AuditSection"
-      style={{ backgroundImage: `url(${background})` }}
+      style={{ backgroundImage: `url(/images/Auditform.png)` }}
     >
       <div className="AuditOverlay">
         <div className="AuditContainer">
           {/* Logo */}
           <div className="AuditLogo">
-            <img src={logo} alt="Quant Astra Logo" />
+            <img src="/images/shadow logo.png" alt="Quant Astra Logo" />
           </div>
 
           {/* Header */}

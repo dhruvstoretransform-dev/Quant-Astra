@@ -1,8 +1,5 @@
 import React from "react";
 
-
-import rocket from "./cta.png";
-
 const CTA = () => {
   return (
     <section className="CTASection">
@@ -40,7 +37,7 @@ const CTA = () => {
         <div className="CTARight">
 
           <img
-            src={rocket}
+            src="/images/cta.png"
             alt="Rocket"
             className="RocketImage"
           />

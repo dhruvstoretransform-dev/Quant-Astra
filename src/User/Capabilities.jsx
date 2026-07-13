@@ -10,8 +10,6 @@ import React from "react";
 //   FaChartLine,
 // } from "react-icons/fa";
 
-import logo from "./Group.png"; // Replace with your Quant Astra logo
-
 function Capabilities() {
   return (
     <section className="CapabilitiesSection">
@@ -71,7 +69,7 @@ function Capabilities() {
           {/* Center Logo */}
 
           <div className="CenterLogo">
-            <img src={logo} alt="Quant Astra" />
+            <img src="/images/Group.png" alt="Quant Astra" />
           </div>
 
           {/* TOP */}

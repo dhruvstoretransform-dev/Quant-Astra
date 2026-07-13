@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.png";
 
 
 function Navbar() {
@@ -9,7 +8,7 @@ function Navbar() {
     <nav className="navbar-container">
 
       <div className="navbar-logo">
-        <img src={logo} alt="Logo" />
+        <img src="/images/logo.png" alt="Logo" />
       </div>
 
       <div

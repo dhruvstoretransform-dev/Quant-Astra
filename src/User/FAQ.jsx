@@ -1,9 +1,5 @@
 import React from "react";
 
-
-import leftBg from "./top-left.png";
-import rightBg from "./bottom-right.png";
-
 const FAQ = () => {
   return (
     <section className="FAQSection">
@@ -11,13 +7,13 @@ const FAQ = () => {
       {/* Background Images */}
 
       <img
-        src={leftBg}
+        src="/images/top-left.png"
         alt=""
         className="FAQLeftBg"
       />
 
       <img
-        src={rightBg}
+        src="/images/bottom-right.png"
         alt=""
         className="FAQRightBg"
       />

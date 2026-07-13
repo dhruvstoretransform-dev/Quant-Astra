@@ -1,8 +1,5 @@
 import React from "react";
 
-
-import logo from "./logo.png";
-
 const Footer = () => {
   return (
     <footer className="FooterSection">
@@ -14,7 +11,7 @@ const Footer = () => {
         <div className="FooterColumn FooterLeft">
 
           <img
-            src={logo}
+            src="/images/logo.png"
             alt="Quant Astra"
             className="FooterLogo"
           />
