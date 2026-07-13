@@ -2319,7 +2319,35 @@ body{
 
 .Ring{
 
-    display:none;
+    .Ring{
+
+    display:block;
+
+}
+
+.Ring1{
+
+    width:250px;
+
+    height:250px;
+
+}
+
+.Ring2{
+
+    width:180px;
+
+    height:180px;
+
+}
+
+.Ring3{
+
+    width:110px;
+
+    height:110px;
+
+}
 
 }
 
@@ -2327,7 +2355,7 @@ body{
 
 .Line{
 
-    display:none;
+    display:block;
 
 }
 
