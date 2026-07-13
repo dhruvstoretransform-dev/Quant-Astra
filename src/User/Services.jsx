@@ -1,63 +1,14 @@
 import React from "react";
 
+
 import serviceBg from "./service.png";
 
-const services = [
-  {
-    id: 1,
-    version: "V4.2.0",
-    icon: "⚙️",
-    title: "AI Business Automation",
-    description:
-      "Automate repetitive tasks, streamline workflows, and eliminate operational bottlenecks with intelligent systems that improve productivity, accuracy, and business scalability.",
-    status: "STATUS: OPERATIONAL",
-  },
-  {
-    id: 2,
-    version: "V2.1.5",
-    icon: "🤖",
-    title: "AI Agents",
-    description:
-      "Deploy AI-powered agents that handle customer interactions, document processing, business support, and information retrieval with speed, consistency, and precision.",
-    status: "STATUS: ACTIVE",
-  },
-  {
-    id: 3,
-    version: "V8.0.1",
-    icon: "📈",
-    title: "Advanced SEO",
-    description:
-      "Improve search visibility, attract qualified traffic, and strengthen online authority through data-driven SEO strategies built for long-term growth.",
-    status: "STATUS: OPTIMIZED",
-  },
-  {
-    id: 4,
-    version: "V3.4.2",
-    icon: "📢",
-    title: "Digital Marketing",
-    description:
-      "Generate awareness, leads, and revenue through targeted digital campaigns designed to connect your business with the right audience.",
-    status: "STATUS: SCALING",
-  },
-  {
-    id: 5,
-    version: "V5.1.0",
-    icon: "🛒",
-    title: "E-Commerce Solutions",
-    description:
-      "Create seamless online shopping experiences with conversion-focused eCommerce solutions that enhance customer engagement and drive sustainable growth.",
-    status: "STATUS: INTEGRATED",
-  },
-  {
-    id: 6,
-    version: "V6.2.2",
-    icon: "⚡",
-    title: "Process Optimisation",
-    description:
-      "Redesign workflows, reduce inefficiencies, and improve operational performance through strategic process improvements and intelligent business systems.",
-    status: "STATUS: REFINED",
-  },
-];
+import automationIcon from "./Overlay+Border.svg";
+import aiAgentIcon from "./ai agent.svg";
+import seoIcon from "./advance.svg";
+import marketingIcon from "./digital.svg";
+import ecommerceIcon from "./e-commerece.svg";
+import processIcon from "./process.svg";
 
 function Services() {
   return (
@@ -85,49 +36,310 @@ function Services() {
 
         <div className="ServicesGrid">
 
-          {services.map((service) => (
-            <div className="ServicesCard" key={service.id}>
+          {/* CARD 1 */}
 
-              <div className="ServicesCardHeader">
+          <div className="ServicesCard">
 
-                <div className="ServicesIcon">
-                  {service.icon}
-                </div>
+            <div className="ServicesCardHeader">
 
-                <span className="ServicesVersion">
-                  {service.version}
-                </span>
+              <div className="ServicesIcon">
 
-              </div>
-
-              <div className="ServicesCardBody">
-
-                <h3 className="ServicesTitle">
-                  {service.title}
-                </h3>
-
-                <p className="ServicesText">
-                  {service.description}
-                </p>
+                <img
+                  src={automationIcon}
+                  alt="AI Business Automation"
+                  className="ServicesIconImage"
+                />
 
               </div>
 
-              <div className="ServicesCardFooter">
-
-                <span>{service.status}</span>
-
-                <span className="ServicesArrow">
-                  →
-                </span>
-
-              </div>
+              <span className="ServicesVersion">
+                V4.2.0
+              </span>
 
             </div>
-          ))}
+
+            <div className="ServicesCardBody">
+
+              <h3 className="ServicesTitle">
+                AI Business Automation
+              </h3>
+
+              <p className="ServicesText">
+                Automate repetitive tasks, streamline workflows, and eliminate
+                operational bottlenecks with intelligent systems that improve
+                productivity, accuracy, and business scalability.
+              </p>
+
+            </div>
+
+            <div className="ServicesCardFooter">
+
+              <span>
+                STATUS: OPERATIONAL
+              </span>
+
+              <span className="ServicesArrow">
+                →
+              </span>
+
+            </div>
+
+          </div>
+
+          {/* CARD 2 */}
+
+          <div className="ServicesCard">
+
+            <div className="ServicesCardHeader">
+
+              <div className="ServicesIcon">
+
+                <img
+                  src={aiAgentIcon}
+                  alt="AI Agents"
+                  className="ServicesIconImage"
+                />
+
+              </div>
+
+              <span className="ServicesVersion">
+                V2.1.5
+              </span>
+
+            </div>
+
+            <div className="ServicesCardBody">
+
+              <h3 className="ServicesTitle">
+                AI Agents
+              </h3>
+
+              <p className="ServicesText">
+                Deploy AI-powered agents that handle customer interactions,
+                document processing, business support, and information retrieval
+                with speed, consistency, and precision.
+              </p>
+
+            </div>
+
+            <div className="ServicesCardFooter">
+
+              <span>
+                STATUS: ACTIVE
+              </span>
+
+              <span className="ServicesArrow">
+                →
+              </span>
+
+            </div>
+
+          </div>
+
+          {/* CARD 3 */}
+
+          <div className="ServicesCard">
+
+            <div className="ServicesCardHeader">
+
+              <div className="ServicesIcon">
+
+                <img
+                  src={seoIcon}
+                  alt="Advanced SEO"
+                  className="ServicesIconImage"
+                />
+
+              </div>
+
+              <span className="ServicesVersion">
+                V8.0.1
+              </span>
+
+            </div>
+
+            <div className="ServicesCardBody">
+
+              <h3 className="ServicesTitle">
+                Advanced SEO
+              </h3>
+
+              <p className="ServicesText">
+                Improve search visibility, attract qualified traffic, and
+                strengthen online authority through data-driven SEO strategies
+                built for long-term growth.
+              </p>
+
+            </div>
+
+            <div className="ServicesCardFooter">
+
+              <span>
+                STATUS: OPTIMIZED
+              </span>
+
+              <span className="ServicesArrow">
+                →
+              </span>
+
+            </div>
+
+          </div>
+
+                    {/* CARD 4 */}
+
+          <div className="ServicesCard">
+
+            <div className="ServicesCardHeader">
+
+              <div className="ServicesIcon">
+
+                <img
+                  src={marketingIcon}
+                  alt="Digital Marketing"
+                  className="ServicesIconImage"
+                />
+
+              </div>
+
+              <span className="ServicesVersion">
+                V3.4.2
+              </span>
+
+            </div>
+
+            <div className="ServicesCardBody">
+
+              <h3 className="ServicesTitle">
+                Digital Marketing
+              </h3>
+
+              <p className="ServicesText">
+                Generate awareness, leads, and revenue through targeted digital
+                campaigns designed to connect your business with the right
+                audience.
+              </p>
+
+            </div>
+
+            <div className="ServicesCardFooter">
+
+              <span>
+                STATUS: SCALING
+              </span>
+
+              <span className="ServicesArrow">
+                →
+              </span>
+
+            </div>
+
+          </div>
+
+          {/* CARD 5 */}
+
+          <div className="ServicesCard">
+
+            <div className="ServicesCardHeader">
+
+              <div className="ServicesIcon">
+
+                <img
+                  src={ecommerceIcon}
+                  alt="E-Commerce Solutions"
+                  className="ServicesIconImage"
+                />
+
+              </div>
+
+              <span className="ServicesVersion">
+                V5.1.0
+              </span>
+
+            </div>
+
+            <div className="ServicesCardBody">
+
+              <h3 className="ServicesTitle">
+                E-Commerce Solutions
+              </h3>
+
+              <p className="ServicesText">
+                Create seamless online shopping experiences with
+                conversion-focused eCommerce solutions that enhance customer
+                engagement and drive sustainable growth.
+              </p>
+
+            </div>
+
+            <div className="ServicesCardFooter">
+
+              <span>
+                STATUS: INTEGRATED
+              </span>
+
+              <span className="ServicesArrow">
+                →
+              </span>
+
+            </div>
+
+          </div>
+
+          {/* CARD 6 */}
+
+          <div className="ServicesCard">
+
+            <div className="ServicesCardHeader">
+
+              <div className="ServicesIcon">
+
+                <img
+                  src={processIcon}
+                  alt="Process Optimisation"
+                  className="ServicesIconImage"
+                />
+
+              </div>
+
+              <span className="ServicesVersion">
+                V6.2.2
+              </span>
+
+            </div>
+
+            <div className="ServicesCardBody">
+
+              <h3 className="ServicesTitle">
+                Process Optimisation
+              </h3>
+
+              <p className="ServicesText">
+                Redesign workflows, reduce inefficiencies, and improve
+                operational performance through strategic process improvements
+                and intelligent business systems.
+              </p>
+
+            </div>
+
+            <div className="ServicesCardFooter">
+
+              <span>
+                STATUS: REFINED
+              </span>
+
+              <span className="ServicesArrow">
+                →
+              </span>
+
+            </div>
+
+          </div>
 
         </div>
 
       </div>
+
     </section>
   );
 }
