@@ -165,6 +165,28 @@
 
 }
 
+.navbar-dropdown {
+    width: 100%;
+    text-align: center;
+}
+
+.navbar-dropdown span {
+    justify-content: center;
+}
+
+.dropdown-menu {
+    position: static;
+    width: 100%;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    margin-top: 10px;
+}
+
+.dropdown-menu li {
+    padding: 10px 0;
+}
+
 /* Menu items */
 
 .navbar-nav-links li{
@@ -205,6 +227,52 @@
 
 }
 
+}
+
+
+/* ===========================
+      DROPDOWN
+=========================== */
+
+.navbar-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-dropdown span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-arrow {
+    font-size: 10px;
+    transition: 0.3s;
+}
+
+.dropdown-menu {
+     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background: #111;
+    border-radius: 8px;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.dropdown-menu li {
+    padding: 12px 18px;
+    color: #fff;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.dropdown-menu li:hover {
+    background: #D6B25E;
+    color: #000;
 }
 
 
@@ -521,6 +589,19 @@ body{
 
 }
 
+.navbar-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    top: 100%;
+    margin-top: 0;
+}
+
 
 
 /* About section started from here  */
@@ -758,6 +839,21 @@ body{
 
     }
 
+}
+
+.aboutjsx-stat h3 {
+    color: #D7B44A;
+    font-size: 54px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.aboutjsx-stat h3 {
+    color: #D7B44A;
+    font-size: 54px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    font-variant-numeric: tabular-nums;
 }
 
 
@@ -2534,7 +2630,7 @@ body{
 .AuditContainer{
 
     width:100%;
-    max-width:900px;
+    max-width:800px;
 
     background:rgba(16,17,20,.92);
 
@@ -2542,7 +2638,7 @@ body{
 
     border-radius:20px;
 
-    padding:60px;
+    padding:20px;
 
     position:relative;
 
@@ -3122,77 +3218,44 @@ body{
 ========================================== */
 
 .FAQSection{
-
     position:relative;
-
     width:100%;
-
     overflow:hidden;
-
     background:#090B0E;
-
     padding:90px 64px 100px;
-
 }
 
 /* ==========================================
-            LEFT BACKGROUND
+            BACKGROUND IMAGES
 ========================================== */
 
 .FAQLeftBg{
-
     position:absolute;
-
     top:0;
-
     left:0;
-
     width:320px;
-
-    height:auto;
-
-    z-index:1;
-
     pointer-events:none;
-
+    z-index:1;
 }
-
-/* ==========================================
-           RIGHT BACKGROUND
-========================================== */
 
 .FAQRightBg{
-
     position:absolute;
-
     right:0;
-
     bottom:0;
-
     width:340px;
-
-    height:auto;
-
-    z-index:1;
-
     pointer-events:none;
-
+    z-index:1;
 }
 
 /* ==========================================
-              CONTAINER
+                CONTAINER
 ========================================== */
 
 .FAQContainer{
-
     max-width:1280px;
-
-    margin:0 auto;
-
+    margin:auto;
     position:relative;
-
     z-index:5;
-
 }
 
 /* ==========================================
@@ -3200,181 +3263,124 @@ body{
 ========================================== */
 
 .FAQHeader{
-
     max-width:760px;
-
     margin:0 auto 70px;
-
     text-align:center;
-
 }
-
-/* ==========================================
-                TAG
-========================================== */
 
 .FAQTag{
-
     display:inline-block;
-
     color:#D7B44A;
-
     font-size:18px;
-
     font-weight:600;
-
     letter-spacing:5px;
-
     text-transform:uppercase;
-
     margin-bottom:18px;
-
 }
-
-/* ==========================================
-              HEADING
-========================================== */
 
 .FAQHeading{
-
     color:#F5F5F5;
-
     font-size:64px;
-
     font-weight:700;
-
     line-height:74px;
-
     margin-bottom:20px;
-
 }
-
-/* ==========================================
-            DESCRIPTION
-========================================== */
 
 .FAQDescription{
-
     color:#B8B8B8;
-
     font-size:22px;
-
-    font-weight:400;
-
     line-height:38px;
-
-    max-width:760px;
-
-    margin:0 auto;
-
 }
 
-
-
 /* ==========================================
-                FAQ CARDS
+                FAQ LIST
 ========================================== */
 
 .FAQCards{
-
     display:flex;
-
     flex-direction:column;
-
-    gap:24px;
-
+    gap:22px;
 }
 
 /* ==========================================
-                SINGLE CARD
+                FAQ CARD
 ========================================== */
 
 .FAQCard{
-
-    width:100%;
-
     background:#101216;
-
     border:1px solid rgba(215,180,74,.12);
-
     border-radius:12px;
-
-    padding:28px 30px;
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:18px;
-
-    transition:all .35s ease;
-
+    overflow:hidden;
+    transition:.35s ease;
 }
 
 .FAQCard:hover{
-
     border-color:#D7B44A;
-
-    transform:translateY(-4px);
-
-    box-shadow:0 12px 30px rgba(0,0,0,.35);
-
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
 }
 
 /* ==========================================
-                ICON
+            QUESTION ROW
 ========================================== */
 
-.FAQIcon{
-
-    width:32px;
-
-    height:32px;
-
+.FAQQuestionRow{
     display:flex;
-
-    justify-content:center;
-
+    justify-content:space-between;
     align-items:center;
-
-    flex-shrink:0;
-
-    color:#D7B44A;
-
-    font-size:22px;
-
-    font-weight:700;
-
-    margin-top:2px;
-
+    padding:28px 30px;
+    cursor:pointer;
+    user-select:none;
 }
 
 /* ==========================================
-                CONTENT
-========================================== */
-
-.FAQContent{
-
-    flex:1;
-
-}
-
-/* ==========================================
-                QUESTION
+            QUESTION
 ========================================== */
 
 .FAQQuestion{
-
     color:#F4F4F4;
-
     font-size:32px;
-
     font-weight:500;
-
     line-height:42px;
+    margin:0;
+    flex:1;
+    padding-right:20px;
+}
 
-    margin-bottom:14px;
+/* ==========================================
+            ARROW
+========================================== */
 
+.FAQArrow{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#D7B44A;
+    font-size:18px;
+    font-weight:400;
+    transition:all .3s ease;
+    flex-shrink:0;
+}
+
+.FAQArrow.rotate{
+    transform:rotate(180deg);
+    color:#D7B44A;
+}
+
+/* ==========================================
+            ANSWER WRAPPER
+========================================== */
+
+.FAQAnswerWrapper{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .45s ease,padding .35s ease;
+    padding:0 30px;
+}
+
+.FAQAnswerWrapper.open{
+    max-height:250px;
+    padding:0 30px 28px;
 }
 
 /* ==========================================
@@ -3382,28 +3388,34 @@ body{
 ========================================== */
 
 .FAQAnswer{
-
     color:#BDBDBD;
-
     font-size:20px;
-
-    font-weight:400;
-
     line-height:34px;
-
-    max-width:900px;
-
 }
 
 /* ==========================================
-            REMOVE LAST MARGIN
+            ACTIVE CARD
 ========================================== */
 
-.FAQCard:last-child{
-
-    margin-bottom:0;
-
+.FAQCard.active{
+    border-color:#D7B44A;
+    box-shadow:0 10px 30px rgba(215,180,74,.12);
 }
+
+/* ==========================================
+            SMOOTH EFFECTS
+========================================== */
+
+.FAQQuestion,
+.FAQArrow,
+.FAQAnswer{
+    transition:.3s ease;
+}
+
+.FAQCard.active .FAQQuestion{
+    color:#D7B44A;
+}
+
 
 
 /* ==========================================
@@ -3413,90 +3425,75 @@ body{
 @media (max-width:1024px){
 
 .FAQSection{
-
     padding:70px 40px;
-
 }
 
 .FAQContainer{
-
     max-width:100%;
-
 }
 
 .FAQHeader{
-
     margin-bottom:50px;
-
 }
 
 .FAQHeading{
-
     font-size:48px;
-
     line-height:58px;
-
 }
 
 .FAQDescription{
-
     font-size:18px;
-
     line-height:30px;
+}
 
+.FAQTag{
+    font-size:16px;
+    letter-spacing:4px;
 }
 
 .FAQLeftBg{
-
     width:220px;
-
 }
 
 .FAQRightBg{
-
     width:220px;
-
 }
 
 .FAQCards{
-
-    gap:20px;
-
+    gap:18px;
 }
 
-.FAQCard{
-
-    padding:24px;
-
+.FAQQuestionRow{
+    padding:22px 24px;
 }
 
 .FAQQuestion{
-
     font-size:24px;
-
     line-height:34px;
+    padding-right:15px;
+}
 
+.FAQArrow{
+    width:38px;
+    height:38px;
+    font-size:16px;
+}
+
+.FAQAnswerWrapper{
+    padding:0 24px;
+}
+
+.FAQAnswerWrapper.open{
+    padding:0 24px 24px;
 }
 
 .FAQAnswer{
-
     font-size:17px;
-
     line-height:28px;
-
-}
-
-.FAQIcon{
-
-    width:28px;
-
-    height:28px;
-
-    font-size:20px;
-
 }
 
 }
+
 
 /* ==========================================
             MOBILE (768px)
@@ -3505,173 +3502,136 @@ body{
 @media (max-width:768px){
 
 .FAQSection{
-
     padding:50px 20px;
-
-}
-
-.FAQLeftBg{
-
-    width:140px;
-
-}
-
-.FAQRightBg{
-
-    width:140px;
-
 }
 
 .FAQHeader{
-
     margin-bottom:40px;
-
 }
 
 .FAQTag{
-
     font-size:14px;
-
     letter-spacing:3px;
-
 }
 
 .FAQHeading{
-
     font-size:34px;
-
     line-height:42px;
-
 }
 
 .FAQDescription{
-
     font-size:16px;
-
     line-height:28px;
+}
 
+.FAQLeftBg{
+    width:140px;
+}
+
+.FAQRightBg{
+    width:140px;
 }
 
 .FAQCards{
-
-    gap:16px;
-
+    gap:15px;
 }
 
-.FAQCard{
-
-    padding:20px;
-
-    gap:14px;
-
-}
-
-.FAQIcon{
-
-    width:24px;
-
-    height:24px;
-
-    font-size:18px;
-
+.FAQQuestionRow{
+    padding:18px;
 }
 
 .FAQQuestion{
-
     font-size:20px;
-
     line-height:30px;
+    padding-right:12px;
+}
 
+.FAQArrow{
+    width:34px;
+    height:34px;
+    font-size:14px;
+}
+
+.FAQAnswerWrapper{
+    padding:0 18px;
+}
+
+.FAQAnswerWrapper.open{
+    padding:0 18px 18px;
 }
 
 .FAQAnswer{
-
     font-size:15px;
-
     line-height:25px;
-
 }
 
 }
+
 
 /* ==========================================
-            SMALL MOBILE (480px)
+        SMALL MOBILE (480px)
 ========================================== */
 
 @media (max-width:480px){
 
 .FAQSection{
-
     padding:40px 16px;
-
-}
-
-.FAQLeftBg{
-
-    width:90px;
-
-}
-
-.FAQRightBg{
-
-    width:90px;
-
 }
 
 .FAQTag{
-
     font-size:12px;
-
     letter-spacing:2px;
-
 }
 
 .FAQHeading{
-
     font-size:28px;
-
     line-height:36px;
-
 }
 
 .FAQDescription{
-
     font-size:14px;
-
     line-height:24px;
-
 }
 
-.FAQCard{
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    padding:18px;
-
+.FAQLeftBg{
+    width:90px;
 }
 
-.FAQIcon{
+.FAQRightBg{
+    width:90px;
+}
 
-    margin-bottom:8px;
+.FAQCards{
+    gap:12px;
+}
 
+.FAQQuestionRow{
+    padding:16px;
 }
 
 .FAQQuestion{
+    font-size:17px;
+    line-height:26px;
+    padding-right:10px;
+}
 
-    font-size:18px;
+.FAQArrow{
+    width:30px;
+    height:30px;
+    font-size:13px;
+}
 
-    line-height:28px;
+.FAQAnswerWrapper{
+    padding:0 16px;
+}
 
+.FAQAnswerWrapper.open{
+    padding:0 16px 16px;
 }
 
 .FAQAnswer{
-
     font-size:14px;
-
     line-height:22px;
-
 }
 
 }
@@ -3748,11 +3708,11 @@ body{
 
     color:#F5F5F5;
 
-    font-size:72px;
+    font-size:48px;
 
     font-weight:700;
 
-    line-height:82px;
+    line-height:63px;
 
     margin-bottom:36px;
 
@@ -3766,11 +3726,11 @@ body{
 
     color:#C7C2B9;
 
-    font-size:24px;
+    font-size:21px;
 
     font-weight:400;
 
-    line-height:40px;
+    line-height:32px;
 
     margin-bottom:50px;
 
@@ -3798,7 +3758,7 @@ body{
 
 .RocketImage{
 
-    width:460px;
+    width:439px;
 
     max-width:100%;
 
@@ -4043,7 +4003,7 @@ button{
 
 .CTATitle{
 
-    font-size:30px;
+    font-size:25px;
 
     line-height:40px;
 
@@ -4051,7 +4011,7 @@ button{
 
 .CTADescription{
 
-    font-size:16px;
+    font-size:21px;
 
     line-height:26px;
 
@@ -4069,7 +4029,7 @@ button{
 
 .RocketImage{
 
-    width:220px;
+    width:250px;
 
 }
 
