@@ -1,79 +1,284 @@
 /* navbar section start from here  */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background-color: #000;
-}
 
-.navbar-nav-links {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    align-items: center;
-}
 
-.navbar-nav-links li {
-    font-family: "Manrope", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.7px;
-    color: #FFFFFF;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav-links li:hover,
-.navbar-nav-links li.navbar-active {
-    color: #D6B25E;
-}
-
-.navbar-consult-btn {
-    font-family: "Manrope", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.7px;
-    background: #D6B25E;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 14px 24px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.navbar-consult-btn:hover {
-    background: #c7a44d;
-}
-
-.navbar-logo img {
-    width: 130px;
-    height: auto;
-}
-
-/* Hide toggle on desktop */
-
-.navbar-toggle{
-    display:none;
-    font-size:32px;
-    color:white;
-    cursor:pointer;
-}
-
-/* Mobile */
-
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 
 /* ==========================================
-            TABLET
+            RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Manrope",sans-serif;
+    background:#000;
+}
+
+/* ==========================================
+            NAVBAR
+========================================== */
+
+.navbar-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 60px;
+
+    background:#000;
+
+    position:relative;
+
+    z-index:999;
+
+}
+
+/* ==========================================
+            LOGO
+========================================== */
+
+.navbar-logo img{
+
+    width:130px;
+
+    height:auto;
+
+    display:block;
+
+}
+
+/* ==========================================
+        NAVIGATION
+========================================== */
+
+.navbar-nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    list-style:none;
+
+    gap:40px;
+
+}
+
+/* ==========================================
+            NAV ITEMS
+========================================== */
+
+.navbar-nav-links li{
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:.7px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.navbar-nav-links li:hover{
+
+    color:#D6B25E;
+
+}
+
+.navbar-active{
+
+    color:#D6B25E !important;
+
+}
+
+/* ==========================================
+        DESKTOP BUTTON
+========================================== */
+
+.desktop-btn{
+
+    display:flex;
+
+}
+
+.mobile-btn{
+
+    display:none;
+
+}
+
+/* ==========================================
+        CONSULT BUTTON
+========================================== */
+
+.navbar-consult-btn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:14px 24px;
+
+    background:#D6B25E;
+
+    color:#000;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.navbar-consult-btn:hover{
+
+    background:#caa34b;
+
+}
+
+/* ==========================================
+        HAMBURGER
+========================================== */
+
+.navbar-toggle{
+
+    display:none;
+
+    color:#fff;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+            DROPDOWN
+========================================== */
+
+.navbar-dropdown{
+
+    position:relative;
+
+}
+
+.dropdown-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+}
+
+.dropdown-arrow{
+
+    font-size:10px;
+
+    transition:.3s;
+
+}
+
+.dropdown-arrow.rotate{
+
+    transform:rotate(180deg);
+
+}
+
+/* ==========================================
+        DROPDOWN MENU
+========================================== */
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:120%;
+
+    left:0;
+
+    width:210px;
+
+    background:#111;
+
+    border:1px solid rgba(214,178,94,.25);
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    display:none;
+
+    list-style:none;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.dropdown-menu.show{
+
+    display:block;
+
+}
+
+.dropdown-menu li{
+
+    padding:14px 18px;
+
+    color:#fff;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.dropdown-menu li:hover{
+
+    background:#D6B25E;
+
+    color:#000;
+
+}
+
+/* ==========================================
+            TABLET (992px)
 ========================================== */
 
 @media (max-width:992px){
+
+/* ==========================
+        NAVBAR
+========================== */
 
 .navbar-container{
 
@@ -81,27 +286,9 @@
 
 }
 
-.navbar-nav-links{
-
-    gap:24px;
-
-}
-
-}
-
-/* ==========================================
-            MOBILE
-========================================== */
-
-@media (max-width:768px){
-
-.navbar-container{
-
-    position:relative;
-
-    padding:18px 20px;
-
-}
+/* ==========================
+        LOGO
+========================== */
 
 .navbar-logo img{
 
@@ -109,23 +296,139 @@
 
 }
 
-/* Show hamburger */
+/* ==========================
+        NAV LINKS
+========================== */
+
+.navbar-nav-links{
+
+    gap:24px;
+
+}
+
+/* ==========================
+        NAV ITEMS
+========================== */
+
+.navbar-nav-links li{
+
+    font-size:13px;
+
+}
+
+/* ==========================
+        BUTTON
+========================== */
+
+.navbar-consult-btn{
+
+    padding:12px 20px;
+
+    font-size:13px;
+
+}
+
+/* ==========================
+        DROPDOWN
+========================== */
+
+.dropdown-menu{
+
+    width:190px;
+
+}
+
+.dropdown-menu li{
+
+    padding:12px 16px;
+
+    font-size:13px;
+
+}
+
+/* Keep Desktop Button */
+
+.desktop-btn{
+
+    display:flex;
+
+}
+
+.mobile-btn{
+
+    display:none;
+
+}
+
+/* Hide Hamburger */
+
+.navbar-toggle{
+
+    display:none;
+
+}
+
+}
+
+/* ==========================================
+            MOBILE (768px)
+========================================== */
+
+@media (max-width:768px){
+
+/* ==========================
+        NAVBAR
+========================== */
+
+.navbar-container{
+
+    padding:18px 20px;
+
+    position:relative;
+
+}
+
+/* ==========================
+        LOGO
+========================== */
+
+.navbar-logo img{
+
+    width:120px;
+
+}
+
+/* ==========================
+        HAMBURGER
+========================== */
 
 .navbar-toggle{
 
     display:block;
 
-    font-size:32px;
+    font-size:30px;
 
     color:#ffffff;
 
     cursor:pointer;
 
-    z-index:1001;
+    z-index:1002;
 
 }
 
-/* Hide menu by default */
+/* ==========================
+        DESKTOP BUTTON
+========================== */
+
+.desktop-btn{
+
+    display:none;
+
+}
+
+/* ==========================
+        MOBILE MENU
+========================== */
 
 .navbar-nav-links{
 
@@ -133,11 +436,13 @@
 
 }
 
-/* Show menu when active */
-
 .navbar-nav-links.active{
 
     display:flex;
+
+    flex-direction:column;
+
+    align-items:stretch;
 
     position:absolute;
 
@@ -149,49 +454,133 @@
 
     background:#000;
 
-    flex-direction:column;
+    padding:20px;
 
-    align-items:center;
+    gap:0;
 
-    gap:20px;
+    border-top:1px solid rgba(255,255,255,.08);
 
-    padding:25px 0;
-
-    border-top:1px solid rgba(255,255,255,.1);
-
-    z-index:1000;
+    z-index:1001;
 
 }
 
-/* Menu items */
+/* ==========================
+        MENU ITEMS
+========================== */
 
-.navbar-nav-links li{
+.navbar-nav-links > li{
 
     width:100%;
 
-    text-align:center;
+    text-align:left;
 
-    font-size:16px;
+    padding:16px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
 
 }
 
-/* Button */
+/* ==========================
+        SERVICES
+========================== */
 
-.navbar-consult-btn{
+.navbar-dropdown{
 
-    width:auto;
+    width:100%;
 
-    min-width:170px;
+}
 
-    height:44px;
+.dropdown-title{
 
-    padding:10px 18px;
+    width:100%;
 
-    font-size:13px;
+    display:flex;
 
-    line-height:20px;
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* ==========================
+        DROPDOWN
+========================== */
+
+.dropdown-menu{
+
+    position:static;
+
+    display:none;
+
+    width:100%;
+
+    background:#111;
+
+    border:none;
 
     border-radius:8px;
+
+    margin-top:12px;
+
+    box-shadow:none;
+
+}
+
+.dropdown-menu.show{
+
+    display:block;
+
+}
+
+.dropdown-menu li{
+
+    padding:14px 18px;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.dropdown-menu li:last-child{
+
+    border-bottom:none;
+
+}
+
+/* ==========================
+        ARROW
+========================== */
+
+.dropdown-arrow{
+
+    transition:.3s;
+
+}
+
+.dropdown-arrow.rotate{
+
+    transform:rotate(180deg);
+
+}
+
+/* ==========================
+        MOBILE BUTTON
+========================== */
+
+.mobile-btn{
+
+    display:block;
+
+    border:none !important;
+
+    padding-top:24px !important;
+
+    padding-bottom:8px !important;
+
+}
+
+.mobile-btn .navbar-consult-btn{
+
+    width:100%;
 
     display:flex;
 
@@ -199,12 +588,13 @@
 
     align-items:center;
 
-    margin:0 auto;
+    height:48px;
+
+    font-size:14px;
 
 }
 
 }
-
 
 
 
@@ -250,7 +640,7 @@ body{
 
     inset:0;
 
-    background:rgba(0,0,0,.45);
+    background:rgba(0,0,0,0.65);
 
 }
 
@@ -290,7 +680,7 @@ body{
 
 .hero-title{
 
-    font-size:72px;
+    font-size:57px;
 
     font-weight:800;
 
@@ -312,7 +702,7 @@ body{
 
     margin-top:30px;
 
-    font-size:24px;
+    font-size:21px;
 
     line-height:38px;
 
@@ -519,13 +909,30 @@ body{
 
 }
 
+.navbar-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    top: 100%;
+    margin-top: 0;
+}
+
 
 
 /* About section started from here  */
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 
-.aboutjsx-about{
+/* ==========================================
+                WRAPPER
+========================================== */
+
+.wrapper{
     width:100%;
     min-height:100vh;
     background:#111217;
@@ -534,229 +941,275 @@ body{
     justify-content:center;
     align-items:center;
 
-   
-
     padding:100px 70px;
 
     font-family:"Manrope",sans-serif;
 }
 
-.aboutjsx-about-left{
+/* ==========================================
+                LEFT IMAGE
+========================================== */
 
+.wrapper-left{
     flex:1;
-
 }
 
-.aboutjsx-about-left img{
-
-     width:100%;
-    max-width:668px;
+.wrapper-left img{
+    width:100%;
+    max-width:750px;
     height:auto;
     display:block;
     border-radius:18px;
 }
 
-.aboutjsx-about-right{
+/* ==========================================
+                RIGHT CONTENT
+========================================== */
 
+.wrapper-right{
     flex:1;
     width:100%;
     max-width:600px;
 }
 
-.aboutjsx-section-tag{
+/* ==========================================
+                    TAG
+========================================== */
 
+.wrapper-tag{
     color:#D7B44A;
-
     font-size:16px;
-
     letter-spacing:4px;
-
     text-transform:uppercase;
-
 }
 
-.aboutjsx-about-title{
+/* ==========================================
+                    TITLE
+========================================== */
 
+.wrapper-title{
     margin-top:20px;
-
-    color:#fff;
-
-    font-size:58px;
-
-    line-height:65px;
-
+    color:#ffffff;
+    font-size:33px;
+    line-height:55px;
     font-weight:700;
 }
 
-.aboutjsx-about-title span{
-
+.wrapper-title span{
     color:#D7B44A;
-
 }
 
-.aboutjsx-about-subtitle{
+/* ==========================================
+                SUBTITLE
+========================================== */
 
-    margin-top:30px;
-
+.wrapper-subtitle{
+    margin-top:15px;
     color:#D7B44A;
-
     font-size:30px;
-
     font-weight:500;
+}
+
+/* ==========================================
+                DESCRIPTION
+========================================== */
+
+.wrapper-description{
+    margin-top:21px;
+    color:#D6D6D6;
+    font-size:24px;
+}
+
+/* ==========================================
+                STATS
+========================================== */
+
+.wrapper-stats{
+    margin-top:45px;
+    display:flex;
+    gap:120px;
+}
+
+/* ==========================================
+                SINGLE STAT
+========================================== */
+
+.wrapper-stat h3{
+    color:#D7B44A;
+    font-size:54px;
+    font-weight:700;
+
+    transition:color .3s ease;
+
+    font-variant-numeric:tabular-nums;
+}
+
+.wrapper-stat p{
+    margin-top:10px;
+    color:#D0D0D0;
+    letter-spacing:2px;
+    font-size:18px;
+}
+
+/* ==========================================
+            TABLET & MOBILE (768px)
+========================================== */
+
+@media (max-width:768px){
+
+.wrapper{
+
+    flex-direction:column;
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    gap:40px;
 
 }
 
-.aboutjsx-about-description{
+.wrapper-left{
+
+    width:100%;
+
+}
+
+.wrapper-left img{
+
+    width:100%;
+
+    max-width:450px;
+
+    margin:auto;
+
+}
+
+.wrapper-right{
+
+    width:100%;
+
+    max-width:100%;
+
+}
+
+.wrapper-tag{
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+}
+
+.wrapper-title{
+
+    font-size:34px;
+
+    line-height:44px;
+
+}
+
+.wrapper-subtitle{
+
+    font-size:22px;
+
+}
+
+.wrapper-description{
+
+    font-size:18px;
+
+    line-height:30px;
+
+}
+
+.wrapper-stats{
+
+    justify-content:center;
+
+    gap:40px;
 
     margin-top:40px;
 
-    color:#D6D6D6;
+}
 
-    font-size:24px;
+.wrapper-stat h3{
 
-    /* line-height:42px; */
+    font-size:42px;
 
 }
 
-.aboutjsx-stats{
+.wrapper-stat p{
 
-    margin-top:70px;
+    font-size:16px;
 
-    display:flex;
-
-    gap:120px;
+    letter-spacing:1px;
 
 }
 
-.aboutjsx-stat h3{
+}
 
-    color:#D7B44A;
+/* ==========================================
+            SMALL MOBILE (480px)
+========================================== */
 
-    font-size:54px;
+@media (max-width:480px){
 
-    font-weight:700;
+.wrapper{
+
+    padding:40px 15px;
 
 }
 
-.aboutjsx-stat p{
+.wrapper-title{
 
-    margin-top:10px;
+    font-size:28px;
 
-    color:#D0D0D0;
+    line-height:38px;
 
-    letter-spacing:2px;
+}
+
+.wrapper-subtitle{
 
     font-size:18px;
 
 }
 
+.wrapper-description{
 
-@media (max-width:768px){
+    font-size:16px;
 
-    .aboutjsx-about{
-
-        flex-direction:column;
-
-        padding:60px 20px;
-
-        text-align:center;
-
-        gap:40px;
-
-    }
-
-    .aboutjsx-about-left{
-
-        width:100%;
-
-    }
-
-    .aboutjsx-about-left img{
-
-        width:100%;
-        max-width:450px;
-        margin:auto;
-
-    }
-
-    .aboutjsx-about-right{
-
-        width:100%;
-        max-width:100%;
-
-    }
-
-    .aboutjsx-about-title{
-
-        font-size:34px;
-        line-height:44px;
-
-    }
-
-    .aboutjsx-about-subtitle{
-
-        font-size:22px;
-
-    }
-
-    .aboutjsx-about-description{
-
-        font-size:18px;
-        line-height:30px;
-
-    }
-
-    .aboutjsx-stats{
-
-        justify-content:center;
-
-        gap:40px;
-
-        margin-top:40px;
-
-    }
+    line-height:26px;
 
 }
 
-@media (max-width:480px){
+.wrapper-stats{
 
-    .aboutjsx-about{
+    flex-direction:column;
 
-        padding:40px 15px;
+    align-items:center;
 
-    }
-
-    .aboutjsx-about-title{
-
-        font-size:28px;
-
-        line-height:38px;
-
-    }
-
-    .aboutjsx-about-subtitle{
-
-        font-size:18px;
-
-    }
-
-    .aboutjsx-about-description{
-
-        font-size:16px;
-
-        line-height:26px;
-
-    }
-
-    .aboutjsx-stats{
-
-        flex-direction:column;
-
-        gap:30px;
-
-    }
+    gap:30px;
 
 }
+
+.wrapper-stat h3{
+
+    font-size:36px;
+
+}
+
+.wrapper-stat p{
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+}
+
+}
+
+
 
 
 /* Testimonials section started from here  */
@@ -792,13 +1245,13 @@ body{
 .TestimonialsTag{
     color:#D7B44A;
     letter-spacing:5px;
-    font-size:18px;
+    font-size:21px;
     font-weight:600;
 }
 
 .TestimonialsHeading{
     color:#fff;
-    font-size:60px;
+    font-size:52px;
     font-weight:700;
     margin-top:20px;
 }
@@ -807,13 +1260,13 @@ body{
     max-width:820px;
     margin:25px auto 70px;
     color:#E8E8E8;
-    font-size:24px;
+    font-size:23px;
     line-height:38px;
 }
 
 .TestimonialsCards{
     display:flex;
-    gap:30px;
+    gap:15px;
 }
 
 .TestimonialsCard{
@@ -861,8 +1314,8 @@ body{
 
 .TestimonialsReview{
     color:#E4E4E4;
-    font-size:22px;
-    line-height:38px;
+    font-size:20px;
+    line-height:30px;
 }
 
 .TestimonialsStars{
@@ -885,7 +1338,7 @@ body{
 
     .TestimonialsDescription{
         font-size:18px;
-        line-height:30px;
+        line-height:39px;
     }
 
     .TestimonialsSection{
@@ -989,7 +1442,7 @@ body{
 
     color:#D7B44A;
 
-    font-size:18px;
+    font-size:21px;
 
     font-weight:600;
 
@@ -1486,7 +1939,7 @@ body{
 
 .IndustriesCard{
 
-    background:rgba(18,19,22,.95);
+     background:rgba(18,19,22,.95);
 
     border:1px solid rgba(215,180,74,.18);
 
@@ -1494,7 +1947,7 @@ body{
 
     padding:32px;
 
-    min-height:130px;
+    height:220px;          /* Fixed height */
 
     display:flex;
 
@@ -1502,11 +1955,12 @@ body{
 
     justify-content:flex-start;
 
-    gap:16px;
+    gap:20px;
 
     transition:all .35s ease;
 
     cursor:pointer;
+
 
 }
 
@@ -1554,13 +2008,19 @@ body{
 
 .IndustriesTitle{
 
-    color:#ffffff;
+     color:#ffffff;
 
-    font-size:24px;
+    font-size:21px;
 
     font-weight:600;
 
     line-height:32px;
+
+    min-height:64px;      /* Same title height for every card */
+
+    display:flex;
+
+    align-items:flex-start;
 
 }
 
@@ -1570,11 +2030,11 @@ body{
 
 .IndustriesCTA{
 
+    height:220px;
+
     background:#D7B44A;
 
     border-radius:8px;
-
-    min-height:130px;
 
     padding:32px;
 
@@ -1716,17 +2176,21 @@ body{
 
 .IndustriesCard{
 
-    padding:28px;
+  padding:24px;
 
-    min-height:140px;
+    min-height:170px;
+
+    height:auto;
 
 }
 
 .IndustriesTitle{
 
-    font-size:22px;
+   font-size:20px;
 
-    line-height:30px;
+    line-height:28px;
+
+    min-height:auto;
 
 }
 
@@ -1742,9 +2206,11 @@ body{
 
 .IndustriesCTA{
 
-    min-height:140px;
+    padding:24px;
 
-    padding:28px;
+    min-height:170px;
+
+    height:auto;
 
 }
 
@@ -1804,9 +2270,9 @@ body{
 
 .IndustriesGrid{
 
-    grid-template-columns:1fr;
+    grid-template-columns:repeat(2,1fr);
 
-    gap:18px;
+    gap:16px;
 
 }
 
@@ -1898,7 +2364,8 @@ body{
 
 .IndustriesGrid{
 
-    gap:16px;
+       grid-template-columns:1fr;
+
 
 }
 
@@ -1964,10 +2431,20 @@ body{
     box-sizing:border-box;
 }
 
+body{
+    background:#0B0D10;
+    font-family:"Manrope",sans-serif;
+}
+
+/* ==========================================
+                SECTION
+========================================== */
+
 .CapabilitiesSection{
 
     width:100%;
-    min-height:1287px;
+
+    min-height:100vh;
 
     padding:80px 64px;
 
@@ -1975,13 +2452,11 @@ body{
 
     overflow:hidden;
 
-    font-family:"Manrope",sans-serif;
-
 }
 
-/* ===========================
-        HEADER
-=========================== */
+/* ==========================================
+                HEADER
+========================================== */
 
 .CapabilitiesHeader{
 
@@ -2067,9 +2542,9 @@ body{
 
 }
 
-/* ===========================
-      BIG CIRCLE
-=========================== */
+/* ==========================================
+            CIRCLE WRAPPER
+========================================== */
 
 .CapabilitiesCircleWrapper{
 
@@ -2079,80 +2554,19 @@ body{
 
     align-items:center;
 
+    width:100%;
+
 }
 
-.CapabilitiesCircle{
+/* ==========================================
+            CIRCLE IMAGE
+========================================== */
 
-    position:relative;
+.CapabilitiesCircle{
 
     width:950px;
 
     height:950px;
-
-    border-radius:50%;
-
-    background:#000;
-
-    box-shadow:
-    0 0 90px rgba(215,180,74,.18),
-    0 0 180px rgba(215,180,74,.10);
-
-}
-
-/* ===========================
-         RINGS
-=========================== */
-
-.Ring{
-
-    position:absolute;
-
-    border:3px dashed #D7B44A;
-
-    border-radius:50%;
-
-    left:50%;
-    top:50%;
-
-    transform:translate(-50%,-50%);
-}
-
-.Ring1{
-
-    width:420px;
-    height:420px;
-
-}
-
-.Ring2{
-
-    width:300px;
-    height:300px;
-
-}
-
-.Ring3{
-
-    width:180px;
-    height:180px;
-
-}
-
-/* ===========================
-       CENTER LOGO
-=========================== */
-
-.CenterLogo{
-
-    position:absolute;
-
-    left:50%;
-    top:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:180px;
-    height:180px;
 
     display:flex;
 
@@ -2162,17 +2576,36 @@ body{
 
 }
 
-.CenterLogo img{
+.CapabilitiesCircleImage{
 
-    width:700px;
+     width:100%;
+
+    height:100%;
 
     object-fit:contain;
 
+    display:block;
+
+    transition:
+        transform .45s ease,
+        filter .45s ease,
+        drop-shadow .45s ease;
+
+    cursor:pointer;
+
 }
 
+.CapabilitiesCircleImage:hover{
+
+    transform:scale(1.03);
+
+    filter:drop-shadow(0 0 18px rgba(215,180,74,.35))
+           drop-shadow(0 0 35px rgba(215,180,74,.20));
+
+}
 
 /* ==========================================
-            TABLET (1024px)
+            TABLET
 ========================================== */
 
 @media (max-width:1024px){
@@ -2187,11 +2620,19 @@ body{
 
     flex-direction:column;
 
+    align-items:center;
+
     text-align:center;
 
     gap:30px;
 
-    margin-bottom:70px;
+    margin-bottom:60px;
+
+}
+
+.CapabilitiesTag{
+
+    justify-content:center;
 
 }
 
@@ -2200,8 +2641,6 @@ body{
     width:100%;
 
     max-width:700px;
-
-    margin:auto;
 
 }
 
@@ -2221,12 +2660,6 @@ body{
 
 }
 
-.CapabilitiesTag{
-
-    justify-content:center;
-
-}
-
 .CapabilitiesCircle{
 
     width:700px;
@@ -2235,112 +2668,10 @@ body{
 
 }
 
-.Ring1{
-
-    width:320px;
-
-    height:320px;
-
 }
-
-.Ring2{
-
-    width:230px;
-
-    height:230px;
-
-}
-
-.Ring3{
-
-    width:140px;
-
-    height:140px;
-
-}
-
-.CenterLogo{
-
-    width:140px;
-
-    height:140px;
-
-}
-
-.CenterLogo img{
-
-    width:120px;
-
-}
-
-.CapabilityBox{
-
-    font-size:16px;
-
-    padding:10px 16px;
-
-}
-
-.CapabilityIcon{
-
-    font-size:22px;
-
-}
-
-/* Move all cards closer */
-
-.TopCard{
-
-    top:25px;
-
-}
-
-.LeftCard{
-
-    left:20px;
-
-    top:170px;
-
-}
-
-.RightCard{
-
-    right:20px;
-
-    top:170px;
-
-}
-
-.BottomLeftCard{
-
-    left:30px;
-
-    bottom:150px;
-
-}
-
-.BottomRightCard{
-
-    right:30px;
-
-    bottom:150px;
-
-}
-
-.BottomCard{
-
-    bottom:20px;
-
-}
-
-}
-
 
 /* ==========================================
-            MOBILE (768px)
-========================================== */
-/* ==========================================
-            MOBILE (768px)
+            MOBILE
 ========================================== */
 
 @media (max-width:768px){
@@ -2351,23 +2682,53 @@ body{
 
 }
 
-.CapabilitiesCircleWrapper{
+.CapabilitiesHeader{
 
-    display:flex;
-
-    justify-content:center;
+    flex-direction:column;
 
     align-items:center;
 
+    text-align:center;
+
+    gap:24px;
+
+    margin-bottom:40px;
+
+}
+
+.CapabilitiesTag{
+
+    justify-content:center;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+}
+
+.CapabilitiesHeading{
+
+    font-size:34px;
+
+    line-height:44px;
+
+}
+
+.CapabilitiesRight{
+
     width:100%;
 
-    overflow:hidden;
+}
+
+.CapabilitiesRight p{
+
+    font-size:16px;
+
+    line-height:28px;
 
 }
 
 .CapabilitiesCircle{
-
-    position:relative;
 
     width:90vw;
 
@@ -2377,97 +2738,59 @@ body{
 
     max-height:520px;
 
-    margin:0 auto;
-
-    border-radius:50%;
-
-    background:#000;
-
-    box-shadow:
-        0 0 40px rgba(215,180,74,.18),
-        0 0 80px rgba(215,180,74,.10);
-
 }
 
-/* Rings */
-
-.Ring1{
-
-    width:70%;
-
-    height:70%;
-
-}
-
-.Ring2{
-
-    width:50%;
-
-    height:50%;
-
-}
-
-.Ring3{
-
-    width:30%;
-
-    height:30%;
-
-}
-
-/* Center Logo */
-
-.CenterLogo{
-
-    position:absolute;
-
-    left:50%;
-
-    top:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:110px;
-
-    height:110px;
-
-}
-
-.CenterLogo img{
+.CapabilitiesCircleImage{
 
     width:100%;
 
     height:auto;
 
 }
+
 }
 
-
 /* ==========================================
-            SMALL MOBILE (480px)
+            SMALL MOBILE
 ========================================== */
 
 @media (max-width:480px){
+
+.CapabilitiesSection{
+
+    padding:40px 16px;
+
+}
+
+.CapabilitiesHeading{
+
+    font-size:28px;
+
+    line-height:38px;
+
+}
+
+.CapabilitiesTag{
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+}
+
+.CapabilitiesRight p{
+
+    font-size:15px;
+
+    line-height:26px;
+
+}
 
 .CapabilitiesCircle{
 
     width:95vw;
 
     height:95vw;
-
-}
-
-.CenterLogo{
-
-    width:90px;
-
-    height:90px;
-
-}
-
-.CenterLogo img{
-
-    width:100%;
 
 }
 
@@ -2530,7 +2853,7 @@ body{
 .AuditContainer{
 
     width:100%;
-    max-width:900px;
+    max-width:800px;
 
     background:rgba(16,17,20,.92);
 
@@ -2538,14 +2861,13 @@ body{
 
     border-radius:20px;
 
-    padding:60px;
+    padding:20px;
 
     position:relative;
 
     backdrop-filter:blur(10px);
 
-    box-shadow:
-    0 20px 60px rgba(0,0,0,.45);
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
 
 }
 
@@ -2557,8 +2879,11 @@ body{
 
     position:absolute;
 
-    top:35px;
-    right:35px;
+    top:0;
+
+    right:0;
+
+    z-index:10;
 
 }
 
@@ -2608,11 +2933,11 @@ body{
 
     color:#ffffff;
 
-    font-size:58px;
+    font-size:43px;
 
     font-weight:700;
 
-    line-height:1.15;
+    line-height:1;
 
     margin-bottom:16px;
 
@@ -2624,14 +2949,13 @@ body{
 
     font-size:20px;
 
-    line-height:32px;
+    line-height:28px;
 
     max-width:620px;
 
     margin:0 auto;
 
 }
-
 
 /* ==========================================
                 FORM
@@ -2680,7 +3004,19 @@ body{
 }
 
 /* ==========================================
-              INPUTS
+            SELECT WRAPPER
+========================================== */
+
+.SelectWrapper{
+
+    position:relative;
+
+    width:100%;
+
+}
+
+/* ==========================================
+                INPUTS
 ========================================== */
 
 .FormGroup input,
@@ -2710,32 +3046,19 @@ body{
 .FormGroup input,
 .FormGroup select{
 
-    height:56px;
+    height:41px;
+
+}
+
+.FormGroup input{
 
     padding:0 18px;
 
 }
 
-.FormGroup textarea{
-
-    min-height:160px;
-
-    padding:18px;
-
-    resize:none;
-
-}
-
-/* Placeholder */
-
-.FormGroup input::placeholder,
-.FormGroup textarea::placeholder{
-
-    color:#888888;
-
-}
-
 .FormGroup select{
+
+    padding:0 50px 0 18px;
 
     appearance:none;
 
@@ -2744,6 +3067,53 @@ body{
     -moz-appearance:none;
 
     cursor:pointer;
+
+}
+
+.FormGroup textarea{
+
+    min-height:167px;
+
+    padding:18px;
+
+    resize:none;
+
+}
+
+.FormGroup input::placeholder,
+.FormGroup textarea::placeholder{
+
+    color:#888888;
+
+}
+
+/* ==========================================
+            CUSTOM ARROW
+========================================== */
+
+.SelectArrow{
+
+    position:absolute;
+
+    top:50%;
+
+    right:18px;
+
+    transform:translateY(-50%);
+
+    color:#D7B44A;
+
+    font-size:11px;
+
+    pointer-events:none;
+
+    transition:.3s ease;
+
+}
+
+.SelectWrapper:focus-within .SelectArrow{
+
+    transform:translateY(-50%) rotate(180deg);
 
 }
 
@@ -2829,7 +3199,6 @@ body{
 
 }
 
-
 /* ==========================================
             TABLET (1024px)
 ========================================== */
@@ -2852,9 +3221,9 @@ body{
 
 .AuditLogo{
 
-    top:25px;
+    top:10px;
 
-    right:25px;
+    right:10px;
 
 }
 
@@ -2882,7 +3251,20 @@ body{
 
 .FormGrid{
 
-    gap:20px;
+    gap:18px;
+
+}
+
+.FormGroup input,
+.FormGroup select{
+
+    height:48px;
+
+}
+
+.FormGroup textarea{
+
+    min-height:150px;
 
 }
 
@@ -2917,23 +3299,27 @@ body{
 
 .AuditLogo{
 
-    position:static;
+    position:absolute;
 
-    text-align:center;
+    top:10px;
 
-    margin-bottom:20px;
+    right:10px;
+
+    margin:0;
 
 }
 
 .AuditLogo img{
 
-    width:80px;
+    width:70px;
 
 }
 
 .AuditHeader{
 
     margin-bottom:35px;
+
+    padding-top:30px;
 
 }
 
@@ -2980,9 +3366,23 @@ body{
 .FormGroup input,
 .FormGroup select{
 
-    height:52px;
+    height:50px;
 
     font-size:15px;
+
+}
+
+.FormGroup select{
+
+    padding-right:45px;
+
+}
+
+.SelectArrow{
+
+    right:16px;
+
+    font-size:10px;
 
 }
 
@@ -3000,7 +3400,7 @@ body{
 
     min-width:100%;
 
-    height:54px;
+    height:50px;
 
     font-size:14px;
 
@@ -3023,13 +3423,27 @@ body{
 
 .AuditContainer{
 
-    padding:28px 18px;
+    padding:24px 16px;
+
+}
+
+.AuditLogo{
+
+    top:8px;
+
+    right:8px;
 
 }
 
 .AuditLogo img{
 
-    width:70px;
+    width:55px;
+
+}
+
+.AuditHeader{
+
+    padding-top:25px;
 
 }
 
@@ -3068,11 +3482,25 @@ body{
 .FormGroup input,
 .FormGroup select{
 
-    height:48px;
+    height:46px;
 
-    padding:0 14px;
+    padding-left:14px;
 
     font-size:14px;
+
+}
+
+.FormGroup select{
+
+    padding-right:42px;
+
+}
+
+.SelectArrow{
+
+    right:14px;
+
+    font-size:9px;
 
 }
 
@@ -3088,7 +3516,7 @@ body{
 
 .SubmitButton{
 
-    height:50px;
+    height:48px;
 
     font-size:13px;
 
@@ -3118,77 +3546,44 @@ body{
 ========================================== */
 
 .FAQSection{
-
     position:relative;
-
     width:100%;
-
     overflow:hidden;
-
     background:#090B0E;
-
     padding:90px 64px 100px;
-
 }
 
 /* ==========================================
-            LEFT BACKGROUND
+            BACKGROUND IMAGES
 ========================================== */
 
 .FAQLeftBg{
-
     position:absolute;
-
     top:0;
-
     left:0;
-
     width:320px;
-
-    height:auto;
-
-    z-index:1;
-
     pointer-events:none;
-
+    z-index:1;
 }
-
-/* ==========================================
-           RIGHT BACKGROUND
-========================================== */
 
 .FAQRightBg{
-
     position:absolute;
-
     right:0;
-
     bottom:0;
-
     width:340px;
-
-    height:auto;
-
-    z-index:1;
-
     pointer-events:none;
-
+    z-index:1;
 }
 
 /* ==========================================
-              CONTAINER
+                CONTAINER
 ========================================== */
 
 .FAQContainer{
-
     max-width:1280px;
-
-    margin:0 auto;
-
+    margin:auto;
     position:relative;
-
     z-index:5;
-
 }
 
 /* ==========================================
@@ -3196,181 +3591,124 @@ body{
 ========================================== */
 
 .FAQHeader{
-
     max-width:760px;
-
     margin:0 auto 70px;
-
     text-align:center;
-
 }
-
-/* ==========================================
-                TAG
-========================================== */
 
 .FAQTag{
-
     display:inline-block;
-
     color:#D7B44A;
-
     font-size:18px;
-
     font-weight:600;
-
     letter-spacing:5px;
-
     text-transform:uppercase;
-
     margin-bottom:18px;
-
 }
-
-/* ==========================================
-              HEADING
-========================================== */
 
 .FAQHeading{
-
     color:#F5F5F5;
-
     font-size:64px;
-
     font-weight:700;
-
     line-height:74px;
-
     margin-bottom:20px;
-
 }
-
-/* ==========================================
-            DESCRIPTION
-========================================== */
 
 .FAQDescription{
-
     color:#B8B8B8;
-
     font-size:22px;
-
-    font-weight:400;
-
     line-height:38px;
-
-    max-width:760px;
-
-    margin:0 auto;
-
 }
 
-
-
 /* ==========================================
-                FAQ CARDS
+                FAQ LIST
 ========================================== */
 
 .FAQCards{
-
     display:flex;
-
     flex-direction:column;
-
-    gap:24px;
-
+    gap:22px;
 }
 
 /* ==========================================
-                SINGLE CARD
+                FAQ CARD
 ========================================== */
 
 .FAQCard{
-
-    width:100%;
-
     background:#101216;
-
     border:1px solid rgba(215,180,74,.12);
-
     border-radius:12px;
-
-    padding:28px 30px;
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:18px;
-
-    transition:all .35s ease;
-
+    overflow:hidden;
+    transition:.35s ease;
 }
 
 .FAQCard:hover{
-
     border-color:#D7B44A;
-
-    transform:translateY(-4px);
-
-    box-shadow:0 12px 30px rgba(0,0,0,.35);
-
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
 }
 
 /* ==========================================
-                ICON
+            QUESTION ROW
 ========================================== */
 
-.FAQIcon{
-
-    width:32px;
-
-    height:32px;
-
+.FAQQuestionRow{
     display:flex;
-
-    justify-content:center;
-
+    justify-content:space-between;
     align-items:center;
-
-    flex-shrink:0;
-
-    color:#D7B44A;
-
-    font-size:22px;
-
-    font-weight:700;
-
-    margin-top:2px;
-
+    padding:28px 30px;
+    cursor:pointer;
+    user-select:none;
 }
 
 /* ==========================================
-                CONTENT
-========================================== */
-
-.FAQContent{
-
-    flex:1;
-
-}
-
-/* ==========================================
-                QUESTION
+            QUESTION
 ========================================== */
 
 .FAQQuestion{
-
     color:#F4F4F4;
-
     font-size:32px;
-
     font-weight:500;
-
     line-height:42px;
+    margin:0;
+    flex:1;
+    padding-right:20px;
+}
 
-    margin-bottom:14px;
+/* ==========================================
+            ARROW
+========================================== */
 
+.FAQArrow{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#D7B44A;
+    font-size:18px;
+    font-weight:400;
+    transition:all .3s ease;
+    flex-shrink:0;
+}
+
+.FAQArrow.rotate{
+    transform:rotate(180deg);
+    color:#D7B44A;
+}
+
+/* ==========================================
+            ANSWER WRAPPER
+========================================== */
+
+.FAQAnswerWrapper{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .45s ease,padding .35s ease;
+    padding:0 30px;
+}
+
+.FAQAnswerWrapper.open{
+    max-height:250px;
+    padding:0 30px 28px;
 }
 
 /* ==========================================
@@ -3378,28 +3716,34 @@ body{
 ========================================== */
 
 .FAQAnswer{
-
     color:#BDBDBD;
-
     font-size:20px;
-
-    font-weight:400;
-
     line-height:34px;
-
-    max-width:900px;
-
 }
 
 /* ==========================================
-            REMOVE LAST MARGIN
+            ACTIVE CARD
 ========================================== */
 
-.FAQCard:last-child{
-
-    margin-bottom:0;
-
+.FAQCard.active{
+    border-color:#D7B44A;
+    box-shadow:0 10px 30px rgba(215,180,74,.12);
 }
+
+/* ==========================================
+            SMOOTH EFFECTS
+========================================== */
+
+.FAQQuestion,
+.FAQArrow,
+.FAQAnswer{
+    transition:.3s ease;
+}
+
+.FAQCard.active .FAQQuestion{
+    color:#D7B44A;
+}
+
 
 
 /* ==========================================
@@ -3409,90 +3753,75 @@ body{
 @media (max-width:1024px){
 
 .FAQSection{
-
     padding:70px 40px;
-
 }
 
 .FAQContainer{
-
     max-width:100%;
-
 }
 
 .FAQHeader{
-
     margin-bottom:50px;
-
 }
 
 .FAQHeading{
-
     font-size:48px;
-
     line-height:58px;
-
 }
 
 .FAQDescription{
-
     font-size:18px;
-
     line-height:30px;
+}
 
+.FAQTag{
+    font-size:16px;
+    letter-spacing:4px;
 }
 
 .FAQLeftBg{
-
     width:220px;
-
 }
 
 .FAQRightBg{
-
     width:220px;
-
 }
 
 .FAQCards{
-
-    gap:20px;
-
+    gap:18px;
 }
 
-.FAQCard{
-
-    padding:24px;
-
+.FAQQuestionRow{
+    padding:22px 24px;
 }
 
 .FAQQuestion{
-
     font-size:24px;
-
     line-height:34px;
+    padding-right:15px;
+}
 
+.FAQArrow{
+    width:38px;
+    height:38px;
+    font-size:16px;
+}
+
+.FAQAnswerWrapper{
+    padding:0 24px;
+}
+
+.FAQAnswerWrapper.open{
+    padding:0 24px 24px;
 }
 
 .FAQAnswer{
-
     font-size:17px;
-
     line-height:28px;
-
-}
-
-.FAQIcon{
-
-    width:28px;
-
-    height:28px;
-
-    font-size:20px;
-
 }
 
 }
+
 
 /* ==========================================
             MOBILE (768px)
@@ -3501,173 +3830,136 @@ body{
 @media (max-width:768px){
 
 .FAQSection{
-
     padding:50px 20px;
-
-}
-
-.FAQLeftBg{
-
-    width:140px;
-
-}
-
-.FAQRightBg{
-
-    width:140px;
-
 }
 
 .FAQHeader{
-
     margin-bottom:40px;
-
 }
 
 .FAQTag{
-
     font-size:14px;
-
     letter-spacing:3px;
-
 }
 
 .FAQHeading{
-
     font-size:34px;
-
     line-height:42px;
-
 }
 
 .FAQDescription{
-
     font-size:16px;
-
     line-height:28px;
+}
 
+.FAQLeftBg{
+    width:140px;
+}
+
+.FAQRightBg{
+    width:140px;
 }
 
 .FAQCards{
-
-    gap:16px;
-
+    gap:15px;
 }
 
-.FAQCard{
-
-    padding:20px;
-
-    gap:14px;
-
-}
-
-.FAQIcon{
-
-    width:24px;
-
-    height:24px;
-
-    font-size:18px;
-
+.FAQQuestionRow{
+    padding:18px;
 }
 
 .FAQQuestion{
-
     font-size:20px;
-
     line-height:30px;
+    padding-right:12px;
+}
 
+.FAQArrow{
+    width:34px;
+    height:34px;
+    font-size:14px;
+}
+
+.FAQAnswerWrapper{
+    padding:0 18px;
+}
+
+.FAQAnswerWrapper.open{
+    padding:0 18px 18px;
 }
 
 .FAQAnswer{
-
     font-size:15px;
-
     line-height:25px;
-
 }
 
 }
+
 
 /* ==========================================
-            SMALL MOBILE (480px)
+        SMALL MOBILE (480px)
 ========================================== */
 
 @media (max-width:480px){
 
 .FAQSection{
-
     padding:40px 16px;
-
-}
-
-.FAQLeftBg{
-
-    width:90px;
-
-}
-
-.FAQRightBg{
-
-    width:90px;
-
 }
 
 .FAQTag{
-
     font-size:12px;
-
     letter-spacing:2px;
-
 }
 
 .FAQHeading{
-
     font-size:28px;
-
     line-height:36px;
-
 }
 
 .FAQDescription{
-
     font-size:14px;
-
     line-height:24px;
-
 }
 
-.FAQCard{
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    padding:18px;
-
+.FAQLeftBg{
+    width:90px;
 }
 
-.FAQIcon{
+.FAQRightBg{
+    width:90px;
+}
 
-    margin-bottom:8px;
+.FAQCards{
+    gap:12px;
+}
 
+.FAQQuestionRow{
+    padding:16px;
 }
 
 .FAQQuestion{
+    font-size:17px;
+    line-height:26px;
+    padding-right:10px;
+}
 
-    font-size:18px;
+.FAQArrow{
+    width:30px;
+    height:30px;
+    font-size:13px;
+}
 
-    line-height:28px;
+.FAQAnswerWrapper{
+    padding:0 16px;
+}
 
+.FAQAnswerWrapper.open{
+    padding:0 16px 16px;
 }
 
 .FAQAnswer{
-
     font-size:14px;
-
     line-height:22px;
-
 }
 
 }
@@ -3731,8 +4023,11 @@ body{
 .CTALeft{
 
     flex:1;
-
     max-width:620px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 
 }
 
@@ -3744,11 +4039,11 @@ body{
 
     color:#F5F5F5;
 
-    font-size:72px;
+    font-size:48px;
 
     font-weight:700;
 
-    line-height:82px;
+    line-height:63px;
 
     margin-bottom:36px;
 
@@ -3762,13 +4057,69 @@ body{
 
     color:#C7C2B9;
 
-    font-size:24px;
+    font-size:21px;
 
     font-weight:400;
 
-    line-height:40px;
+    line-height:32px;
 
     margin-bottom:50px;
+
+}
+
+/* ==========================================
+                BUTTON
+========================================== */
+
+.CTAButton{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:395px;
+
+    height:72px;
+
+    margin-top:15px;
+
+    align-self:flex-start;
+
+    background:#D7B43F;
+
+    color:#1B1B1B;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.CTAButton:hover{
+
+    transform:translateY(-3px);
+
+    background:#E3BF48;
+
+    box-shadow:
+    0 0 25px rgba(215,180,63,.55),
+    0 0 45px rgba(215,180,63,.35);
+
+}
+
+.CTAButton:active{
+
+    transform:translateY(0);
 
 }
 
@@ -3794,7 +4145,7 @@ body{
 
 .RocketImage{
 
-    width:460px;
+    width:439px;
 
     max-width:100%;
 
@@ -3802,83 +4153,9 @@ body{
 
     object-fit:contain;
 
-}
-
-/* ==========================================
-                BUTTON
-========================================== */
-
-.CTAButton{
-
-    display:inline-flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    width:395px;
-
-    height:72px;
-
-    background:#D7B43F;
-
-    color:#1B1B1B;
-
-    border:none;
-
-    border-radius:10px;
-
-    font-family:"Manrope",sans-serif;
-
-    font-size:24px;
-
-    font-weight:600;
-
-    line-height:32px;
-
-    cursor:pointer;
-
-    transition:all .35s ease;
-
-    box-shadow:
-    0 0 18px rgba(215,180,63,.35),
-    0 0 35px rgba(215,180,63,.18);
-
-}
-
-/* ==========================================
-            BUTTON HOVER
-========================================== */
-
-.CTAButton:hover{
-
-    transform:translateY(-3px);
-
-    background:#E3BF48;
-
-    box-shadow:
-    0 0 25px rgba(215,180,63,.55),
-    0 0 45px rgba(215,180,63,.35);
-
-}
-
-/* ==========================================
-            BUTTON ACTIVE
-========================================== */
-
-.CTAButton:active{
-
-    transform:translateY(0);
-
-}
-
-/* ==========================================
-            IMAGE ANIMATION
-========================================== */
-
-.RocketImage{
-
     transition:transform .4s ease;
+    
+  
 
 }
 
@@ -3887,10 +4164,6 @@ body{
     transform:translateY(-8px);
 
 }
-
-/* ==========================================
-            REMOVE OUTLINE
-========================================== */
 
 button{
 
@@ -3905,47 +4178,31 @@ button{
 @media (max-width:1024px){
 
 .CTASection{
-
     padding:70px 40px;
-
 }
 
 .CTAContainer{
-
     gap:40px;
-
 }
 
 .CTATitle{
-
     font-size:54px;
-
     line-height:64px;
-
 }
 
 .CTADescription{
-
     font-size:20px;
-
     line-height:34px;
-
 }
 
 .RocketImage{
-
     width:360px;
-
 }
 
 .CTAButton{
-
     width:320px;
-
     height:64px;
-
     font-size:20px;
-
 }
 
 }
@@ -3957,70 +4214,65 @@ button{
 @media (max-width:768px){
 
 .CTASection{
-
     padding:50px 20px;
-
 }
 
+/* Stack everything */
 .CTAContainer{
-
+    display:flex;
     flex-direction:column;
-
+    align-items:center;
     text-align:center;
-
-    gap:40px;
-
+    gap:30px;
 }
 
+/* Make the left side behave like a column */
 .CTALeft{
-
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     max-width:100%;
-
 }
 
+/* Title */
 .CTATitle{
-
     font-size:40px;
-
     line-height:50px;
-
-    margin-bottom:24px;
-
+    margin-bottom:20px;
 }
 
+/* Description */
 .CTADescription{
-
     font-size:18px;
-
     line-height:30px;
-
-    margin-bottom:35px;
-
+    margin-bottom:0;
 }
 
-.CTADescription br,
-.CTATitle br{
-
+/* Hide desktop line breaks */
+.CTATitle br,
+.CTADescription br{
     display:none;
-
 }
 
-.CTAButton{
-
-    width:100%;
-
-    max-width:340px;
-
-    height:58px;
-
-    font-size:18px;
-
+/* Image comes after content */
+.CTARight{
+    order:2;
+    display:flex;
+    justify-content:center;
 }
 
 .RocketImage{
-
     width:280px;
+}
 
+/* Button goes after image */
+.CTAButton{
+    order:3;
+    width:100%;
+    max-width:340px;
+    height:58px;
+    margin-top:20px;
+    font-size:18px;
 }
 
 }
@@ -4032,41 +4284,27 @@ button{
 @media (max-width:480px){
 
 .CTASection{
-
     padding:40px 16px;
-
 }
 
 .CTATitle{
-
     font-size:30px;
-
     line-height:40px;
-
 }
 
 .CTADescription{
-
     font-size:16px;
-
     line-height:26px;
-
-}
-
-.CTAButton{
-
-    width:100%;
-
-    height:54px;
-
-    font-size:16px;
-
 }
 
 .RocketImage{
+    width:230px;
+}
 
-    width:220px;
-
+.CTAButton{
+    max-width:100%;
+    height:54px;
+    font-size:16px;
 }
 
 }
@@ -4622,3 +4860,5 @@ body{
 }
 
 }
+
+

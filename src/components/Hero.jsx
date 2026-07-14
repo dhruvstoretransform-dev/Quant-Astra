@@ -1,11 +1,10 @@
 import React from "react";
-import heroBg from "./Hero.png";
 
 function Hero() {
   return (
    <section
   className="hero-container"
-  style={{ backgroundImage: `url(${heroBg})` }}
+  style={{ backgroundImage: `url(/images/Hero.png)` }}
 >
   <div className="hero-content">
 

@@ -1,41 +1,35 @@
 import React from "react";
 
-import backgroundImage from "./industry.jpg";
-
-// Icons (using react-icons)
+// Icons
 import {
   FaGavel,
-  FaBuilding,
   FaUniversity,
   FaTruck,
-  FaUserTie,
   FaCity,
   FaHeadset,
+  FaBuilding,
   FaArrowRight,
 } from "react-icons/fa";
 
 function Industries() {
+
   const industries = [
+
     {
       icon: <FaGavel />,
       title: "Law Firms",
     },
-    {
-      icon: <FaBuilding />,
-      title: "Corp Sec",
-    },
+
     {
       icon: <FaUniversity />,
       title: "Accounting",
     },
+
     {
       icon: <FaTruck />,
       title: "Logistics",
     },
-    {
-      icon: <FaUserTie />,
-      title: "Prof Services",
-    },
+
     {
       icon: <FaCity />,
       title: (
@@ -46,24 +40,33 @@ function Industries() {
         </>
       ),
     },
+
     {
       icon: <FaHeadset />,
       title: "Insurance Firms",
     },
+
+    {
+      icon: <FaBuilding />,
+      title: "Other SME Sectors",
+    },
+
   ];
 
   return (
+
     <section
       className="IndustriesSection"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(/images/industry.jpg)`,
       }}
     >
+
       <div className="IndustriesOverlay"></div>
 
       <div className="IndustriesContainer">
 
-        {/* Top Section */}
+        {/* Header */}
 
         <div className="IndustriesHeader">
 
@@ -82,9 +85,12 @@ function Industries() {
           <div className="IndustriesRight">
 
             <p className="IndustriesDescription">
-              Specialized AI, automation, and growth solutions tailored
-              for industries where efficiency, compliance, accuracy,
-              and operational excellence are essential.
+
+              Specialized AI, automation, and growth solutions
+              tailored for industries where efficiency,
+              compliance, accuracy, and operational excellence
+              are essential.
+
             </p>
 
           </div>
@@ -101,18 +107,24 @@ function Industries() {
               className="IndustriesCard"
               key={index}
             >
+
               <div className="IndustriesIcon">
+
                 {item.icon}
+
               </div>
 
               <h3 className="IndustriesTitle">
+
                 {item.title}
+
               </h3>
+
             </div>
 
           ))}
 
-          {/* Last CTA Card */}
+                    {/* Request Strategy Card */}
 
           <div className="IndustriesCTA">
 
@@ -127,8 +139,11 @@ function Industries() {
         </div>
 
       </div>
+
     </section>
+
   );
+
 }
 
 export default Industries;
