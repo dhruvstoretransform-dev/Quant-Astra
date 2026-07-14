@@ -50,7 +50,7 @@ const AuditForm = () => {
                   <option>Education</option>
                 </select>
               </div>
-
+                
               {/* Phone */}
               <div className="FormGroup">
                 <label>PHONE NUMBER</label>

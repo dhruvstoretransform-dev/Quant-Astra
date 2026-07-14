@@ -3,79 +3,282 @@
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background-color: #000;
-}
-
-.navbar-nav-links {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    align-items: center;
-}
-
-.navbar-nav-links li {
-    font-family: "Manrope", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.7px;
-    color: #FFFFFF;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav-links li:hover,
-.navbar-nav-links li.navbar-active {
-    color: #D6B25E;
-}
-
-.navbar-consult-btn {
-    font-family: "Manrope", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.7px;
-    background: #D6B25E;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 14px 24px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.navbar-consult-btn:hover {
-    background: #c7a44d;
-}
-
-.navbar-logo img {
-    width: 130px;
-    height: auto;
-}
-
-/* Hide toggle on desktop */
-
-.navbar-toggle{
-    display:none;
-    font-size:32px;
-    color:white;
-    cursor:pointer;
-}
-
-/* Mobile */
-
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 
 /* ==========================================
-            TABLET
+            RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Manrope",sans-serif;
+    background:#000;
+}
+
+/* ==========================================
+            NAVBAR
+========================================== */
+
+.navbar-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 60px;
+
+    background:#000;
+
+    position:relative;
+
+    z-index:999;
+
+}
+
+/* ==========================================
+            LOGO
+========================================== */
+
+.navbar-logo img{
+
+    width:130px;
+
+    height:auto;
+
+    display:block;
+
+}
+
+/* ==========================================
+        NAVIGATION
+========================================== */
+
+.navbar-nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    list-style:none;
+
+    gap:40px;
+
+}
+
+/* ==========================================
+            NAV ITEMS
+========================================== */
+
+.navbar-nav-links li{
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:.7px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.navbar-nav-links li:hover{
+
+    color:#D6B25E;
+
+}
+
+.navbar-active{
+
+    color:#D6B25E !important;
+
+}
+
+/* ==========================================
+        DESKTOP BUTTON
+========================================== */
+
+.desktop-btn{
+
+    display:flex;
+
+}
+
+.mobile-btn{
+
+    display:none;
+
+}
+
+/* ==========================================
+        CONSULT BUTTON
+========================================== */
+
+.navbar-consult-btn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:14px 24px;
+
+    background:#D6B25E;
+
+    color:#000;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.navbar-consult-btn:hover{
+
+    background:#caa34b;
+
+}
+
+/* ==========================================
+        HAMBURGER
+========================================== */
+
+.navbar-toggle{
+
+    display:none;
+
+    color:#fff;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+            DROPDOWN
+========================================== */
+
+.navbar-dropdown{
+
+    position:relative;
+
+}
+
+.dropdown-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+}
+
+.dropdown-arrow{
+
+    font-size:10px;
+
+    transition:.3s;
+
+}
+
+.dropdown-arrow.rotate{
+
+    transform:rotate(180deg);
+
+}
+
+/* ==========================================
+        DROPDOWN MENU
+========================================== */
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:120%;
+
+    left:0;
+
+    width:210px;
+
+    background:#111;
+
+    border:1px solid rgba(214,178,94,.25);
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    display:none;
+
+    list-style:none;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.dropdown-menu.show{
+
+    display:block;
+
+}
+
+.dropdown-menu li{
+
+    padding:14px 18px;
+
+    color:#fff;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.dropdown-menu li:hover{
+
+    background:#D6B25E;
+
+    color:#000;
+
+}
+
+/* ==========================================
+            TABLET (992px)
 ========================================== */
 
 @media (max-width:992px){
+
+/* ==========================
+        NAVBAR
+========================== */
 
 .navbar-container{
 
@@ -83,27 +286,9 @@
 
 }
 
-.navbar-nav-links{
-
-    gap:24px;
-
-}
-
-}
-
-/* ==========================================
-            MOBILE
-========================================== */
-
-@media (max-width:768px){
-
-.navbar-container{
-
-    position:relative;
-
-    padding:18px 20px;
-
-}
+/* ==========================
+        LOGO
+========================== */
 
 .navbar-logo img{
 
@@ -111,23 +296,139 @@
 
 }
 
-/* Show hamburger */
+/* ==========================
+        NAV LINKS
+========================== */
+
+.navbar-nav-links{
+
+    gap:24px;
+
+}
+
+/* ==========================
+        NAV ITEMS
+========================== */
+
+.navbar-nav-links li{
+
+    font-size:13px;
+
+}
+
+/* ==========================
+        BUTTON
+========================== */
+
+.navbar-consult-btn{
+
+    padding:12px 20px;
+
+    font-size:13px;
+
+}
+
+/* ==========================
+        DROPDOWN
+========================== */
+
+.dropdown-menu{
+
+    width:190px;
+
+}
+
+.dropdown-menu li{
+
+    padding:12px 16px;
+
+    font-size:13px;
+
+}
+
+/* Keep Desktop Button */
+
+.desktop-btn{
+
+    display:flex;
+
+}
+
+.mobile-btn{
+
+    display:none;
+
+}
+
+/* Hide Hamburger */
+
+.navbar-toggle{
+
+    display:none;
+
+}
+
+}
+
+/* ==========================================
+            MOBILE (768px)
+========================================== */
+
+@media (max-width:768px){
+
+/* ==========================
+        NAVBAR
+========================== */
+
+.navbar-container{
+
+    padding:18px 20px;
+
+    position:relative;
+
+}
+
+/* ==========================
+        LOGO
+========================== */
+
+.navbar-logo img{
+
+    width:120px;
+
+}
+
+/* ==========================
+        HAMBURGER
+========================== */
 
 .navbar-toggle{
 
     display:block;
 
-    font-size:32px;
+    font-size:30px;
 
     color:#ffffff;
 
     cursor:pointer;
 
-    z-index:1001;
+    z-index:1002;
 
 }
 
-/* Hide menu by default */
+/* ==========================
+        DESKTOP BUTTON
+========================== */
+
+.desktop-btn{
+
+    display:none;
+
+}
+
+/* ==========================
+        MOBILE MENU
+========================== */
 
 .navbar-nav-links{
 
@@ -135,11 +436,13 @@
 
 }
 
-/* Show menu when active */
-
 .navbar-nav-links.active{
 
     display:flex;
+
+    flex-direction:column;
+
+    align-items:stretch;
 
     position:absolute;
 
@@ -151,71 +454,133 @@
 
     background:#000;
 
-    flex-direction:column;
+    padding:20px;
 
-    align-items:center;
+    gap:0;
 
-    gap:20px;
+    border-top:1px solid rgba(255,255,255,.08);
 
-    padding:25px 0;
-
-    border-top:1px solid rgba(255,255,255,.1);
-
-    z-index:1000;
+    z-index:1001;
 
 }
 
-.navbar-dropdown {
-    width: 100%;
-    text-align: center;
-}
+/* ==========================
+        MENU ITEMS
+========================== */
 
-.navbar-dropdown span {
-    justify-content: center;
-}
-
-.dropdown-menu {
-    position: static;
-    width: 100%;
-    border: none;
-    background: transparent;
-    box-shadow: none;
-    margin-top: 10px;
-}
-
-.dropdown-menu li {
-    padding: 10px 0;
-}
-
-/* Menu items */
-
-.navbar-nav-links li{
+.navbar-nav-links > li{
 
     width:100%;
 
-    text-align:center;
+    text-align:left;
 
-    font-size:16px;
+    padding:16px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
 
 }
 
-/* Button */
+/* ==========================
+        SERVICES
+========================== */
 
-.navbar-consult-btn{
+.navbar-dropdown{
 
-    width:auto;
+    width:100%;
 
-    min-width:170px;
+}
 
-    height:44px;
+.dropdown-title{
 
-    padding:10px 18px;
+    width:100%;
 
-    font-size:13px;
+    display:flex;
 
-    line-height:20px;
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* ==========================
+        DROPDOWN
+========================== */
+
+.dropdown-menu{
+
+    position:static;
+
+    display:none;
+
+    width:100%;
+
+    background:#111;
+
+    border:none;
 
     border-radius:8px;
+
+    margin-top:12px;
+
+    box-shadow:none;
+
+}
+
+.dropdown-menu.show{
+
+    display:block;
+
+}
+
+.dropdown-menu li{
+
+    padding:14px 18px;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.dropdown-menu li:last-child{
+
+    border-bottom:none;
+
+}
+
+/* ==========================
+        ARROW
+========================== */
+
+.dropdown-arrow{
+
+    transition:.3s;
+
+}
+
+.dropdown-arrow.rotate{
+
+    transform:rotate(180deg);
+
+}
+
+/* ==========================
+        MOBILE BUTTON
+========================== */
+
+.mobile-btn{
+
+    display:block;
+
+    border:none !important;
+
+    padding-top:24px !important;
+
+    padding-bottom:8px !important;
+
+}
+
+.mobile-btn .navbar-consult-btn{
+
+    width:100%;
 
     display:flex;
 
@@ -223,58 +588,13 @@
 
     align-items:center;
 
-    margin:0 auto;
+    height:48px;
+
+    font-size:14px;
 
 }
 
 }
-
-
-/* ===========================
-      DROPDOWN
-=========================== */
-
-.navbar-dropdown {
-    position: relative;
-    cursor: pointer;
-}
-
-.navbar-dropdown span {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.dropdown-arrow {
-    font-size: 10px;
-    transition: 0.3s;
-}
-
-.dropdown-menu {
-     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 200px;
-    background: #111;
-    border-radius: 8px;
-    list-style: none;
-    padding: 10px 0;
-    z-index: 999;
-}
-
-.dropdown-menu li {
-    padding: 12px 18px;
-    color: #fff;
-    transition: .3s;
-    white-space: nowrap;
-}
-
-.dropdown-menu li:hover {
-    background: #D6B25E;
-    color: #000;
-}
-
 
 
 
@@ -382,7 +702,7 @@ body{
 
     margin-top:30px;
 
-    font-size:24px;
+    font-size:21px;
 
     line-height:38px;
 
@@ -606,9 +926,13 @@ body{
 
 /* About section started from here  */
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 
-.aboutjsx-about{
+/* ==========================================
+                WRAPPER
+========================================== */
+
+.wrapper{
     width:100%;
     min-height:100vh;
     background:#111217;
@@ -617,243 +941,272 @@ body{
     justify-content:center;
     align-items:center;
 
-   
-
     padding:100px 70px;
 
     font-family:"Manrope",sans-serif;
 }
 
-.aboutjsx-about-left{
+/* ==========================================
+                LEFT IMAGE
+========================================== */
 
+.wrapper-left{
     flex:1;
-
 }
 
-.aboutjsx-about-left img{
-
-     width:100%;
+.wrapper-left img{
+    width:100%;
     max-width:750px;
     height:auto;
     display:block;
     border-radius:18px;
 }
 
-.aboutjsx-about-right{
+/* ==========================================
+                RIGHT CONTENT
+========================================== */
 
+.wrapper-right{
     flex:1;
     width:100%;
     max-width:600px;
 }
 
-.aboutjsx-section-tag{
+/* ==========================================
+                    TAG
+========================================== */
 
+.wrapper-tag{
     color:#D7B44A;
+    font-size:16px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+/* ==========================================
+                    TITLE
+========================================== */
+
+.wrapper-title{
+    margin-top:20px;
+    color:#ffffff;
+    font-size:52px;
+    line-height:55px;
+    font-weight:700;
+}
+
+.wrapper-title span{
+    color:#D7B44A;
+}
+
+/* ==========================================
+                SUBTITLE
+========================================== */
+
+.wrapper-subtitle{
+    margin-top:15px;
+    color:#D7B44A;
+    font-size:30px;
+    font-weight:500;
+}
+
+/* ==========================================
+                DESCRIPTION
+========================================== */
+
+.wrapper-description{
+    margin-top:21px;
+    color:#D6D6D6;
+    font-size:24px;
+}
+
+/* ==========================================
+                STATS
+========================================== */
+
+.wrapper-stats{
+    margin-top:45px;
+    display:flex;
+    gap:120px;
+}
+
+/* ==========================================
+                SINGLE STAT
+========================================== */
+
+.wrapper-stat h3{
+    color:#D7B44A;
+    font-size:54px;
+    font-weight:700;
+
+    transition:color .3s ease;
+
+    font-variant-numeric:tabular-nums;
+}
+
+.wrapper-stat p{
+    margin-top:10px;
+    color:#D0D0D0;
+    letter-spacing:2px;
+    font-size:18px;
+}
+
+/* ==========================================
+            TABLET & MOBILE (768px)
+========================================== */
+
+@media (max-width:768px){
+
+.wrapper{
+
+    flex-direction:column;
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    gap:40px;
+
+}
+
+.wrapper-left{
+
+    width:100%;
+
+}
+
+.wrapper-left img{
+
+    width:100%;
+
+    max-width:450px;
+
+    margin:auto;
+
+}
+
+.wrapper-right{
+
+    width:100%;
+
+    max-width:100%;
+
+}
+
+.wrapper-tag{
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+}
+
+.wrapper-title{
+
+    font-size:34px;
+
+    line-height:44px;
+
+}
+
+.wrapper-subtitle{
+
+    font-size:22px;
+
+}
+
+.wrapper-description{
+
+    font-size:18px;
+
+    line-height:30px;
+
+}
+
+.wrapper-stats{
+
+    justify-content:center;
+
+    gap:40px;
+
+    margin-top:40px;
+
+}
+
+.wrapper-stat h3{
+
+    font-size:42px;
+
+}
+
+.wrapper-stat p{
 
     font-size:16px;
 
-    letter-spacing:4px;
-
-    text-transform:uppercase;
+    letter-spacing:1px;
 
 }
 
-.aboutjsx-about-title{
-
-    margin-top:20px;
-
-    color:#fff;
-
-    font-size:52px;
-
-    line-height:55px;
-
-    font-weight:700;
 }
 
-.aboutjsx-about-title span{
+/* ==========================================
+            SMALL MOBILE (480px)
+========================================== */
 
-    color:#D7B44A;
+@media (max-width:480px){
+
+.wrapper{
+
+    padding:40px 15px;
 
 }
 
-.aboutjsx-about-subtitle{
+.wrapper-title{
 
-    margin-top:15px;
+    font-size:28px;
 
-    color:#D7B44A;
-
-    font-size:30px;
-
-    font-weight:500;
+    line-height:38px;
 
 }
 
-.aboutjsx-about-description{
-
-    margin-top:21px;
-
-    color:#D6D6D6;
-
-    font-size:24px;
-
-    /* line-height:42px; */
-
-}
-
-.aboutjsx-stats{
-
-    margin-top:45px;
-
-    display:flex;
-
-    gap:120px;
-
-}
-
-.aboutjsx-stat h3{
-
-    color:#D7B44A;
-
-    font-size:54px;
-
-    font-weight:700;
-
-}
-
-.aboutjsx-stat p{
-
-    margin-top:10px;
-
-    color:#D0D0D0;
-
-    letter-spacing:2px;
+.wrapper-subtitle{
 
     font-size:18px;
 
 }
 
+.wrapper-description{
 
-@media (max-width:768px){
+    font-size:16px;
 
-    .aboutjsx-about{
-
-        flex-direction:column;
-
-        padding:60px 20px;
-
-        text-align:center;
-
-        gap:40px;
-
-    }
-
-    .aboutjsx-about-left{
-
-        width:100%;
-
-    }
-
-    .aboutjsx-about-left img{
-
-        width:100%;
-        max-width:450px;
-        margin:auto;
-
-    }
-
-    .aboutjsx-about-right{
-
-        width:100%;
-        max-width:100%;
-
-    }
-
-    .aboutjsx-about-title{
-
-        font-size:34px;
-        line-height:44px;
-
-    }
-
-    .aboutjsx-about-subtitle{
-
-        font-size:22px;
-
-    }
-
-    .aboutjsx-about-description{
-
-        font-size:18px;
-        line-height:30px;
-
-    }
-
-    .aboutjsx-stats{
-
-        justify-content:center;
-
-        gap:40px;
-
-        margin-top:40px;
-
-    }
+    line-height:26px;
 
 }
 
-@media (max-width:480px){
+.wrapper-stats{
 
-    .aboutjsx-about{
+    flex-direction:column;
 
-        padding:40px 15px;
+    align-items:center;
 
-    }
-
-    .aboutjsx-about-title{
-
-        font-size:28px;
-
-        line-height:38px;
-
-    }
-
-    .aboutjsx-about-subtitle{
-
-        font-size:18px;
-
-    }
-
-    .aboutjsx-about-description{
-
-        font-size:16px;
-
-        line-height:26px;
-
-    }
-
-    .aboutjsx-stats{
-
-        flex-direction:column;
-
-        gap:30px;
-
-    }
+    gap:30px;
 
 }
 
-.aboutjsx-stat h3 {
-    color: #D7B44A;
-    font-size: 54px;
-    font-weight: 700;
-    transition: all 0.2s ease;
+.wrapper-stat h3{
+
+    font-size:36px;
+
 }
 
-.aboutjsx-stat h3 {
-    color: #D7B44A;
-    font-size: 54px;
-    font-weight: 700;
-    transition: color 0.3s ease;
-    font-variant-numeric: tabular-nums;
+.wrapper-stat p{
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+}
+
 }
 
 
@@ -892,7 +1245,7 @@ body{
 .TestimonialsTag{
     color:#D7B44A;
     letter-spacing:5px;
-    font-size:18px;
+    font-size:21px;
     font-weight:600;
 }
 
@@ -913,7 +1266,7 @@ body{
 
 .TestimonialsCards{
     display:flex;
-    gap:30px;
+    gap:15px;
 }
 
 .TestimonialsCard{
@@ -962,7 +1315,7 @@ body{
 .TestimonialsReview{
     color:#E4E4E4;
     font-size:20px;
-    line-height:38px;
+    line-height:30px;
 }
 
 .TestimonialsStars{
@@ -985,7 +1338,7 @@ body{
 
     .TestimonialsDescription{
         font-size:18px;
-        line-height:30px;
+        line-height:39px;
     }
 
     .TestimonialsSection{
@@ -1089,7 +1442,7 @@ body{
 
     color:#D7B44A;
 
-    font-size:18px;
+    font-size:21px;
 
     font-weight:600;
 
@@ -1586,7 +1939,7 @@ body{
 
 .IndustriesCard{
 
-    background:rgba(18,19,22,.95);
+     background:rgba(18,19,22,.95);
 
     border:1px solid rgba(215,180,74,.18);
 
@@ -1594,7 +1947,7 @@ body{
 
     padding:32px;
 
-    min-height:130px;
+    height:220px;          /* Fixed height */
 
     display:flex;
 
@@ -1602,11 +1955,12 @@ body{
 
     justify-content:flex-start;
 
-    gap:16px;
+    gap:20px;
 
     transition:all .35s ease;
 
     cursor:pointer;
+
 
 }
 
@@ -1654,13 +2008,19 @@ body{
 
 .IndustriesTitle{
 
-    color:#ffffff;
+     color:#ffffff;
 
     font-size:24px;
 
     font-weight:600;
 
     line-height:32px;
+
+    min-height:64px;      /* Same title height for every card */
+
+    display:flex;
+
+    align-items:flex-start;
 
 }
 
@@ -1670,11 +2030,11 @@ body{
 
 .IndustriesCTA{
 
+    height:220px;
+
     background:#D7B44A;
 
     border-radius:8px;
-
-    min-height:130px;
 
     padding:32px;
 
@@ -1816,17 +2176,21 @@ body{
 
 .IndustriesCard{
 
-    padding:28px;
+  padding:24px;
 
-    min-height:140px;
+    min-height:170px;
+
+    height:auto;
 
 }
 
 .IndustriesTitle{
 
-    font-size:22px;
+   font-size:20px;
 
-    line-height:30px;
+    line-height:28px;
+
+    min-height:auto;
 
 }
 
@@ -1842,9 +2206,11 @@ body{
 
 .IndustriesCTA{
 
-    min-height:140px;
+    padding:24px;
 
-    padding:28px;
+    min-height:170px;
+
+    height:auto;
 
 }
 
@@ -1904,9 +2270,9 @@ body{
 
 .IndustriesGrid{
 
-    grid-template-columns:1fr;
+    grid-template-columns:repeat(2,1fr);
 
-    gap:18px;
+    gap:16px;
 
 }
 
@@ -1998,7 +2364,8 @@ body{
 
 .IndustriesGrid{
 
-    gap:16px;
+       grid-template-columns:1fr;
+
 
 }
 
@@ -2657,8 +3024,11 @@ body{
 
     position:absolute;
 
-    top:35px;
-    right:35px;
+    top:0;
+
+    right:0;
+
+    z-index:10;
 
 }
 
@@ -2708,11 +3078,11 @@ body{
 
     color:#ffffff;
 
-    font-size:58px;
+    font-size:43px;
 
     font-weight:700;
 
-    line-height:1.15;
+    line-height:1;
 
     margin-bottom:16px;
 
@@ -2724,7 +3094,7 @@ body{
 
     font-size:20px;
 
-    line-height:32px;
+    line-height:18px;
 
     max-width:620px;
 
@@ -2810,7 +3180,7 @@ body{
 .FormGroup input,
 .FormGroup select{
 
-    height:56px;
+    height:41px;
 
     padding:0 18px;
 
@@ -2818,7 +3188,7 @@ body{
 
 .FormGroup textarea{
 
-    min-height:160px;
+    min-height:167px;
 
     padding:18px;
 
@@ -2982,7 +3352,7 @@ body{
 
 .FormGrid{
 
-    gap:20px;
+    gap:18px;
 
 }
 
@@ -3100,7 +3470,7 @@ body{
 
     min-width:100%;
 
-    height:54px;
+    height:48px;
 
     font-size:14px;
 

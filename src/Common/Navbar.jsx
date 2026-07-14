@@ -1,52 +1,134 @@
 import { useState } from "react";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
 
-  return (
-    <nav className="navbar-container">
-      {/* Logo */}
-      <div className="navbar-logo">
-        <img src="/images/logo.png" alt="Logo" />
-      </div>
+    const [menuOpen, setMenuOpen] = useState(false);
 
-      {/* Mobile Toggle */}
-      <div
-        className="navbar-toggle"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        ☰
-      </div>
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
-      {/* Navigation Links */}
-      <ul className={menuOpen ? "navbar-nav-links active" : "navbar-nav-links"}>
-        <li className="navbar-active">Home</li>
+    return (
 
-        <li>About Us</li>
+        <nav className="navbar-container">
 
-        {/* Services Dropdown */}
-        <li className="navbar-dropdown">
-          <span className="dropdown-title">
-            Services <span className="dropdown-arrow">▼</span>
-          </span>
+            {/* Logo */}
 
-          <ul className="dropdown-menu">
-            <li>AI Automation</li>
-            <li>AI Agents</li>
-          </ul>
-        </li>
+            <div className="navbar-logo">
 
-        <li>Industries</li>
+                <img
+                    src="/images/logo.png"
+                    alt="Logo"
+                />
 
-        <li>Contact Us</li>
-      </ul>
+            </div>
 
-      {/* Consultation Button */}
-      <button className="navbar-consult-btn">
-        Book a Consultation
-      </button>
-    </nav>
-  );
+            {/* Mobile Toggle */}
+
+            <div
+                className="navbar-toggle"
+                onClick={() => setMenuOpen(!menuOpen)}
+            >
+                ☰
+            </div>
+
+            {/* Navigation */}
+
+            <ul
+                className={
+                    menuOpen
+                        ? "navbar-nav-links active"
+                        : "navbar-nav-links"
+                }
+            >
+
+                <li className="navbar-active">
+                    Home
+                </li>
+
+                <li>
+                    About Us
+                </li>
+
+                {/* Services */}
+
+                <li
+                    className="navbar-dropdown"
+
+                    onMouseEnter={() => setDropdownOpen(true)}
+
+                    onMouseLeave={() => setDropdownOpen(false)}
+                >
+
+                    <div
+                        className="dropdown-title"
+
+                        onClick={() =>
+                            setDropdownOpen(!dropdownOpen)
+                        }
+                    >
+
+                        Services
+
+                        <span
+                            className={
+                                dropdownOpen
+                                    ? "dropdown-arrow rotate"
+                                    : "dropdown-arrow"
+                            }
+                        >
+                            ▼
+                        </span>
+
+                    </div>
+
+                    <ul
+                        className={
+                            dropdownOpen
+                                ? "dropdown-menu show"
+                                : "dropdown-menu"
+                        }
+                    >
+
+                        <li>
+                            AI Automation
+                        </li>
+
+                        <li>
+                            AI Agents
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    Industries
+                </li>
+
+                <li>
+                    Contact Us
+                </li>
+
+                {/* Mobile Button */}
+
+                <li className="mobile-btn">
+
+                    <button className="navbar-consult-btn">
+
+                        Book a Consultation
+
+                    </button>
+
+                </li>
+                            </ul>
+
+            {/* Desktop Button */}
+            <button className="navbar-consult-btn desktop-btn">
+                Book a Consultation
+            </button>
+
+        </nav>
+
+    );
 }
 
 export default Navbar;
