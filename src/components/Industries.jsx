@@ -48,7 +48,7 @@ function Industries() {
 
     {
       icon: <FaBuilding />,
-      title: "Other Sectors",
+      title: "Other SME Sectors",
     },
 
   ];

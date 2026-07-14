@@ -990,7 +990,7 @@ body{
 .wrapper-title{
     margin-top:20px;
     color:#ffffff;
-    font-size:52px;
+    font-size:33px;
     line-height:55px;
     font-weight:700;
 }
@@ -2010,7 +2010,7 @@ body{
 
      color:#ffffff;
 
-    font-size:24px;
+    font-size:21px;
 
     font-weight:600;
 
@@ -2431,10 +2431,20 @@ body{
     box-sizing:border-box;
 }
 
+body{
+    background:#0B0D10;
+    font-family:"Manrope",sans-serif;
+}
+
+/* ==========================================
+                SECTION
+========================================== */
+
 .CapabilitiesSection{
 
     width:100%;
-    min-height:1287px;
+
+    min-height:100vh;
 
     padding:80px 64px;
 
@@ -2442,13 +2452,11 @@ body{
 
     overflow:hidden;
 
-    font-family:"Manrope",sans-serif;
-
 }
 
-/* ===========================
-        HEADER
-=========================== */
+/* ==========================================
+                HEADER
+========================================== */
 
 .CapabilitiesHeader{
 
@@ -2534,9 +2542,9 @@ body{
 
 }
 
-/* ===========================
-      BIG CIRCLE
-=========================== */
+/* ==========================================
+            CIRCLE WRAPPER
+========================================== */
 
 .CapabilitiesCircleWrapper{
 
@@ -2546,80 +2554,19 @@ body{
 
     align-items:center;
 
+    width:100%;
+
 }
 
-.CapabilitiesCircle{
+/* ==========================================
+            CIRCLE IMAGE
+========================================== */
 
-    position:relative;
+.CapabilitiesCircle{
 
     width:950px;
 
     height:950px;
-
-    border-radius:50%;
-
-    background:#000;
-
-    box-shadow:
-    0 0 90px rgba(215,180,74,.18),
-    0 0 180px rgba(215,180,74,.10);
-
-}
-
-/* ===========================
-         RINGS
-=========================== */
-
-.Ring{
-
-    position:absolute;
-
-    border:3px dashed #D7B44A;
-
-    border-radius:50%;
-
-    left:50%;
-    top:50%;
-
-    transform:translate(-50%,-50%);
-}
-
-.Ring1{
-
-    width:420px;
-    height:420px;
-
-}
-
-.Ring2{
-
-    width:300px;
-    height:300px;
-
-}
-
-.Ring3{
-
-    width:180px;
-    height:180px;
-
-}
-
-/* ===========================
-       CENTER LOGO
-=========================== */
-
-.CenterLogo{
-
-    position:absolute;
-
-    left:50%;
-    top:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:180px;
-    height:180px;
 
     display:flex;
 
@@ -2629,17 +2576,36 @@ body{
 
 }
 
-.CenterLogo img{
+.CapabilitiesCircleImage{
 
-    width:700px;
+     width:100%;
+
+    height:100%;
 
     object-fit:contain;
 
+    display:block;
+
+    transition:
+        transform .45s ease,
+        filter .45s ease,
+        drop-shadow .45s ease;
+
+    cursor:pointer;
+
 }
 
+.CapabilitiesCircleImage:hover{
+
+    transform:scale(1.03);
+
+    filter:drop-shadow(0 0 18px rgba(215,180,74,.35))
+           drop-shadow(0 0 35px rgba(215,180,74,.20));
+
+}
 
 /* ==========================================
-            TABLET (1024px)
+            TABLET
 ========================================== */
 
 @media (max-width:1024px){
@@ -2654,11 +2620,19 @@ body{
 
     flex-direction:column;
 
+    align-items:center;
+
     text-align:center;
 
     gap:30px;
 
-    margin-bottom:70px;
+    margin-bottom:60px;
+
+}
+
+.CapabilitiesTag{
+
+    justify-content:center;
 
 }
 
@@ -2667,8 +2641,6 @@ body{
     width:100%;
 
     max-width:700px;
-
-    margin:auto;
 
 }
 
@@ -2688,12 +2660,6 @@ body{
 
 }
 
-.CapabilitiesTag{
-
-    justify-content:center;
-
-}
-
 .CapabilitiesCircle{
 
     width:700px;
@@ -2702,112 +2668,10 @@ body{
 
 }
 
-.Ring1{
-
-    width:320px;
-
-    height:320px;
-
 }
-
-.Ring2{
-
-    width:230px;
-
-    height:230px;
-
-}
-
-.Ring3{
-
-    width:140px;
-
-    height:140px;
-
-}
-
-.CenterLogo{
-
-    width:140px;
-
-    height:140px;
-
-}
-
-.CenterLogo img{
-
-    width:120px;
-
-}
-
-.CapabilityBox{
-
-    font-size:16px;
-
-    padding:10px 16px;
-
-}
-
-.CapabilityIcon{
-
-    font-size:22px;
-
-}
-
-/* Move all cards closer */
-
-.TopCard{
-
-    top:25px;
-
-}
-
-.LeftCard{
-
-    left:20px;
-
-    top:170px;
-
-}
-
-.RightCard{
-
-    right:20px;
-
-    top:170px;
-
-}
-
-.BottomLeftCard{
-
-    left:30px;
-
-    bottom:150px;
-
-}
-
-.BottomRightCard{
-
-    right:30px;
-
-    bottom:150px;
-
-}
-
-.BottomCard{
-
-    bottom:20px;
-
-}
-
-}
-
 
 /* ==========================================
-            MOBILE (768px)
-========================================== */
-/* ==========================================
-            MOBILE (768px)
+            MOBILE
 ========================================== */
 
 @media (max-width:768px){
@@ -2818,23 +2682,53 @@ body{
 
 }
 
-.CapabilitiesCircleWrapper{
+.CapabilitiesHeader{
 
-    display:flex;
-
-    justify-content:center;
+    flex-direction:column;
 
     align-items:center;
 
+    text-align:center;
+
+    gap:24px;
+
+    margin-bottom:40px;
+
+}
+
+.CapabilitiesTag{
+
+    justify-content:center;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+}
+
+.CapabilitiesHeading{
+
+    font-size:34px;
+
+    line-height:44px;
+
+}
+
+.CapabilitiesRight{
+
     width:100%;
 
-    overflow:hidden;
+}
+
+.CapabilitiesRight p{
+
+    font-size:16px;
+
+    line-height:28px;
 
 }
 
 .CapabilitiesCircle{
-
-    position:relative;
 
     width:90vw;
 
@@ -2844,97 +2738,59 @@ body{
 
     max-height:520px;
 
-    margin:0 auto;
-
-    border-radius:50%;
-
-    background:#000;
-
-    box-shadow:
-        0 0 40px rgba(215,180,74,.18),
-        0 0 80px rgba(215,180,74,.10);
-
 }
 
-/* Rings */
-
-.Ring1{
-
-    width:70%;
-
-    height:70%;
-
-}
-
-.Ring2{
-
-    width:50%;
-
-    height:50%;
-
-}
-
-.Ring3{
-
-    width:30%;
-
-    height:30%;
-
-}
-
-/* Center Logo */
-
-.CenterLogo{
-
-    position:absolute;
-
-    left:50%;
-
-    top:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:110px;
-
-    height:110px;
-
-}
-
-.CenterLogo img{
+.CapabilitiesCircleImage{
 
     width:100%;
 
     height:auto;
 
 }
+
 }
 
-
 /* ==========================================
-            SMALL MOBILE (480px)
+            SMALL MOBILE
 ========================================== */
 
 @media (max-width:480px){
+
+.CapabilitiesSection{
+
+    padding:40px 16px;
+
+}
+
+.CapabilitiesHeading{
+
+    font-size:28px;
+
+    line-height:38px;
+
+}
+
+.CapabilitiesTag{
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+}
+
+.CapabilitiesRight p{
+
+    font-size:15px;
+
+    line-height:26px;
+
+}
 
 .CapabilitiesCircle{
 
     width:95vw;
 
     height:95vw;
-
-}
-
-.CenterLogo{
-
-    width:90px;
-
-    height:90px;
-
-}
-
-.CenterLogo img{
-
-    width:100%;
 
 }
 
@@ -3011,8 +2867,7 @@ body{
 
     backdrop-filter:blur(10px);
 
-    box-shadow:
-    0 20px 60px rgba(0,0,0,.45);
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
 
 }
 
@@ -3094,14 +2949,13 @@ body{
 
     font-size:20px;
 
-    line-height:18px;
+    line-height:28px;
 
     max-width:620px;
 
     margin:0 auto;
 
 }
-
 
 /* ==========================================
                 FORM
@@ -3150,7 +3004,19 @@ body{
 }
 
 /* ==========================================
-              INPUTS
+            SELECT WRAPPER
+========================================== */
+
+.SelectWrapper{
+
+    position:relative;
+
+    width:100%;
+
+}
+
+/* ==========================================
+                INPUTS
 ========================================== */
 
 .FormGroup input,
@@ -3182,7 +3048,25 @@ body{
 
     height:41px;
 
+}
+
+.FormGroup input{
+
     padding:0 18px;
+
+}
+
+.FormGroup select{
+
+    padding:0 50px 0 18px;
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    -moz-appearance:none;
+
+    cursor:pointer;
 
 }
 
@@ -3196,8 +3080,6 @@ body{
 
 }
 
-/* Placeholder */
-
 .FormGroup input::placeholder,
 .FormGroup textarea::placeholder{
 
@@ -3205,15 +3087,33 @@ body{
 
 }
 
-.FormGroup select{
+/* ==========================================
+            CUSTOM ARROW
+========================================== */
 
-    appearance:none;
+.SelectArrow{
 
-    -webkit-appearance:none;
+    position:absolute;
 
-    -moz-appearance:none;
+    top:50%;
 
-    cursor:pointer;
+    right:18px;
+
+    transform:translateY(-50%);
+
+    color:#D7B44A;
+
+    font-size:11px;
+
+    pointer-events:none;
+
+    transition:.3s ease;
+
+}
+
+.SelectWrapper:focus-within .SelectArrow{
+
+    transform:translateY(-50%) rotate(180deg);
 
 }
 
@@ -3299,7 +3199,6 @@ body{
 
 }
 
-
 /* ==========================================
             TABLET (1024px)
 ========================================== */
@@ -3322,9 +3221,9 @@ body{
 
 .AuditLogo{
 
-    top:25px;
+    top:10px;
 
-    right:25px;
+    right:10px;
 
 }
 
@@ -3353,6 +3252,19 @@ body{
 .FormGrid{
 
     gap:18px;
+
+}
+
+.FormGroup input,
+.FormGroup select{
+
+    height:48px;
+
+}
+
+.FormGroup textarea{
+
+    min-height:150px;
 
 }
 
@@ -3387,23 +3299,27 @@ body{
 
 .AuditLogo{
 
-    position:static;
+    position:absolute;
 
-    text-align:center;
+    top:10px;
 
-    margin-bottom:20px;
+    right:10px;
+
+    margin:0;
 
 }
 
 .AuditLogo img{
 
-    width:80px;
+    width:70px;
 
 }
 
 .AuditHeader{
 
     margin-bottom:35px;
+
+    padding-top:30px;
 
 }
 
@@ -3450,9 +3366,23 @@ body{
 .FormGroup input,
 .FormGroup select{
 
-    height:52px;
+    height:50px;
 
     font-size:15px;
+
+}
+
+.FormGroup select{
+
+    padding-right:45px;
+
+}
+
+.SelectArrow{
+
+    right:16px;
+
+    font-size:10px;
 
 }
 
@@ -3470,7 +3400,7 @@ body{
 
     min-width:100%;
 
-    height:48px;
+    height:50px;
 
     font-size:14px;
 
@@ -3493,13 +3423,27 @@ body{
 
 .AuditContainer{
 
-    padding:28px 18px;
+    padding:24px 16px;
+
+}
+
+.AuditLogo{
+
+    top:8px;
+
+    right:8px;
 
 }
 
 .AuditLogo img{
 
-    width:70px;
+    width:55px;
+
+}
+
+.AuditHeader{
+
+    padding-top:25px;
 
 }
 
@@ -3538,11 +3482,25 @@ body{
 .FormGroup input,
 .FormGroup select{
 
-    height:48px;
+    height:46px;
 
-    padding:0 14px;
+    padding-left:14px;
 
     font-size:14px;
+
+}
+
+.FormGroup select{
+
+    padding-right:42px;
+
+}
+
+.SelectArrow{
+
+    right:14px;
+
+    font-size:9px;
 
 }
 
@@ -3558,7 +3516,7 @@ body{
 
 .SubmitButton{
 
-    height:50px;
+    height:48px;
 
     font-size:13px;
 
@@ -4065,8 +4023,11 @@ body{
 .CTALeft{
 
     flex:1;
-
     max-width:620px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 
 }
 
@@ -4107,6 +4068,62 @@ body{
 }
 
 /* ==========================================
+                BUTTON
+========================================== */
+
+.CTAButton{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:395px;
+
+    height:72px;
+
+    margin-top:15px;
+
+    align-self:flex-start;
+
+    background:#D7B43F;
+
+    color:#1B1B1B;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.CTAButton:hover{
+
+    transform:translateY(-3px);
+
+    background:#E3BF48;
+
+    box-shadow:
+    0 0 25px rgba(215,180,63,.55),
+    0 0 45px rgba(215,180,63,.35);
+
+}
+
+.CTAButton:active{
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================
                 RIGHT SIDE
 ========================================== */
 
@@ -4136,83 +4153,9 @@ body{
 
     object-fit:contain;
 
-}
-
-/* ==========================================
-                BUTTON
-========================================== */
-
-.CTAButton{
-
-    display:inline-flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    width:395px;
-
-    height:72px;
-
-    background:#D7B43F;
-
-    color:#1B1B1B;
-
-    border:none;
-
-    border-radius:10px;
-
-    font-family:"Manrope",sans-serif;
-
-    font-size:24px;
-
-    font-weight:600;
-
-    line-height:32px;
-
-    cursor:pointer;
-
-    transition:all .35s ease;
-
-    box-shadow:
-    0 0 18px rgba(215,180,63,.35),
-    0 0 35px rgba(215,180,63,.18);
-
-}
-
-/* ==========================================
-            BUTTON HOVER
-========================================== */
-
-.CTAButton:hover{
-
-    transform:translateY(-3px);
-
-    background:#E3BF48;
-
-    box-shadow:
-    0 0 25px rgba(215,180,63,.55),
-    0 0 45px rgba(215,180,63,.35);
-
-}
-
-/* ==========================================
-            BUTTON ACTIVE
-========================================== */
-
-.CTAButton:active{
-
-    transform:translateY(0);
-
-}
-
-/* ==========================================
-            IMAGE ANIMATION
-========================================== */
-
-.RocketImage{
-
     transition:transform .4s ease;
+    
+  
 
 }
 
@@ -4221,10 +4164,6 @@ body{
     transform:translateY(-8px);
 
 }
-
-/* ==========================================
-            REMOVE OUTLINE
-========================================== */
 
 button{
 
@@ -4239,47 +4178,31 @@ button{
 @media (max-width:1024px){
 
 .CTASection{
-
     padding:70px 40px;
-
 }
 
 .CTAContainer{
-
     gap:40px;
-
 }
 
 .CTATitle{
-
     font-size:54px;
-
     line-height:64px;
-
 }
 
 .CTADescription{
-
     font-size:20px;
-
     line-height:34px;
-
 }
 
 .RocketImage{
-
     width:360px;
-
 }
 
 .CTAButton{
-
     width:320px;
-
     height:64px;
-
     font-size:20px;
-
 }
 
 }
@@ -4291,70 +4214,65 @@ button{
 @media (max-width:768px){
 
 .CTASection{
-
     padding:50px 20px;
-
 }
 
+/* Stack everything */
 .CTAContainer{
-
+    display:flex;
     flex-direction:column;
-
+    align-items:center;
     text-align:center;
-
-    gap:40px;
-
+    gap:30px;
 }
 
+/* Make the left side behave like a column */
 .CTALeft{
-
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     max-width:100%;
-
 }
 
+/* Title */
 .CTATitle{
-
     font-size:40px;
-
     line-height:50px;
-
-    margin-bottom:24px;
-
+    margin-bottom:20px;
 }
 
+/* Description */
 .CTADescription{
-
     font-size:18px;
-
     line-height:30px;
-
-    margin-bottom:35px;
-
+    margin-bottom:0;
 }
 
-.CTADescription br,
-.CTATitle br{
-
+/* Hide desktop line breaks */
+.CTATitle br,
+.CTADescription br{
     display:none;
-
 }
 
-.CTAButton{
-
-    width:100%;
-
-    max-width:340px;
-
-    height:58px;
-
-    font-size:18px;
-
+/* Image comes after content */
+.CTARight{
+    order:2;
+    display:flex;
+    justify-content:center;
 }
 
 .RocketImage{
-
     width:280px;
+}
 
+/* Button goes after image */
+.CTAButton{
+    order:3;
+    width:100%;
+    max-width:340px;
+    height:58px;
+    margin-top:20px;
+    font-size:18px;
 }
 
 }
@@ -4366,41 +4284,27 @@ button{
 @media (max-width:480px){
 
 .CTASection{
-
     padding:40px 16px;
-
 }
 
 .CTATitle{
-
-    font-size:25px;
-
+    font-size:30px;
     line-height:40px;
-
 }
 
 .CTADescription{
-
-    font-size:21px;
-
-    line-height:26px;
-
-}
-
-.CTAButton{
-
-    width:100%;
-
-    height:54px;
-
     font-size:16px;
-
+    line-height:26px;
 }
 
 .RocketImage{
+    width:230px;
+}
 
-    width:250px;
-
+.CTAButton{
+    max-width:100%;
+    height:54px;
+    font-size:16px;
 }
 
 }
