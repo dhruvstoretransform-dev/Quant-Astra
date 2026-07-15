@@ -95,16 +95,31 @@ body{
     position:relative;
 
 }
- .navbar-nav-links li:hover{
+.navbar-nav-links a:hover{
 
     color:#D6B25E;
 
-} 
+}
 
-.navbar-active{
+.navbar-nav-links a{
+    color:#fff;
+    text-decoration: none;
+    transition:.3s;
+}
 
+.navbar-nav-links a:link,
+.navbar-nav-links a:visited,
+.navbar-nav-links a:hover,
+.navbar-nav-links a:active{
+    color:#fff;
+}
+
+.navbar-nav-links a.navbar-active,
+.navbar-nav-links a.navbar-active:link,
+.navbar-nav-links a.navbar-active:visited,
+.navbar-nav-links a.navbar-active:hover,
+.navbar-nav-links a.navbar-active:active{
     color:#D6B25E !important;
-
 }
 
 /* ==========================================
