@@ -596,10 +596,132 @@ body{
 
 }
 
+/* ==========================================
+        LARGE DESKTOP (2180px)
+========================================== */
+
+@media (min-width: 1921px) {
+
+    .navbar-container{
+
+        max-width:2000px;
+
+        margin:0 auto;
+
+        padding:28px 100px;
+
+    }
+
+    /* Logo */
+
+    .navbar-logo img{
+
+        width:180px;
+
+    }
+
+    /* Navigation */
+
+    .navbar-nav-links{
+
+        gap:60px;
+
+    }
+
+    .navbar-nav-links li{
+
+        font-size:18px;
+
+        letter-spacing:1px;
+
+    }
+
+    /* Dropdown */
+
+    .dropdown-menu{
+
+        width:260px;
+
+    }
+
+    .dropdown-menu li{
+
+        font-size:17px;
+
+        padding:18px 24px;
+
+    }
+
+    .dropdown-arrow{
+
+        font-size:13px;
+
+    }
+
+    /* Button */
+
+    .navbar-consult-btn{
+
+        padding:18px 34px;
+
+        font-size:17px;
+
+        border-radius:10px;
+
+    }
+
+}
+
+
+/* ==========================================
+        ULTRA WIDE DESKTOP
+========================================== */
+
+@media (min-width: 2560px) {
+
+    .navbar-container{
+
+        max-width:100%;
+
+        margin:0 auto;
+
+        padding:30px 120px;
+
+    }
+
+    .navbar-logo img{
+
+        width:200px;
+
+    }
+
+    .navbar-nav-links{
+
+        gap:70px;
+
+    }
+
+    .navbar-nav-links li{
+
+        font-size:20px;
+
+    }
+
+    .navbar-consult-btn{
+
+        padding:20px 40px;
+
+        font-size:18px;
+
+    }
+
+}
+
 
 
 
 /* From here hero section is started */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 
 *{
     margin:0;
@@ -922,81 +1044,372 @@ body{
     margin-top: 0;
 }
 
+/* ==========================================
+        LARGE DESKTOP (2180px)
+========================================== */
 
+@media (min-width:1921px){
 
-/* About section started from here  */
+.hero-container{
+
+    min-height:100vh;
+
+    background-size:cover;
+
+}
+
+.hero-content{
+
+    max-width:1200px;
+
+}
+
+.hero-tag{
+
+    font-size:18px;
+
+    padding:16px 30px;
+
+    letter-spacing:4px;
+
+    border-radius:12px;
+
+    margin-bottom:45px;
+
+}
+
+.hero-title{
+
+    font-size:78px;
+
+    line-height:100px;
+
+}
+
+.hero-text{
+
+    margin-top:40px;
+
+    font-size:28px;
+
+    line-height:48px;
+
+    max-width:950px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.hero-buttons{
+
+    margin-top:60px;
+
+    gap:40px;
+
+}
+
+.hero-primary-btn,
+.hero-secondary-btn{
+
+    width:320px;
+
+    height:74px;
+
+    font-size:22px;
+
+    border-radius:12px;
+
+}
+
+}
+
+/* ==========================================
+        ULTRA WIDE (2560px+)
+========================================== */
+
+@media (min-width:2560px){
+
+.hero-content{
+
+    max-width:1400px;
+
+}
+
+.hero-title{
+
+    font-size:90px;
+
+    line-height:115px;
+
+}
+
+.hero-text{
+
+    font-size:32px;
+
+    line-height:54px;
+
+}
+
+.hero-primary-btn,
+.hero-secondary-btn{
+
+    width:360px;
+
+    height:80px;
+
+    font-size:24px;
+
+}
+
+}
+
+/* Wrapper section started from here  */
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 
 /* ==========================================
-                WRAPPER
+                RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Manrope",sans-serif;
+    background:#111217;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* ==========================================
+                ABOUT SECTION
 ========================================== */
 
 .wrapper{
+
     width:100%;
+
     min-height:100vh;
+
     background:#111217;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
-    padding:100px 70px;
+    gap:70px;
 
-    font-family:"Manrope",sans-serif;
+    padding:100px 64px;
+
 }
 
 /* ==========================================
-                LEFT IMAGE
+                LEFT SIDE
 ========================================== */
 
 .wrapper-left{
-    flex:1;
-}
 
-.wrapper-left img{
-    width:100%;
-    max-width:750px;
-    height:auto;
-    display:block;
-    border-radius:18px;
+    flex:1;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
 }
 
 /* ==========================================
-                RIGHT CONTENT
+                IMAGE
+========================================== */
+
+.AboutImage{
+
+    width:100%;
+
+    max-width:720px;
+
+    height:auto;
+
+    display:block;
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+}
+
+/* ==========================================
+            FLOATING CARD
+========================================== */
+
+.ProtocolCard{
+
+    position:absolute;
+
+    right:-30px;
+
+    bottom:30px;
+
+    width:260px;
+
+    height:85px;
+
+    background:#1A1C21;
+
+    border:1px solid rgba(215,180,74,.25);
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 22px;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.45);
+
+    z-index:5;
+
+}
+
+/* ==========================================
+                ICON
+========================================== */
+
+.ProtocolIcon{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(215,180,74,.08);
+
+    color:#D7B44A;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+.ProtocolContent{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.ProtocolVersion{
+
+    color:#D7B44A;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:5px;
+
+}
+
+.ProtocolTitle{
+
+    color:#F5F5F5;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    line-height:22px;
+
+}
+
+/* ==========================================
+                RIGHT SIDE
 ========================================== */
 
 .wrapper-right{
+
     flex:1;
-    width:100%;
+
     max-width:600px;
+
 }
 
 /* ==========================================
-                    TAG
+                TAG
 ========================================== */
 
 .wrapper-tag{
+
+    display:inline-block;
+
     color:#D7B44A;
+
     font-size:16px;
+
+    font-weight:600;
+
     letter-spacing:4px;
+
     text-transform:uppercase;
+
+    margin-bottom:18px;
+
 }
 
 /* ==========================================
-                    TITLE
+                TITLE
 ========================================== */
 
 .wrapper-title{
-    margin-top:20px;
-    color:#ffffff;
-    font-size:33px;
-    line-height:55px;
+
+    color:#FFFFFF;
+
+    font-size:42px;
+
     font-weight:700;
+
+    line-height:58px;
+
+    margin-bottom:22px;
+
 }
 
 .wrapper-title span{
+
     color:#D7B44A;
+
 }
 
 /* ==========================================
@@ -1004,10 +1417,17 @@ body{
 ========================================== */
 
 .wrapper-subtitle{
-    margin-top:15px;
+
     color:#D7B44A;
-    font-size:30px;
+
+    font-size:28px;
+
     font-weight:500;
+
+    line-height:38px;
+
+    margin-bottom:20px;
+
 }
 
 /* ==========================================
@@ -1015,9 +1435,15 @@ body{
 ========================================== */
 
 .wrapper-description{
-    margin-top:21px;
+
     color:#D6D6D6;
-    font-size:24px;
+
+    font-size:20px;
+
+    line-height:36px;
+
+    max-width:560px;
+
 }
 
 /* ==========================================
@@ -1025,34 +1451,362 @@ body{
 ========================================== */
 
 .wrapper-stats{
-    margin-top:45px;
+
     display:flex;
-    gap:120px;
+
+    gap:90px;
+
+    margin-top:55px;
+
 }
 
-/* ==========================================
-                SINGLE STAT
-========================================== */
+.wrapper-stat{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
 
 .wrapper-stat h3{
+
     color:#D7B44A;
-    font-size:54px;
+
+    font-size:56px;
+
     font-weight:700;
 
-    transition:color .3s ease;
+    line-height:1;
 
     font-variant-numeric:tabular-nums;
+
 }
 
 .wrapper-stat p{
-    margin-top:10px;
-    color:#D0D0D0;
+
+    margin-top:12px;
+
+    color:#CFCFCF;
+
+    font-size:17px;
+
+    line-height:26px;
+
     letter-spacing:2px;
-    font-size:18px;
+
+    text-transform:uppercase;
+
 }
 
 /* ==========================================
-            TABLET & MOBILE (768px)
+        LARGE LAPTOPS (1440px)
+========================================== */
+
+@media (max-width:1440px){
+
+.wrapper{
+    padding:90px 60px;
+    gap:55px;
+}
+
+.AboutImage{
+    max-width:620px;
+}
+
+.ProtocolCard{
+    width:230px;
+    height:74px;
+    right:-25px;
+    bottom:0;
+    padding:18px 20px;
+}
+
+.ProtocolIcon img{
+    width:42px;
+    height:42px;
+}
+
+.ProtocolVersion{
+    font-size:13px;
+    letter-spacing:1.8px;
+}
+
+.ProtocolTitle{
+    font-size:14px;
+    line-height:22px;
+}
+
+.wrapper-right{
+    max-width:560px;
+}
+
+.wrapper-tag{
+    font-size:15px;
+    letter-spacing:3px;
+}
+
+.wrapper-title{
+    font-size:30px;
+    line-height:42px;
+}
+
+.wrapper-subtitle{
+    font-size:26px;
+    line-height:36px;
+}
+
+.wrapper-description{
+    font-size:20px;
+    line-height:34px;
+}
+
+.wrapper-stats{
+    gap:90px;
+    margin-top:42px;
+}
+
+.wrapper-stat h3{
+    font-size:48px;
+}
+
+.wrapper-stat p{
+    font-size:16px;
+    line-height:24px;
+}
+
+}
+
+/* ==========================================
+        LAPTOP (1200px)
+========================================== */
+
+@media (max-width:1200px){
+
+.wrapper{
+    padding:80px 45px;
+    gap:45px;
+}
+
+.AboutImage{
+    max-width:540px;
+}
+
+.ProtocolCard{
+    width:215px;
+    height:70px;
+    right:-18px;
+    bottom:-5px;
+    padding:16px 18px;
+}
+
+.ProtocolIcon img{
+    width:32px;
+    height:32px;
+}
+
+.ProtocolVersion{
+    font-size:12px;
+    letter-spacing:1.5px;
+}
+
+.ProtocolTitle{
+    font-size:13px;
+    line-height:20px;
+}
+
+.wrapper-right{
+    max-width:500px;
+}
+
+.wrapper-tag{
+    font-size:14px;
+    letter-spacing:3px;
+}
+
+.wrapper-title{
+    font-size:27px;
+    line-height:38px;
+}
+
+.wrapper-subtitle{
+    font-size:23px;
+    line-height:32px;
+}
+
+.wrapper-description{
+    font-size:18px;
+    line-height:30px;
+}
+
+.wrapper-stats{
+    gap:70px;
+    margin-top:36px;
+}
+
+.wrapper-stat h3{
+    font-size:42px;
+}
+
+.wrapper-stat p{
+    font-size:15px;
+    line-height:22px;
+    letter-spacing:1.5px;
+}
+
+}
+
+/* ==========================================
+        TABLET LANDSCAPE (1024px)
+========================================== */
+
+@media (max-width:1024px){
+
+.wrapper{
+
+    padding:70px 35px;
+
+    gap:35px;
+
+    align-items:center;
+
+}
+
+.wrapper-left{
+
+    flex:1;
+
+    position:relative;
+
+}
+
+.AboutImage{
+
+    width:100%;
+
+    max-width:460px;
+
+    border-radius:16px;
+
+}
+
+/* Floating Card */
+
+.ProtocolCard{
+
+    width:230px;
+
+    height:57px;
+
+    right:-10px;
+
+    bottom:10px;
+
+    padding:14px 16px;
+
+    gap:12px;
+
+    border-radius:10px;
+
+}
+
+.ProtocolIcon{
+
+    width:38px;
+
+    height:38px;
+
+    font-size:18px;
+
+}
+
+.ProtocolVersion{
+
+    font-size:11px;
+
+    letter-spacing:1.2px;
+
+    margin-bottom:3px;
+
+}
+
+.ProtocolTitle{
+
+    font-size:13px;
+
+    line-height:18px;
+
+}
+
+.wrapper-right{
+
+    max-width:430px;
+
+}
+
+.wrapper-tag{
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+}
+
+.wrapper-title{
+
+    font-size:25px;
+
+    line-height:34px;
+
+    margin-bottom:16px;
+
+}
+
+.wrapper-subtitle{
+
+    font-size:21px;
+
+    line-height:30px;
+
+    margin-bottom:16px;
+
+}
+
+.wrapper-description{
+
+    font-size:17px;
+
+    line-height:28px;
+
+}
+
+.wrapper-stats{
+
+    margin-top:32px;
+
+    gap:45px;
+
+}
+
+.wrapper-stat h3{
+
+    font-size:38px;
+
+}
+
+.wrapper-stat p{
+
+    font-size:14px;
+
+    line-height:22px;
+
+    letter-spacing:1px;
+
+}
+
+}
+
+/* ==========================================
+            TABLET (768px)
 ========================================== */
 
 @media (max-width:768px){
@@ -1061,11 +1815,11 @@ body{
 
     flex-direction:column;
 
-    padding:60px 20px;
-
     text-align:center;
 
-    gap:40px;
+    padding:60px 24px;
+
+    gap:55px;
 
 }
 
@@ -1073,21 +1827,69 @@ body{
 
     width:100%;
 
+    justify-content:center;
+
+    margin-bottom:25px;
+
 }
 
-.wrapper-left img{
+.AboutImage{
 
     width:100%;
 
-    max-width:450px;
+    max-width:500px;
 
-    margin:auto;
+    border-radius:16px;
+
+}
+
+/* Floating Card */
+
+.ProtocolCard{
+
+    width:250px;
+
+    height:70px;
+
+    left:81%;
+
+    right:auto;
+
+    bottom:10px;
+
+    transform:translateX(-50%);
+
+    padding:15px 18px;
+
+    gap:12px;
+
+}
+
+.ProtocolIcon{
+
+    width:38px;
+
+    height:38px;
+
+    font-size:18px;
+
+}
+
+.ProtocolVersion{
+
+    font-size:11px;
+
+}
+
+.ProtocolTitle{
+
+    font-size:15px;
+
+    line-height:19px;
 
 }
 
 .wrapper-right{
-
-    width:100%;
 
     max-width:100%;
 
@@ -1105,13 +1907,15 @@ body{
 
     font-size:34px;
 
-    line-height:44px;
+    line-height:46px;
 
 }
 
 .wrapper-subtitle{
 
-    font-size:22px;
+    font-size:24px;
+
+    line-height:34px;
 
 }
 
@@ -1121,43 +1925,133 @@ body{
 
     line-height:30px;
 
+    max-width:600px;
+
+    margin:auto;
+
 }
 
 .wrapper-stats{
 
     justify-content:center;
 
-    gap:40px;
+    gap:60px;
 
     margin-top:40px;
 
 }
 
+.wrapper-stat{
+
+    text-align:center;
+
+}
+
 .wrapper-stat h3{
 
-    font-size:42px;
+    font-size:44px;
 
 }
 
 .wrapper-stat p{
 
-    font-size:16px;
+    font-size:15px;
 
-    letter-spacing:1px;
+    line-height:24px;
 
 }
 
 }
 
 /* ==========================================
-            SMALL MOBILE (480px)
+            576px
 ========================================== */
 
-@media (max-width:480px){
+@media (max-width:576px){
 
 .wrapper{
 
-    padding:40px 15px;
+    flex-direction:column;
+
+    padding:50px 20px;
+
+    gap:40px;
+
+    text-align:center;
+
+}
+
+.wrapper-left{
+
+    width:100%;
+
+}
+
+.AboutImage{
+
+    width:100%;
+
+    max-width:420px;
+
+    border-radius:16px;
+
+}
+
+.ProtocolCard{
+
+    width:210px;
+
+    height:72px;
+
+    right:50%;
+
+    transform:translateX(50%);
+
+    bottom:-20px;
+
+    padding:14px 16px;
+
+    gap:12px;
+
+}
+
+.ProtocolIcon img{
+
+    width:36px;
+
+    height:36px;
+
+}
+
+.ProtocolVersion{
+
+    font-size:12px;
+
+    letter-spacing:1.5px;
+
+}
+
+.ProtocolTitle{
+
+    font-size:13px;
+
+    line-height:18px;
+
+}
+
+.wrapper-right{
+
+    max-width:100%;
+
+    margin-top:35px;
+
+}
+
+.wrapper-tag{
+
+    font-size:13px;
+
+    letter-spacing:3px;
 
 }
 
@@ -1171,7 +2065,9 @@ body{
 
 .wrapper-subtitle{
 
-    font-size:18px;
+    font-size:22px;
+
+    line-height:30px;
 
 }
 
@@ -1179,7 +2075,119 @@ body{
 
     font-size:16px;
 
-    line-height:26px;
+    line-height:28px;
+
+}
+
+.wrapper-stats{
+
+    justify-content:center;
+
+    gap:35px;
+
+    margin-top:35px;
+
+}
+
+.wrapper-stat h3{
+
+    font-size:38px;
+
+}
+
+.wrapper-stat p{
+
+    font-size:13px;
+
+    line-height:20px;
+
+}
+
+}
+
+/* ==========================================
+            480px
+========================================== */
+
+@media (max-width:480px){
+
+.wrapper{
+
+    padding:40px 16px;
+
+    gap:35px;
+
+}
+
+.AboutImage{
+
+    max-width:340px;
+
+}
+
+.ProtocolCard{
+
+    width:190px;
+
+    height:66px;
+
+    padding:12px 14px;
+
+    bottom:-18px;
+
+}
+
+.ProtocolIcon img{
+
+    width:30px;
+
+    height:30px;
+
+}
+
+.ProtocolVersion{
+
+    font-size:11px;
+
+}
+
+.ProtocolTitle{
+
+    font-size:12px;
+
+    line-height:16px;
+
+}
+
+.wrapper-tag{
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+}
+
+.wrapper-title{
+
+    font-size:24px;
+
+    line-height:34px;
+
+}
+
+.wrapper-subtitle{
+
+    font-size:19px;
+
+    line-height:28px;
+
+}
+
+.wrapper-description{
+
+    font-size:15px;
+
+    line-height:25px;
 
 }
 
@@ -1189,19 +2197,19 @@ body{
 
     align-items:center;
 
-    gap:30px;
+    gap:24px;
 
 }
 
 .wrapper-stat h3{
 
-    font-size:36px;
+    font-size:34px;
 
 }
 
 .wrapper-stat p{
 
-    font-size:14px;
+    font-size:12px;
 
     letter-spacing:1px;
 
@@ -1209,7 +2217,261 @@ body{
 
 }
 
+/* ==========================================
+            360px
+========================================== */
 
+@media (max-width:360px){
+
+.wrapper{
+
+    padding:35px 12px;
+
+}
+
+.AboutImage{
+
+    max-width:280px;
+
+    border-radius:12px;
+
+}
+
+.ProtocolCard{
+
+    width:165px;
+
+    height:58px;
+
+    padding:10px 12px;
+
+    gap:10px;
+
+    bottom:-15px;
+
+}
+
+.ProtocolIcon img{
+
+    width:26px;
+
+    height:26px;
+
+}
+
+.ProtocolVersion{
+
+    font-size:10px;
+
+    letter-spacing:1px;
+
+}
+
+.ProtocolTitle{
+
+    font-size:11px;
+
+    line-height:14px;
+
+}
+
+.wrapper-tag{
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+}
+
+.wrapper-title{
+
+    font-size:20px;
+
+    line-height:30px;
+
+}
+
+.wrapper-subtitle{
+
+    font-size:17px;
+
+    line-height:24px;
+
+}
+
+.wrapper-description{
+
+    font-size:14px;
+
+    line-height:22px;
+
+}
+
+.wrapper-stat h3{
+
+    font-size:30px;
+
+}
+
+.wrapper-stat p{
+
+    font-size:11px;
+
+    line-height:18px;
+
+}
+
+}
+
+/* ==========================================
+        2180px+ (Ultra Wide Desktop)
+========================================== */
+
+@media (min-width:2180px){
+
+.wrapper{
+
+    max-width:100%;
+
+    margin:0 auto;
+
+    min-height:100vh;
+
+    padding:160px 140px;
+
+    gap:48px;
+
+}
+
+.wrapper-left{
+
+    flex:1.1;
+
+}
+
+.AboutImage{
+
+    width:100%;
+
+    max-width:1135px;
+
+    border-radius:24px;
+
+}
+
+.ProtocolCard{
+
+    width:300px;
+
+    height:96px;
+
+    right:100px;
+
+    bottom:45px;
+
+    padding:24px 26px;
+
+    gap:18px;
+
+    border-radius:16px;
+
+}
+
+.ProtocolIcon img{
+
+    width:52px;
+
+    height:52px;
+
+}
+
+.ProtocolVersion{
+
+    font-size:16px;
+
+    letter-spacing:2px;
+
+}
+
+.ProtocolTitle{
+
+    font-size:18px;
+
+    line-height:28px;
+
+}
+
+.wrapper-right{
+
+    max-width:760px;
+
+}
+
+.wrapper-tag{
+
+    font-size:20px;
+
+    letter-spacing:5px;
+
+}
+
+.wrapper-title{
+
+    margin-top:26px;
+
+    font-size:52px;
+
+    line-height:68px;
+
+}
+
+.wrapper-subtitle{
+
+    margin-top:22px;
+
+    font-size:38px;
+
+    line-height:48px;
+
+}
+
+.wrapper-description{
+
+    margin-top:30px;
+
+    font-size:28px;
+
+    line-height:44px;
+
+}
+
+.wrapper-stats{
+
+    margin-top:65px;
+
+    gap:170px;
+
+}
+
+.wrapper-stat h3{
+
+    font-size:72px;
+
+}
+
+.wrapper-stat p{
+
+    margin-top:14px;
+
+    font-size:20px;
+
+    line-height:30px;
+
+    letter-spacing:2px;
+
+}
+
+}
 
 
 /* Testimonials section started from here  */
@@ -1381,10 +2643,192 @@ body{
 
 }
 
+/* ==========================================
+        LARGE DESKTOP (2180px)
+========================================== */
+
+@media (min-width:1921px){
+
+.TestimonialsSection{
+
+    padding:120px 100px;
+
+}
+
+.TestimonialsContent{
+
+    max-width:1800px;
+
+}
+
+.TestimonialsTag{
+
+    font-size:24px;
+
+    letter-spacing:6px;
+
+}
+
+.TestimonialsHeading{
+
+    margin-top:24px;
+
+    font-size:68px;
+
+}
+
+.TestimonialsDescription{
+
+    max-width:1100px;
+
+    margin:35px auto 90px;
+
+    font-size:30px;
+
+    line-height:50px;
+
+}
+
+.TestimonialsCards{
+
+    gap:40px;
+
+}
+
+.TestimonialsCard{
+
+    padding:55px;
+
+    border-radius:24px;
+
+}
+
+.TestimonialsProfile{
+
+    gap:24px;
+
+    margin-bottom:36px;
+
+}
+
+.TestimonialsAvatar{
+
+    width:78px;
+
+    height:78px;
+
+    font-size:28px;
+
+    border-radius:16px;
+
+}
+
+.TestimonialsProfile h4{
+
+    font-size:32px;
+
+}
+
+.TestimonialsProfile p{
+
+    font-size:18px;
+
+    letter-spacing:2px;
+
+}
+
+.TestimonialsReview{
+
+    font-size:26px;
+
+    line-height:42px;
+
+}
+
+.TestimonialsStars{
+
+    margin-top:45px;
+
+    font-size:30px;
+
+}
+
+}
+
+/* ==========================================
+        ULTRA WIDE (2560px+)
+========================================== */
+
+@media (min-width:2560px){
+
+.TestimonialsContent{
+
+    max-width:2100px;
+
+}
+
+.TestimonialsHeading{
+
+    font-size:78px;
+
+}
+
+.TestimonialsDescription{
+
+    max-width:1300px;
+
+    font-size:34px;
+
+    line-height:56px;
+
+}
+
+.TestimonialsCard{
+
+    padding:65px;
+
+}
+
+.TestimonialsAvatar{
+
+    width:90px;
+
+    height:90px;
+
+    font-size:32px;
+
+}
+
+.TestimonialsProfile h4{
+
+    font-size:36px;
+
+}
+
+.TestimonialsReview{
+
+    font-size:30px;
+
+    line-height:48px;
+
+}
+
+.TestimonialsStars{
+
+    font-size:34px;
+
+}
+
+}
+
 
 /* service page started from here  */
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+/* ==========================================
+                RESET
+========================================== */
 
 *{
     margin:0;
@@ -1543,13 +2987,13 @@ body{
 
     text-align:left;
 
-    transition:.35s ease;
+    transition:all .35s ease;
 
 }
 
 .ServicesCard:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 
     border-color:#D7B44A;
 
@@ -1558,7 +3002,7 @@ body{
 }
 
 /* ==========================================
-                CARD HEADER
+            CARD HEADER
 ========================================== */
 
 .ServicesCardHeader{
@@ -1587,13 +3031,23 @@ body{
 
     align-items:center;
 
+    transition:.35s;
+
+}
+
+.ServicesCard:hover .ServicesIcon{
+
+    transform:rotate(8deg) scale(1.08);
+
+    border-color:#D7B44A;
+
 }
 
 .ServicesIconImage{
 
-    width:30px;
+    width:23px;
 
-    height:30px;
+    height:23px;
 
     object-fit:contain;
 
@@ -1628,6 +3082,14 @@ body{
     font-weight:600;
 
     line-height:38px;
+
+    transition:.3s;
+
+}
+
+.ServicesCard:hover .ServicesTitle{
+
+    color:#D7B44A;
 
 }
 
@@ -1677,16 +3139,143 @@ body{
 
     color:#D7B44A;
 
-    transition:.3s;
+    transition:.35s;
 
 }
 
 .ServicesCard:hover .ServicesArrow{
 
-    transform:translateX(6px);
+    transform:translateX(8px);
 
 }
 
+/* ==========================================
+        2180px / ULTRA WIDE SCREEN
+========================================== */
+
+@media (min-width:2180px){
+
+.ServicesSection{
+
+    min-height:1350px;
+
+    padding:120px 120px;
+
+}
+
+.ServicesContent{
+
+    max-width:1700px;
+
+}
+
+.ServicesTag{
+
+    font-size:26px;
+
+    letter-spacing:6px;
+
+    margin-bottom:22px;
+
+}
+
+.ServicesHeading{
+
+    font-size:82px;
+
+    margin-bottom:35px;
+
+}
+
+.ServicesDescription{
+
+    max-width:1200px;
+
+    font-size:30px;
+
+    line-height:48px;
+
+    margin:0 auto 90px;
+
+}
+
+.ServicesGrid{
+
+    grid-template-columns:repeat(3,420px);
+
+    justify-content:center;
+
+    gap:45px;
+
+}
+
+.ServicesCard{
+
+    max-width:420px;
+
+    padding:36px;
+
+    border-radius:20px;
+
+}
+
+.ServicesIcon{
+
+    width:76px;
+
+    height:76px;
+
+}
+
+.ServicesIconImage{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+.ServicesVersion{
+
+    font-size:18px;
+
+}
+
+.ServicesTitle{
+
+    font-size:36px;
+
+    line-height:48px;
+
+}
+
+.ServicesText{
+
+    font-size:18px;
+
+    line-height:34px;
+
+}
+
+.ServicesCardFooter{
+
+    margin-top:42px;
+
+    padding-top:24px;
+
+    font-size:17px;
+
+    letter-spacing:2px;
+
+}
+
+.ServicesArrow{
+
+    font-size:30px;
+
+}
+
+}
 
 /* ==========================================
             TABLET (1024px)
@@ -1694,15 +3283,33 @@ body{
 
 @media (max-width:1024px){
 
+/* SECTION */
+
 .ServicesSection{
 
     padding:60px 40px;
 
+    min-height:auto;
+
 }
+
+/* CONTENT */
 
 .ServicesContent{
 
     max-width:100%;
+
+}
+
+/* HEADING */
+
+.ServicesTag{
+
+    font-size:18px;
+
+    letter-spacing:4px;
+
+    margin-bottom:16px;
 
 }
 
@@ -1711,6 +3318,8 @@ body{
     font-size:46px;
 
     line-height:56px;
+
+    margin-bottom:20px;
 
 }
 
@@ -1722,11 +3331,15 @@ body{
 
     line-height:32px;
 
-    margin:0 auto 50px;
+    margin:0 auto 55px;
 
 }
 
+/* GRID */
+
 .ServicesGrid{
+
+    display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
@@ -1735,6 +3348,8 @@ body{
     gap:24px;
 
 }
+
+/* CARD */
 
 .ServicesCard{
 
@@ -1745,6 +3360,8 @@ body{
     padding:24px;
 
 }
+
+/* HEADER */
 
 .ServicesCardHeader{
 
@@ -1774,6 +3391,14 @@ body{
 
 }
 
+/* BODY */
+
+.ServicesCardBody{
+
+    margin-top:20px;
+
+}
+
 .ServicesTitle{
 
     font-size:24px;
@@ -1784,15 +3409,21 @@ body{
 
 .ServicesText{
 
+    margin-top:14px;
+
     font-size:15px;
 
     line-height:26px;
 
 }
 
+/* FOOTER */
+
 .ServicesCardFooter{
 
     margin-top:28px;
+
+    padding-top:18px;
 
     font-size:13px;
 
@@ -1806,11 +3437,21 @@ body{
 
 }
 
+/* HOVER */
+
+.ServicesCard:hover{
+
+    transform:translateY(-6px);
+
 }
 
-/* ==========================================
-            MOBILE (768px)
-========================================== */
+.ServicesCard:hover .ServicesArrow{
+
+    transform:translateX(5px);
+
+}
+
+}
 
 /* ==========================================
             MOBILE (768px)
@@ -1818,107 +3459,295 @@ body{
 
 @media (max-width:768px){
 
+/* SECTION */
+
 .ServicesSection{
+
     padding:50px 20px;
-}
 
-.ServicesGrid{
-    display:grid;
-    grid-template-columns:1fr;
-    justify-items:center;     /* Center every card */
-    align-items:center;
-    gap:24px;
-    width:100%;
-}
-
-.ServicesCard{
-    width:100%;
-    max-width:340px;          /* Card stays centered */
     min-height:auto;
-    padding:24px;
+
+}
+
+/* CONTENT */
+
+.ServicesContent{
+
+    width:100%;
+
+    max-width:100%;
+
     margin:0 auto;
+
+    text-align:center;
+
+}
+
+/* HEADING */
+
+.ServicesTag{
+
+    font-size:16px;
+
+    letter-spacing:3px;
+
+    margin-bottom:14px;
+
 }
 
 .ServicesHeading{
+
     font-size:34px;
+
+    line-height:44px;
+
+    margin-bottom:18px;
+
 }
 
 .ServicesDescription{
+
+    max-width:100%;
+
     font-size:16px;
+
     line-height:28px;
+
+    margin:0 auto 40px;
+
 }
 
-.ServicesTitle{
-    font-size:26px;
+/* GRID */
+
+.ServicesGrid{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    justify-items:center;
+
+    align-items:center;
+
+    gap:24px;
+
+    width:100%;
+
 }
 
-.ServicesText{
-    font-size:16px;
-    line-height:28px;
+/* CARD */
+
+.ServicesCard{
+
+    width:100%;
+
+    max-width:340px;
+
+    margin:0 auto;
+
+    padding:24px;
+
+}
+
+/* HEADER */
+
+.ServicesCardHeader{
+
+    align-items:center;
+
 }
 
 .ServicesIcon{
+
     width:50px;
+
     height:50px;
-    font-size:22px;
-}
 
 }
 
+.ServicesIconImage{
+
+    width:26px;
+
+    height:26px;
+
+}
+
+.ServicesVersion{
+
+    font-size:12px;
+
+}
+
+/* BODY */
+
+.ServicesCardBody{
+
+    margin-top:18px;
+
+}
+
+.ServicesTitle{
+
+    font-size:24px;
+
+    line-height:34px;
+
+}
+
+.ServicesText{
+
+    margin-top:14px;
+
+    font-size:16px;
+
+    line-height:28px;
+
+}
+
+/* FOOTER */
+
+.ServicesCardFooter{
+
+    margin-top:26px;
+
+    padding-top:16px;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+}
+
+.ServicesArrow{
+
+    font-size:20px;
+
+}
+
+}
 
 /* ==========================================
             SMALL MOBILE (480px)
 ========================================== */
 
-@media(max-width:480px){
+@media (max-width:480px){
+
+/* SECTION */
 
 .ServicesSection{
+
     padding:40px 16px;
+
 }
 
-.ServicesGrid{
-    display:grid;
-    grid-template-columns:1fr;
-    justify-items:center;
-    gap:20px;
-}
+/* HEADING */
 
-.ServicesCard{
-    width:100%;
-    max-width:300px;
-    padding:20px;
-    margin:0 auto;
+.ServicesTag{
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
 }
 
 .ServicesHeading{
-    font-size:28px;
-}
 
-.ServicesTag{
-    font-size:14px;
-    letter-spacing:3px;
+    font-size:28px;
+
+    line-height:38px;
+
 }
 
 .ServicesDescription{
+
     font-size:15px;
+
     line-height:26px;
+
+    margin-bottom:35px;
+
 }
 
+/* GRID */
+
+.ServicesGrid{
+
+    gap:20px;
+
+}
+
+/* CARD */
+
+.ServicesCard{
+
+    width:100%;
+
+    max-width:300px;
+
+    margin:0 auto;
+
+    padding:20px;
+
+}
+
+/* ICON */
+
+.ServicesIcon{
+
+    width:46px;
+
+    height:46px;
+
+}
+
+.ServicesIconImage{
+
+    width:24px;
+
+    height:24px;
+
+}
+
+/* BODY */
+
 .ServicesTitle{
+
     font-size:22px;
+
+    line-height:30px;
+
 }
 
 .ServicesText{
+
     font-size:15px;
+
     line-height:24px;
+
 }
+
+/* FOOTER */
 
 .ServicesCardFooter{
+
+    margin-top:22px;
+
+    padding-top:14px;
+
     font-size:12px;
-}
+
+    letter-spacing:1px;
 
 }
 
+.ServicesArrow{
+
+    font-size:18px;
+
+}
+
+}
 
 /* industries section started from here   */
 
@@ -2255,6 +4084,144 @@ body{
    TABLET RESPONSIVE
 ========================================== */
 
+/* ==========================================
+        2180px / ULTRA WIDE
+========================================== */
+
+@media (min-width:2180px){
+
+/* SECTION */
+
+.IndustriesSection{
+
+    padding:120px 100px;
+
+}
+
+/* CONTAINER */
+
+.IndustriesContainer{
+
+    max-width:1700px;
+
+}
+
+/* HEADER */
+
+.IndustriesHeader{
+
+    margin-bottom:90px;
+
+    gap:120px;
+
+}
+
+/* TAG */
+
+.IndustriesTag{
+
+    font-size:24px;
+
+    letter-spacing:6px;
+
+    margin-bottom:22px;
+
+}
+
+/* HEADING */
+
+.IndustriesHeading{
+
+    font-size:82px;
+
+    line-height:96px;
+
+}
+
+/* DESCRIPTION */
+
+.IndustriesDescription{
+
+    font-size:30px;
+
+    line-height:50px;
+
+}
+
+/* GRID */
+
+.IndustriesGrid{
+
+    grid-template-columns:repeat(4,380px);
+
+    justify-content:center;
+
+    gap:36px;
+
+}
+
+/* CARD */
+
+.IndustriesCard{
+
+    height:270px;
+
+    padding:40px;
+
+    border-radius:12px;
+
+}
+
+/* ICON */
+
+.IndustriesIcon{
+
+    width:70px;
+
+    height:70px;
+
+    font-size:32px;
+
+}
+
+/* TITLE */
+
+.IndustriesTitle{
+
+    font-size:30px;
+
+    line-height:42px;
+
+    min-height:90px;
+
+}
+
+/* CTA */
+
+.IndustriesCTA{
+
+    height:270px;
+
+    padding:40px;
+
+}
+
+.IndustriesCTA span{
+
+    font-size:20px;
+
+    letter-spacing:2px;
+
+}
+
+.IndustriesCTA svg{
+
+    font-size:34px;
+
+}
+
+}
+
 @media (max-width:1024px){
 
 .IndustriesSection{
@@ -2574,14 +4541,10 @@ body{
 
 .CapabilitiesSection{
 
-    width:100%;
-
-    min-height:100vh;
-
-    padding:80px 64px;
-
+     width:100%;
+    min-height:auto;
+    padding:60px 64px;
     background:#0B0D10;
-
     overflow:hidden;
 
 }
@@ -2593,15 +4556,10 @@ body{
 .CapabilitiesHeader{
 
     max-width:1280px;
-
-    margin:0 auto 90px;
-
+    margin:0 auto 55px;
     display:flex;
-
     justify-content:space-between;
-
     align-items:flex-start;
-
     gap:60px;
 
 }
@@ -2712,7 +4670,7 @@ body{
 
      width:100%;
 
-    height:100%;
+    height:75%;
 
     object-fit:contain;
 
@@ -2739,6 +4697,126 @@ body{
 /* ==========================================
             TABLET
 ========================================== */
+
+/* ==========================================
+        2180px / ULTRA WIDE
+========================================== */
+
+@media (min-width:2180px){
+
+/* SECTION */
+
+.CapabilitiesSection{
+
+    padding:100px 120px;
+
+}
+
+/* HEADER */
+
+.CapabilitiesHeader{
+
+    max-width:1700px;
+
+    margin:0 auto 80px;
+
+    gap:120px;
+
+}
+
+/* LEFT */
+
+.CapabilitiesLeft{
+
+    flex:1;
+
+}
+
+/* RIGHT */
+
+.CapabilitiesRight{
+
+    width:650px;
+
+}
+
+/* TAG */
+
+.CapabilitiesTag{
+
+    font-size:24px;
+
+    letter-spacing:6px;
+
+    gap:16px;
+
+    margin-bottom:28px;
+
+}
+
+.CapabilitiesTag::before{
+
+    width:48px;
+
+    height:3px;
+
+}
+
+/* HEADING */
+
+.CapabilitiesHeading{
+
+    font-size:86px;
+
+    line-height:100px;
+
+}
+
+/* DESCRIPTION */
+
+.CapabilitiesRight p{
+
+    font-size:30px;
+
+    line-height:50px;
+
+}
+
+/* CIRCLE WRAPPER */
+
+.CapabilitiesCircleWrapper{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* CIRCLE */
+
+.CapabilitiesCircle{
+
+    width:1250px;
+
+    height:1250px;
+
+}
+
+/* IMAGE */
+
+.CapabilitiesCircleImage{
+
+    width:100%;
+
+    height:80%;
+
+}
+
+}
 
 @media (max-width:1024px){
 
@@ -3331,6 +5409,157 @@ body{
 
 }
 
+
+
+
+/* ==========================================
+        LARGE DESKTOP (2180px+)
+========================================== */
+
+@media (min-width:2180px){
+
+/* ==========================
+        SECTION
+========================== */
+
+.AuditSection{
+
+    min-height:100vh;
+    padding:120px 40px;
+
+}
+
+/* ==========================
+        CONTAINER
+========================== */
+
+.AuditContainer{
+
+    max-width:1100px;
+    padding:80px;
+
+}
+
+/* ==========================
+        LOGO
+========================== */
+
+.AuditLogo img{
+
+    width:150px;
+
+}
+
+/* ==========================
+        HEADER
+========================== */
+
+.AuditHeader{
+
+    margin-bottom:70px;
+
+}
+
+.AuditTag{
+
+    font-size:20px;
+    letter-spacing:6px;
+
+}
+
+.AuditTitle{
+
+    font-size:64px;
+    line-height:74px;
+
+}
+
+.AuditSubtitle{
+
+    max-width:800px;
+    font-size:28px;
+    line-height:42px;
+
+}
+
+/* ==========================
+        FORM
+========================== */
+
+.FormGrid{
+
+    gap:32px;
+    margin-bottom:32px;
+
+}
+
+.FormGroup label{
+
+    font-size:16px;
+    letter-spacing:3px;
+    margin-bottom:14px;
+
+}
+
+/* ==========================
+        INPUTS
+========================== */
+
+.FormGroup input,
+.FormGroup select{
+
+    height:64px;
+    font-size:20px;
+    padding:0 24px;
+
+}
+
+.FormGroup select{
+
+    padding-right:70px;
+
+}
+
+.FormGroup textarea{
+
+    min-height:220px;
+    font-size:20px;
+    padding:24px;
+
+}
+
+/* ==========================
+        SELECT ARROW
+========================== */
+
+.SelectArrow{
+
+    right:24px;
+    font-size:15px;
+
+}
+
+/* ==========================
+        BUTTON
+========================== */
+
+.FullWidth{
+
+    margin-bottom:45px;
+
+}
+
+.SubmitButton{
+
+    min-width:420px;
+    height:72px;
+    font-size:18px;
+    border-radius:12px;
+
+}
+
+}
+
 /* ==========================================
             TABLET (1024px)
 ========================================== */
@@ -3877,7 +6106,87 @@ body{
 }
 
 
+/* ==========================================
+        LARGE DESKTOP (2180px)
+========================================== */
 
+@media (min-width:2180px){
+
+.FAQSection{
+    padding:140px 140px 150px;
+}
+
+.FAQContainer{
+    max-width:1800px;
+}
+
+.FAQHeader{
+    max-width:1100px;
+    margin:0 auto 100px;
+}
+
+.FAQTag{
+    font-size:28px;
+    letter-spacing:8px;
+    margin-bottom:30px;
+}
+
+.FAQHeading{
+    font-size:88px;
+    line-height:100px;
+    margin-bottom:35px;
+}
+
+.FAQDescription{
+    font-size:32px;
+    line-height:54px;
+}
+
+.FAQCards{
+    gap:32px;
+}
+
+.FAQCard{
+    border-radius:20px;
+}
+
+.FAQQuestionRow{
+    padding:40px 45px;
+}
+
+.FAQQuestion{
+    font-size:44px;
+    line-height:58px;
+    padding-right:40px;
+}
+
+.FAQArrow{
+    font-size:28px;
+}
+
+.FAQAnswerWrapper{
+    padding:0 45px;
+}
+
+.FAQAnswerWrapper.open{
+    max-height:350px;
+    padding:0 45px 40px;
+}
+
+.FAQAnswer{
+    font-size:28px;
+    line-height:46px;
+}
+
+.FAQLeftBg{
+    width:520px;
+}
+
+.FAQRightBg{
+    width:540px;
+}
+
+}
 /* ==========================================
             TABLET (1024px)
 ========================================== */
@@ -4134,17 +6443,18 @@ body{
 
 .CTAContainer{
 
-    max-width:1280px;
-
+     max-width:1280px;
     margin:0 auto;
 
-    display:flex;
-
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns:1fr auto;
+    grid-template-areas:
+        "left right"
+        "button right";
 
     align-items:center;
-
-    gap:80px;
+    column-gap:80px;
+    row-gap:25px;
 
 }
 
@@ -4154,12 +6464,12 @@ body{
 
 .CTALeft{
 
-    flex:1;
+     grid-area:left;
+
     max-width:620px;
 
     display:flex;
     flex-direction:column;
-    justify-content:center;
 
 }
 
@@ -4205,30 +6515,20 @@ body{
 
 .CTAButton{
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+     grid-area:button;
 
     width:395px;
-
     height:72px;
 
-    margin-top:15px;
-
-    align-self:flex-start;
+    justify-self:start;
 
     background:#D7B43F;
-
     color:#1B1B1B;
 
     border:none;
-
     border-radius:10px;
 
     font-size:24px;
-
     font-weight:600;
 
     cursor:pointer;
@@ -4261,12 +6561,10 @@ body{
 
 .CTARight{
 
-    flex:1;
+   grid-area:right;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
 }
@@ -4300,6 +6598,52 @@ body{
 button{
 
     outline:none;
+
+}
+
+
+/* ==========================================
+        LARGE DESKTOP (2180px)
+========================================== */
+
+@media (min-width:2180px){
+
+.CTASection{
+    padding:140px 140px;
+}
+
+.CTAContainer{
+    max-width:1800px;
+    column-gap:160px;
+    row-gap:50px;
+}
+
+.CTALeft{
+    max-width:850px;
+}
+
+.CTATitle{
+    font-size:76px;
+    line-height:94px;
+    margin-bottom:50px;
+}
+
+.CTADescription{
+    font-size:32px;
+    line-height:50px;
+    margin-bottom:70px;
+}
+
+.CTAButton{
+    width:560px;
+    height:96px;
+    font-size:30px;
+    border-radius:14px;
+}
+
+.RocketImage{
+    width:720px;
+}
 
 }
 
@@ -4349,7 +6693,6 @@ button{
     padding:50px 20px;
 }
 
-/* Stack everything */
 .CTAContainer{
     display:flex;
     flex-direction:column;
@@ -4358,53 +6701,48 @@ button{
     gap:30px;
 }
 
-/* Make the left side behave like a column */
 .CTALeft{
+    order:1;
+    max-width:100%;
     display:flex;
     flex-direction:column;
     align-items:center;
-    max-width:100%;
 }
 
-/* Title */
-.CTATitle{
-    font-size:40px;
-    line-height:50px;
-    margin-bottom:20px;
-}
-
-/* Description */
-.CTADescription{
-    font-size:18px;
-    line-height:30px;
-    margin-bottom:0;
-}
-
-/* Hide desktop line breaks */
-.CTATitle br,
-.CTADescription br{
-    display:none;
-}
-
-/* Image comes after content */
 .CTARight{
     order:2;
     display:flex;
     justify-content:center;
 }
 
-.RocketImage{
-    width:280px;
-}
-
-/* Button goes after image */
 .CTAButton{
     order:3;
     width:100%;
     max-width:340px;
     height:58px;
-    margin-top:20px;
     font-size:18px;
+    margin-top:10px;
+    align-self:center;
+}
+
+.RocketImage{
+    width:280px;
+}
+
+.CTATitle{
+    font-size:40px;
+    line-height:50px;
+    margin-bottom:20px;
+}
+
+.CTADescription{
+    font-size:18px;
+    line-height:30px;
+}
+
+.CTATitle br,
+.CTADescription br{
+    display:none;
 }
 
 }
@@ -4420,7 +6758,7 @@ button{
 }
 
 .CTATitle{
-    font-size:30px;
+    font-size:25px;
     line-height:40px;
 }
 
@@ -4487,7 +6825,7 @@ body{
 
     justify-content:space-between;
 
-    align-items:flex-start;
+    align-items:center;
 
     gap:100px;
 
@@ -4773,6 +7111,98 @@ body{
 
 }
 
+/* ==========================================
+        LARGE DESKTOP (2180px)
+========================================== */
+
+@media (min-width:2180px){
+
+.FooterSection{
+    padding:140px 140px 60px;
+}
+
+.FooterContainer{
+    max-width:1800px;
+    gap:180px;
+}
+
+.FooterLeft{
+    max-width:520px;
+}
+
+.FooterLogo{
+    width:260px;
+    margin-bottom:50px;
+}
+
+.FooterDescription{
+    font-size:28px;
+    line-height:46px;
+    margin-bottom:60px;
+}
+
+.FooterSocial{
+    gap:50px;
+}
+
+.FooterSocial a{
+    font-size:20px;
+    letter-spacing:2px;
+}
+
+.FooterHeading{
+    font-size:22px;
+    letter-spacing:5px;
+    margin-bottom:45px;
+}
+
+.FooterList{
+    gap:32px;
+}
+
+.FooterList li{
+    font-size:30px;
+    line-height:46px;
+}
+
+.FooterAddress{
+    margin-bottom:55px;
+}
+
+.FooterAddress p{
+    font-size:30px;
+    line-height:48px;
+}
+
+.FooterStatus{
+    font-size:18px;
+    letter-spacing:3px;
+}
+
+.FooterDivider{
+    max-width:1800px;
+    margin:100px auto 50px;
+}
+
+.FooterBottom{
+    max-width:1800px;
+}
+
+.FooterCopyright{
+    font-size:20px;
+    letter-spacing:2px;
+}
+
+.FooterLinks{
+    gap:60px;
+}
+
+.FooterLinks a{
+    font-size:20px;
+    letter-spacing:2px;
+}
+
+}
 /* ==========================================
                 RESPONSIVE
 ========================================== */

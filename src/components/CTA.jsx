@@ -24,10 +24,6 @@ const CTA = () => {
         today.
       </p>
 
-      <button className="CTAButton">
-        Book a Free Consultation Today
-      </button>
-
     </div>
 
     {/* Right */}
@@ -38,6 +34,11 @@ const CTA = () => {
         className="RocketImage"
       />
     </div>
+
+    {/* Button */}
+    <button className="CTAButton">
+      Book a Free Consultation Today
+    </button>
 
   </div>
 </section>
