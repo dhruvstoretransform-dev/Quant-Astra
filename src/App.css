@@ -76,7 +76,7 @@ body{
 
 /* ==========================================
             NAV ITEMS
-========================================== */
+==========================================  */
 
 .navbar-nav-links li{
 
@@ -95,12 +95,11 @@ body{
     position:relative;
 
 }
-
-.navbar-nav-links li:hover{
+ .navbar-nav-links li:hover{
 
     color:#D6B25E;
 
-}
+} 
 
 .navbar-active{
 
