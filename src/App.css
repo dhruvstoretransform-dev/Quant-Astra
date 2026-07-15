@@ -1392,9 +1392,19 @@ body{
     box-sizing:border-box;
 }
 
+body{
+    background:#0B0D10;
+    font-family:"Manrope",sans-serif;
+}
+
+/* ==========================================
+                SERVICES SECTION
+========================================== */
+
 .ServicesSection{
 
     width:100%;
+
     min-height:1102px;
 
     padding:80px 64px;
@@ -1411,14 +1421,23 @@ body{
 
 }
 
+/* ==========================================
+                OVERLAY
+========================================== */
+
 .ServicesOverlay{
 
     position:absolute;
+
     inset:0;
 
     background:rgba(0,0,0,.65);
 
 }
+
+/* ==========================================
+                CONTENT
+========================================== */
 
 .ServicesContent{
 
@@ -1434,7 +1453,9 @@ body{
 
 }
 
-/* Heading */
+/* ==========================================
+                HEADING
+========================================== */
 
 .ServicesTag{
 
@@ -1480,27 +1501,31 @@ body{
 
 }
 
-/* Grid */
+/* ==========================================
+                GRID
+========================================== */
 
 .ServicesGrid{
 
-  display:grid;
+    display:grid;
 
     grid-template-columns:repeat(3,320px);
 
     justify-content:center;
 
     gap:30px;
+
 }
 
-/* Card */
+/* ==========================================
+                CARD
+========================================== */
 
 .ServicesCard{
 
-      width:320px;
-      max-width:320px;
+    width:100%;
 
-    /* height:320px; */
+    max-width:320px;
 
     background:#121316;
 
@@ -1516,9 +1541,10 @@ body{
 
     justify-content:space-between;
 
-    transition:.35s;
-
     text-align:left;
+
+    transition:.35s ease;
+
 }
 
 .ServicesCard:hover{
@@ -1531,7 +1557,9 @@ body{
 
 }
 
-/* Header */
+/* ==========================================
+                CARD HEADER
+========================================== */
 
 .ServicesCardHeader{
 
@@ -1559,9 +1587,15 @@ body{
 
     align-items:center;
 
-    font-size:28px;
+}
 
-    color:#D7B44A;
+.ServicesIconImage{
+
+    width:30px;
+
+    height:30px;
+
+    object-fit:contain;
 
 }
 
@@ -1575,12 +1609,17 @@ body{
 
 }
 
-/* Body */
+/* ==========================================
+                BODY
+========================================== */
+
+.ServicesCardBody{
+
+    margin-top:22px;
+
+}
 
 .ServicesTitle{
-
-  
-    margin-top:20px;
 
     color:#ffffff;
 
@@ -1588,12 +1627,13 @@ body{
 
     font-weight:600;
 
+    line-height:38px;
 
 }
 
 .ServicesText{
 
-  margin-top:16px;
+    margin-top:16px;
 
     color:#D6D6D6;
 
@@ -1603,7 +1643,9 @@ body{
 
 }
 
-/* Footer */
+/* ==========================================
+                FOOTER
+========================================== */
 
 .ServicesCardFooter{
 
@@ -1635,11 +1677,22 @@ body{
 
     color:#D7B44A;
 
+    transition:.3s;
+
 }
 
-/* Tablet */
+.ServicesCard:hover .ServicesArrow{
 
-@media(max-width:1024px){
+    transform:translateX(6px);
+
+}
+
+
+/* ==========================================
+            TABLET (1024px)
+========================================== */
+
+@media (max-width:1024px){
 
 .ServicesSection{
 
@@ -1647,9 +1700,9 @@ body{
 
 }
 
-.ServicesGrid{
+.ServicesContent{
 
-    grid-template-columns:repeat(2,1fr);
+    max-width:100%;
 
 }
 
@@ -1657,101 +1710,79 @@ body{
 
     font-size:46px;
 
+    line-height:56px;
+
 }
 
 .ServicesDescription{
+
+    max-width:700px;
 
     font-size:20px;
 
     line-height:32px;
 
-}
-
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-.ServicesSection{
-
-    padding:50px 20px;
+    margin:0 auto 50px;
 
 }
 
 .ServicesGrid{
 
-    grid-template-columns:1fr;
+    grid-template-columns:repeat(2,1fr);
 
-}
+    justify-items:center;
 
-.ServicesHeading{
-
-    font-size:34px;
-
-}
-
-.ServicesDescription{
-
-    font-size:16px;
-
-    line-height:28px;
+    gap:24px;
 
 }
 
 .ServicesCard{
 
-    min-height:auto;
+    width:100%;
+
+    max-width:340px;
 
     padding:24px;
 
 }
 
-.ServicesTitle{
+.ServicesCardHeader{
 
-    font-size:26px;
-
-}
-
-.ServicesText{
-
-    font-size:16px;
-
-    line-height:28px;
+    align-items:center;
 
 }
 
 .ServicesIcon{
 
-    width:50px;
+    width:54px;
 
-    height:50px;
-
-    font-size:22px;
+    height:54px;
 
 }
 
-}
+.ServicesIconImage{
 
-/* Small Mobile */
+    width:28px;
 
-@media(max-width:480px){
-
-.ServicesHeading{
-
-    font-size:28px;
+    height:28px;
 
 }
 
-.ServicesTag{
+.ServicesVersion{
 
-    font-size:14px;
-
-    letter-spacing:3px;
+    font-size:12px;
 
 }
 
-.ServicesDescription{
+.ServicesTitle{
+
+    font-size:24px;
+
+    line-height:34px;
+
+}
+
+.ServicesText{
 
     font-size:15px;
 
@@ -1759,30 +1790,131 @@ body{
 
 }
 
+.ServicesCardFooter{
+
+    margin-top:28px;
+
+    font-size:13px;
+
+    letter-spacing:1.5px;
+
+}
+
+.ServicesArrow{
+
+    font-size:20px;
+
+}
+
+}
+
+/* ==========================================
+            MOBILE (768px)
+========================================== */
+
+/* ==========================================
+            MOBILE (768px)
+========================================== */
+
+@media (max-width:768px){
+
+.ServicesSection{
+    padding:50px 20px;
+}
+
+.ServicesGrid{
+    display:grid;
+    grid-template-columns:1fr;
+    justify-items:center;     /* Center every card */
+    align-items:center;
+    gap:24px;
+    width:100%;
+}
+
 .ServicesCard{
+    width:100%;
+    max-width:340px;          /* Card stays centered */
+    min-height:auto;
+    padding:24px;
+    margin:0 auto;
+}
 
-    padding:20px;
+.ServicesHeading{
+    font-size:34px;
+}
 
+.ServicesDescription{
+    font-size:16px;
+    line-height:28px;
 }
 
 .ServicesTitle{
-
-    font-size:22px;
-
+    font-size:26px;
 }
 
 .ServicesText{
+    font-size:16px;
+    line-height:28px;
+}
 
-    font-size:15px;
-
-    line-height:24px;
+.ServicesIcon{
+    width:50px;
+    height:50px;
+    font-size:22px;
+}
 
 }
 
+
+/* ==========================================
+            SMALL MOBILE (480px)
+========================================== */
+
+@media(max-width:480px){
+
+.ServicesSection{
+    padding:40px 16px;
+}
+
+.ServicesGrid{
+    display:grid;
+    grid-template-columns:1fr;
+    justify-items:center;
+    gap:20px;
+}
+
+.ServicesCard{
+    width:100%;
+    max-width:300px;
+    padding:20px;
+    margin:0 auto;
+}
+
+.ServicesHeading{
+    font-size:28px;
+}
+
+.ServicesTag{
+    font-size:14px;
+    letter-spacing:3px;
+}
+
+.ServicesDescription{
+    font-size:15px;
+    line-height:26px;
+}
+
+.ServicesTitle{
+    font-size:22px;
+}
+
+.ServicesText{
+    font-size:15px;
+    line-height:24px;
+}
+
 .ServicesCardFooter{
-
     font-size:12px;
-
 }
 
 }
