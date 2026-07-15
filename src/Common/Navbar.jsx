@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
 
@@ -45,8 +46,13 @@ function Navbar() {
                 </li>
 
                 <li>
-                    About Us
-                </li>
+    <NavLink
+        to="/about"
+        className="nav-link"
+    >
+        About Us
+    </NavLink>
+</li>
 
                 {/* Services */}
 
