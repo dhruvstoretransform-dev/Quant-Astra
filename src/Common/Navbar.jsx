@@ -41,19 +41,27 @@ function Navbar() {
                 }
             >
 
-                <li className="navbar-active">
-                    Home
+                <li>
+                    <NavLink
+                        to="/home.jsx"
+                        className={({ isActive }) =>
+                            isActive ? "navbar-active" : ""
+                        }
+                        end
+                    >
+                        Home
+                    </NavLink>
                 </li>
 
-                <li>
-    <NavLink
 
-        to="/about"
-        className="navbar-active"
-    >
-        About Us
-    </NavLink>
-</li>
+                <NavLink
+                    to="/about"
+                    className={({ isActive }) =>
+                        isActive ? "navbar-active" : ""
+                    }
+                >
+                    About Us
+                </NavLink>
 
                 {/* Services */}
 
@@ -126,7 +134,7 @@ function Navbar() {
                     </button>
 
                 </li>
-                            </ul>
+            </ul>
 
             {/* Desktop Button */}
             <button className="navbar-consult-btn desktop-btn">
