@@ -1,9 +1,9 @@
-import AboutHero from "../componetns/AboutHero"
-import Leadership from "../componetns/Leadership";
-import Philosophy from "../componetns/Philosophy";
-import Mission from "../componetns/Mission";
-import Values from "../componetns/values";
-import Stats from "../componetns/Stats";
+import AboutHero from "../components/AboutHero.jsx";
+import Leadership from "../components/Leadership.jsx";
+import Philosophy from "../components/Philosophy.jsx";
+import Mission from "../components/Mission.jsx";
+import Values from "../components/values.jsx";
+import Stats from "../components/Stats.jsx";
 
 
 function About() {

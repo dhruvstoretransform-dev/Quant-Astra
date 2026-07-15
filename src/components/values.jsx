@@ -1,7 +1,8 @@
-import trustIcon from "../image/trust.svg";
-import timeIcon from "../image/time.svg";
-import successIcon from "../image/success.svg";
-import transparencyIcon from "../image/transparency.svg";
+// Use public image paths directly
+const trustIcon = "/images/trust.svg";
+const timeIcon = "/images/time.svg";
+const successIcon = "/images/success.svg";
+const transparencyIcon = "/images/transparency.svg";
 
 const values = [
   {

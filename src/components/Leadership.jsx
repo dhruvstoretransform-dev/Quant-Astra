@@ -1,7 +1,8 @@
-import ceoImg from "../image/coo.svg";
-import cooImg from "../image/ceo.svg";
-import networkIcon from "../image/profile-icon.svg";
-import profileIcon from "../image/network-icon.svg";
+// Use public image paths directly
+const ceoImg = "/images/ceo.svg";
+const cooImg = "/images/coo.svg";
+const networkIcon = "/images/network-icon.svg";
+const profileIcon = "/images/profile-icon.svg";
 
 
 const Leadership = () => {

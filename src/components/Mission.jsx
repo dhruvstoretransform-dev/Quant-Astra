@@ -1,4 +1,5 @@
-import missionImg from "../image/mission.png";
+// Use public image path directly
+const missionImg = "/images/mission.png";
 
 const Mission = () => {
   return (

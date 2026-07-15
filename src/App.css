@@ -8019,7 +8019,7 @@ section.vision-architects::before {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background-image: url("../src/image/cornerimage.webp");
+    background-image: url("./image/cornerimage.webp");
     max-width: 500px;
     max-height: 500px;
 }
@@ -8034,7 +8034,7 @@ section.vision-architects::after {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background-image: url("../src/image/cornerimage.webp");
+    background-image: url("./image/cornerimage.webp");
     max-width: 500px;
     max-height: 500px;
     bottom: 0;
