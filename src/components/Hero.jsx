@@ -2,43 +2,57 @@ import React from "react";
 
 function Hero() {
   return (
-   <section
-  className="hero-container"
-  style={{ backgroundImage: `url(/images/Hero.png)` }}
->
-  <div className="hero-content">
+    <section
+      className="hero-container"
+      style={{ backgroundImage: "url('/images/Hero.png')" }}
+    >
+      {/* Dark Overlay */}
+      <div className="hero-overlay"></div>
 
-    <span className="hero-tag">
-      CELESTIAL PRECISION SYSTEMS
-    </span>
+      {/* Hero Content */}
+      <div className="hero-content">
 
-    <h1 className="hero-title">
-      Transform Your Business with
-      <br />
-      <span>AI, Automation & Growth Systems</span>
-    </h1>
+        {/* Top Tag */}
+        <div className="hero-tag">
+          CELESTIAL PRECISION SYSTEMS
+        </div>
 
-    <p className="hero-text">
-      We help law firms, corporate service providers,
-      financial institutions, and businesses across
-      Singapore implement intelligent automation.
-    </p>
+        {/* Main Heading */}
+        <h1 className="hero-title">
+          Transform Your Business with
+          <br />
+          <span>AI, Automation &amp; Growth Systems</span>
+        </h1>
 
-    <div className="hero-buttons">
-      <button className="hero-primary-btn">
-        Schedule a Consultation
-      </button>
+        {/* Description */}
+        <p className="hero-text">
+          We help law firms, corporate service providers,
+          financial institutions and businesses across
+          Singapore implement intelligent automation.
+        </p>
 
-      <button className="hero-secondary-btn">
-        Request a Quotation
-      </button>
-    </div>
+        {/* Buttons */}
+        <div className="hero-buttons">
 
-  </div>
-</section>
+          <button
+            type="button"
+            className="hero-primary-btn"
+          >
+            Schedule a Consultation
+          </button>
+
+          <button
+            type="button"
+            className="hero-secondary-btn"
+          >
+            Request a Quotation
+          </button>
+
+        </div>
+
+      </div>
+    </section>
   );
 }
 
 export default Hero;
-
-
