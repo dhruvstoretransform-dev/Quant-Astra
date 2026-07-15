@@ -78,7 +78,7 @@ body{
             NAV ITEMS
 ==========================================  */
 
-/* .navbar-nav-links li{
+.navbar-nav-links li{
 
     color:#fff;
 
@@ -96,11 +96,11 @@ body{
 
 }
 
-.navbar-nav-links li:hover{
+/* .navbar-nav-links li:hover{
 
     color:#D6B25E;
 
-} */
+}  */
 
 .navbar-active{
 
