@@ -78,7 +78,7 @@ body{
             NAV ITEMS
 ==========================================  */
 
-/* .navbar-nav-links li{
+.navbar-nav-links li{
 
     color:#fff;
 
@@ -95,11 +95,30 @@ body{
     position:relative;
 
 }
- .navbar-nav-links li:hover{
 
-    color:#D6B25E;
+nav.navbar-container .navbar-nav-links a{
+    color:#fff !important;
+    text-decoration: none !important;
+    transition:.3s;
+}
 
-}  */
+nav.navbar-container .navbar-nav-links a:link,
+nav.navbar-container .navbar-nav-links a:visited,
+nav.navbar-container .navbar-nav-links a:active{
+    color:#fff !important;
+}
+
+nav.navbar-container .navbar-nav-links a:hover{
+    color:#D6B25E !important;
+}
+
+nav.navbar-container .navbar-nav-links a.navbar-active,
+nav.navbar-container .navbar-nav-links a.navbar-active:link,
+nav.navbar-container .navbar-nav-links a.navbar-active:visited,
+nav.navbar-container .navbar-nav-links a.navbar-active:hover,
+nav.navbar-container .navbar-nav-links a.navbar-active:active{
+    color:#D6B25E !important;
+}
 
 .navbar-active{
 
@@ -7454,6 +7473,13 @@ img {
 
 a {
     text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
 }
 
 ul,
