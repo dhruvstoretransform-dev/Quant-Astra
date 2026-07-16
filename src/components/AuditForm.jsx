@@ -76,6 +76,9 @@ const AuditForm = () => {
 
                     <option>Education</option>
 
+                    <option>Others</option>
+
+
                   </select>
 
                   <span className="SelectArrow">
