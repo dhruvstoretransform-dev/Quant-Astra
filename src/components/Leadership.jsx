@@ -1,8 +1,8 @@
 import React from "react";
 
 // Use public image paths directly
-const ceoImg = "/images/ceo.svg";
-const cooImg = "/images/coo.svg";
+const ceoImg = "/images/coo.svg";
+const cooImg = "/images/ceo.svg";
 const networkIcon = "/images/network-icon.svg";
 const profileIcon = "/images/profile-icon.svg";
 
