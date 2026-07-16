@@ -8282,6 +8282,13 @@ section.vision-architects:hover::after{
     align-items: center;
     gap: 28px;
     width: 100%;
+
+
+
+}
+.vision-link{
+        background: transparent;
+    border: 0px;
 }
 
 .vision-link {
