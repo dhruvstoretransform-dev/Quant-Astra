@@ -95,11 +95,6 @@ function Navbar() {
                                 : "dropdown-menu"
                         }
                     >
-                        <li>
-                            <li>
-                                <a href="#IndustriesSection">Leaders</a>
-                            </li>
-                        </li>
 
                         <li>
                             AI Agents
@@ -110,18 +105,17 @@ function Navbar() {
                 </li>
 
 
-                <NavLink
-                    to="hero-container"
-                    className={({ isActive }) =>
-                        isActive ? "navbar-active" : ""
-                    }
-                >
-                    new
-                </NavLink>
 
 
                 <li>
-                    <a href="hero-container" >Our Approach</a>
+                    <li>
+                        <a href="#IndustriesSection">Sectors</a>
+                    </li>
+                </li>
+                <li>
+                    <li>
+                        <a href="#TestimonialsSection">Leaders</a>
+                    </li>
                 </li>
 
                 {/* Mobile Button */}

@@ -4,6 +4,7 @@ function Testimonials() {
   return (
     <section
       className="TestimonialsSection"
+      id="TestimonialsSection"
       style={{ backgroundImage: `url(/images/Container.png)` }}
     >
       <div className="TestimonialsOverlay"></div>
