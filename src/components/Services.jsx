@@ -4,6 +4,7 @@ function Services() {
   return (
     <section
       className="ServicesSection"
+      id="ServicesSection"
       style={{ backgroundImage: `url(/images/service.png)` }}
     >
       <div className="ServicesOverlay"></div>

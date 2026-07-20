@@ -57,6 +57,7 @@ function Industries() {
 
     <section
       className="IndustriesSection"
+      id="IndustriesSection"
       style={{
         backgroundImage: `url(/images/industry.jpg)`,
       }}

@@ -85,6 +85,7 @@ function About() {
   return (
     <section
       className="wrapper"
+      id="wrapper"
       ref={sectionRef}
     >
       {/* Left Side */}

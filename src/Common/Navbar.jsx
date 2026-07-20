@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-
 function Navbar() {
 
     const [menuOpen, setMenuOpen] = useState(false);
@@ -42,26 +41,17 @@ function Navbar() {
             >
 
                 <li>
-                    <NavLink
-                        to="/"
-                        className={({ isActive }) =>
-                            isActive ? "navbar-active" : ""
-                        }
-                        end
-                    >
-                        Home
-                    </NavLink>
+                    <li>
+                        <a href="#hero-container">Home</a>
+                    </li>
                 </li>
 
 
-                <NavLink
-                    to="/about"
-                    className={({ isActive }) =>
-                        isActive ? "navbar-active" : ""
-                    }
-                >
-                    About Us
-                </NavLink>
+                <li>
+                    <li>
+                        <a href="#wrapper">Our Approach</a>
+                    </li>
+                </li>
 
                 {/* Services */}
 
@@ -80,8 +70,11 @@ function Navbar() {
                             setDropdownOpen(!dropdownOpen)
                         }
                     >
-
-                        Services
+                        <li>
+                            <li>
+                                <a href="#ServicesSection">Services</a>
+                            </li>
+                        </li>
 
                         <span
                             className={
@@ -102,9 +95,10 @@ function Navbar() {
                                 : "dropdown-menu"
                         }
                     >
-
                         <li>
-                            AI Automation
+                            <li>
+                                <a href="#IndustriesSection">Leaders</a>
+                            </li>
                         </li>
 
                         <li>
@@ -115,12 +109,19 @@ function Navbar() {
 
                 </li>
 
-                <li>
-                    Industries
-                </li>
+
+                <NavLink
+                    to="hero-container"
+                    className={({ isActive }) =>
+                        isActive ? "navbar-active" : ""
+                    }
+                >
+                    new
+                </NavLink>
+
 
                 <li>
-                    Contact Us
+                    <a href="hero-container" >Our Approach</a>
                 </li>
 
                 {/* Mobile Button */}
