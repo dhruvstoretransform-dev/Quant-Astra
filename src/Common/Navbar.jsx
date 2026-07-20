@@ -99,6 +99,10 @@ function Navbar() {
                             AI Agents
                         </li>
 
+                        <li>
+                             AI Automation
+                        </li>
+
                     </ul>
 
                 </li>
