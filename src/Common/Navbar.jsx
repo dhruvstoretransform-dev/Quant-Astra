@@ -48,7 +48,7 @@ function Navbar() {
 
                 <li>
                     <li>
-                        <a href="#TestimonialsSection">Our Approach</a>
+                        <a href="#wrapper">Our Approach</a>
                     </li>
                 </li>
 
@@ -123,7 +123,7 @@ function Navbar() {
 
                 <li>
                     <li>
-                        <a href="#AuditSection">Testimonials</a>
+                        <a href="#TestimonialsSection">Testimonials</a>
                     </li>
                 </li>
                 <li>

@@ -1,8 +1,6 @@
 /* navbar section start from here  */
 
 
-
-
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 
 /* ==========================================
@@ -38,10 +36,31 @@ body{
 
     background:#000;
 
-    position:relative;
-
     z-index:999;
 
+    /* CHANGED: position:sticky -> position:fixed
+       Sticky breaks silently if ANY ancestor (now or in the
+       future) has overflow, transform, filter, contain, or
+       will-change set — fixed has no such dependency and is
+       guaranteed to stay pinned to the viewport. */
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+
+     overflow:visible;
+
+    
+}
+
+/* Spacer that replaces the space the navbar used to occupy
+   in normal document flow (now that it's position:fixed and
+   removed from flow). Height is set dynamically from JS via
+   the --navbar-height custom property, falling back to a safe
+   estimate before JS runs on first paint. */
+.navbar-spacer{
+    width:100%;
+    height:var(--navbar-height, 90px);
 }
 
 /* ==========================================
@@ -287,7 +306,6 @@ nav.navbar-container .navbar-nav-links a.navbar-active:active{
     color:#000;
 
 }
-
 /* ==========================================
             TABLET (992px)
 ========================================== */
