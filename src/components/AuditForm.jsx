@@ -79,7 +79,7 @@ const AuditForm = () => {
                     <option>F n b</option>
 
 
-                    <option>Military or government services</option>
+                    <option>Military & government services</option>
 
 
                   </select>
