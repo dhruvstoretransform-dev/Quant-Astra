@@ -6,33 +6,39 @@ function Hero() {
       className="hero-container"
       style={{ backgroundImage: "url('/images/Hero.png')" }}
     >
-      {/* Dark Overlay */}
+      {/* Overlay */}
       <div className="hero-overlay"></div>
 
-      {/* Hero Content */}
-      <div className="hero-content">
+      {/* Main Wrapper */}
+      <div className="hero-wrapper">
 
-        {/* Top Tag */}
-        <div className="hero-tag">
-          CELESTIAL PRECISION SYSTEMS
+        {/* Tag Container */}
+        <div className="hero-tag-container">
+          <div className="hero-tag">
+            CELESTIAL PRECISION SYSTEMS
+          </div>
         </div>
 
-        {/* Main Heading */}
-        <h1 className="hero-title">
-          Transform Your Business with
-          <br />
-          <span>AI, Automation &amp; Growth Systems</span>
-        </h1>
+        {/* Title Container */}
+        <div className="hero-title-container">
+          <h1 className="hero-title">
+            Transform Your Business with
+            <br />
+            <span>AI Automation &amp; Growth Systems</span>
+          </h1>
+        </div>
 
-        {/* Description */}
-        <p className="hero-text">
-          We help law firms, corporate service providers,
-          financial institutions and businesses across
-          Singapore implement intelligent automation.
-        </p>
+        {/* Text Container */}
+        <div className="hero-text-container">
+          <p className="hero-text">
+            We help law firms, corporate service providers,<br></br>
+            financial institutions and businesses across
+            Singapore implement intelligent automation.
+          </p>
+        </div>
 
-        {/* Buttons */}
-        <div className="hero-buttons">
+        {/* Button Container */}
+        <div className="hero-button-container">
 
           <button
             type="button"
