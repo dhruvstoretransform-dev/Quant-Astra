@@ -4,6 +4,7 @@ const AuditForm = () => {
   return (
     <section
       className="AuditSection"
+      id="AuditSection"
       style={{ backgroundImage: `url(/images/Auditform.png)` }}
     >
       <div className="AuditOverlay">
@@ -66,20 +67,23 @@ const AuditForm = () => {
                       Select Industry
                     </option>
 
-                    <option>Property Agency</option>
+                    <option>Law Firms</option>
 
-                    <option>Healthcare</option>
+                    <option>Accounting & Corporate Services</option>
 
-                    <option>Finance</option>
+                    <option>Financial Services & Insurance</option>
 
-                    <option>Retail</option>
+                    <option>Property & Real Estate</option>
 
-                    <option>Education</option>
+                    <option>Logistics & Supply Chain</option>
 
-                    <option>F n b</option>
+                    <option>Food & Beverage (F&B) </option>
 
 
-                    <option>Military & government services</option>
+                    <option>Government & Defence </option>
+
+
+                    <option>Other SME Sectors</option>
 
 
                   </select>

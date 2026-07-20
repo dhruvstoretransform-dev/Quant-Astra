@@ -48,7 +48,7 @@ function Navbar() {
 
                 <li>
                     <li>
-                        <a href="#wrapper">Our Approach</a>
+                        <a href="#TestimonialsSection">Our Approach</a>
                     </li>
                 </li>
 
@@ -71,7 +71,7 @@ function Navbar() {
                     >
                         <li>
                             <li>
-                                <a href="#ServicesSection">Services</a>
+                                <a href="#ServicesSection">Our Services</a>
                             </li>
                         </li>
 
@@ -82,7 +82,7 @@ function Navbar() {
                                     : "dropdown-arrow"
                             }
                         >
-                            ▼
+                            {/* ▼ */}
                         </span>
 
                     </div>
@@ -95,13 +95,13 @@ function Navbar() {
                         }
                     >
 
-                        <li>
+                        {/* <li>
                             AI Agents
                         </li>
 
                         <li>
                              AI Automation
-                        </li>
+                        </li> */}
 
                     </ul>
 
@@ -109,36 +109,49 @@ function Navbar() {
 
 
 
+                <li>
+                    <li>
+                        <a href="#IndustriesSection">Industries We Serve</a>
+                    </li>
+                </li>
 
                 <li>
                     <li>
-                        <a href="#IndustriesSection">Sectors</a>
+                        <a href="#CapabilitiesSection">Why Us</a>
+                    </li>
+                </li>
+
+                <li>
+                    <li>
+                        <a href="#AuditSection">Testimonials</a>
                     </li>
                 </li>
                 <li>
                     <li>
-                        <a href="#TestimonialsSection">Leaders</a>
+                        <a href="#FAQSection">FAQ</a>
                     </li>
                 </li>
+
 
                 {/* Mobile Button */}
 
                 <li className="mobile-btn">
-
+<a href="#CTASection">
                     <button className="navbar-consult-btn">
 
                         Book a Consultation
 
                     </button>
-
+</a>
                 </li>
             </ul>
 
             {/* Desktop Button */}
+            <a href="#CTASection">
             <button className="navbar-consult-btn desktop-btn">
                 Book a Consultation
             </button>
-
+</a>
         </nav>
 
     );

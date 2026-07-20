@@ -46,7 +46,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="FAQSection">
+    <section className="FAQSection" id="FAQSection">
       {/* Background Images */}
       <img
         src="/images/top-left.png"

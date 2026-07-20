@@ -4,6 +4,7 @@ function Hero() {
   return (
     <section
       className="hero-container"
+      id="hero-container"
       style={{ backgroundImage: "url('/images/Hero.png')" }}
     >
       {/* Overlay */}

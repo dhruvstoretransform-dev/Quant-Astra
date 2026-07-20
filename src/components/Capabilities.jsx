@@ -5,7 +5,7 @@ import React from "react";
 
 function Capabilities() {
   return (
-    <section className="CapabilitiesSection">
+    <section className="CapabilitiesSection" id="CapabilitiesSection">
 
       {/* Top Heading */}
 

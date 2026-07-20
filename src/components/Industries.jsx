@@ -34,8 +34,6 @@ function Industries() {
       icon: <FaCity />,
       title: (
         <>
-          Commercial & Private
-          <br />
           Property Agencies
         </>
       ),
@@ -46,6 +44,14 @@ function Industries() {
       title: "Insurance Firms",
     },
 
+    {
+      icon: <FaBuilding />,
+      title: "Food & Beverage (F&B)",
+    },
+    {
+      icon: <FaBuilding />,
+      title: "Government & Public Sector",
+    },
     {
       icon: <FaBuilding />,
       title: "Other SME Sectors",
