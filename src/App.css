@@ -774,7 +774,11 @@ body{
      z-index: 0; 
 
 }
-
+.hero-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
 .hero-wrapper{
     position: relative;
     z-index: 2;      /* text overlay ke upar */
