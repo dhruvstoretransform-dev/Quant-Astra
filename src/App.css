@@ -778,6 +778,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 24px;
+    margin-top: 18px;
 }
 .hero-wrapper{
     position: relative;
@@ -3114,9 +3115,9 @@ body{
 
 .ServicesIconImage{
 
-    width:23px;
+    width:63px;
 
-    height:23px;
+    height:29px;
 
     object-fit:contain;
 
