@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import leftTop from "../image/cornerimage.webp";
+import bottomRight from "../image/cornerimage.webp";
 
 const faqData = [
   {
@@ -49,13 +51,13 @@ const FAQ = () => {
     <section className="FAQSection" id="FAQSection">
       {/* Background Images */}
       <img
-        src="/images/top-left.png"
+        src={leftTop}
         alt=""
         className="FAQLeftBg"
       />
 
       <img
-        src="/images/bottom-right.png"
+        src={bottomRight}
         alt=""
         className="FAQRightBg"
       />
