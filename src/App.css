@@ -4777,9 +4777,22 @@ body{
 
     transform:scale(1.03);
 
-    filter:drop-shadow(0 0 18px rgba(215,180,74,.35))
-           drop-shadow(0 0 35px rgba(215,180,74,.20));
+    filter:(0 0 18px rgba(233, 196, 87, 0.35))
+           (0 0 35px rgba(215,180,74,.20));
 
+}
+
+
+.FAQLeftBg img {
+     background:
+        linear-gradient(
+            90deg,
+            rgba(13,14,18,0.85) 0%,
+            rgba(13,14,18,0.55) 45%,
+            rgba(13,14,18,0.25) 100%
+        );
+
+    z-index:1;
 }
 
 /* ==========================================
