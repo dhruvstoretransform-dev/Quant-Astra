@@ -1,10 +1,14 @@
 import React from "react";
+import FadeInSection from "../components/FadeInSection";
 
 
 
 
 function Capabilities() {
   return (
+
+        <FadeInSection>
+
     <section className="CapabilitiesSection" id="CapabilitiesSection">
 
       {/* Top Heading */}
@@ -60,6 +64,8 @@ function Capabilities() {
       </div>
 
     </section>
+        </FadeInSection>
+
   );
 }
 

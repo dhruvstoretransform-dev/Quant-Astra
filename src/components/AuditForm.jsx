@@ -1,7 +1,11 @@
 import React from "react";
+import FadeInSection from "../components/FadeInSection";
 
 const AuditForm = () => {
   return (
+
+        <FadeInSection>
+
     <section
       className="AuditSection"
       id="AuditSection"
@@ -153,6 +157,9 @@ const AuditForm = () => {
       </div>
 
     </section>
+
+        </FadeInSection>
+
   );
 };
 

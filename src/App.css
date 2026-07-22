@@ -1,3 +1,27 @@
+/* this is fead in  */
+
+.fade-section{
+
+    opacity:0;
+
+    transform:translateY(80px);
+transition:
+    opacity 2s ease,
+    transform 2s cubic-bezier(.22,.61,.36,1),
+    filter 2s ease;
+
+    will-change:opacity,transform;
+
+}
+
+.fade-section.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
 /* navbar section start from here  */
 
 

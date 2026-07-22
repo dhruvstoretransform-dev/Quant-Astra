@@ -1,4 +1,5 @@
 import React from "react";
+import FadeInSection from "../components/FadeInSection";
 
 // Icons
 import {
@@ -60,6 +61,9 @@ function Industries() {
   ];
 
   return (
+
+
+    <FadeInSection>
 
     <section
       className="IndustriesSection"
@@ -148,6 +152,8 @@ function Industries() {
       </div>
 
     </section>
+        </FadeInSection>
+
 
   );
 

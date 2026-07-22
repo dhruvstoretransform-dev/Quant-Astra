@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import leftTop from "../image/cornerimage.webp";
 import bottomRight from "../image/cornerimage.webp";
+import FadeInSection from "../components/FadeInSection";
 
 const faqData = [
   {
@@ -48,6 +49,9 @@ const FAQ = () => {
   };
 
   return (
+
+    <FadeInSection>
+
     <section className="FAQSection" id="FAQSection">
       {/* Background Images */}
       <img
@@ -119,6 +123,9 @@ const FAQ = () => {
         </div>
       </div>
     </section>
+
+        </FadeInSection>
+
   );
 };
 

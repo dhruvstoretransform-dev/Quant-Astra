@@ -1,7 +1,10 @@
 import React from "react";
+import FadeInSection from "../components/FadeInSection";
 
 function Testimonials() {
   return (
+
+      <FadeInSection>
     <section
       className="TestimonialsSection"
       id="TestimonialsSection"
@@ -82,6 +85,8 @@ function Testimonials() {
 
       </div>
     </section>
+        </FadeInSection>
+
   );
 }
 

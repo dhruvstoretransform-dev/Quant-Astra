@@ -1,7 +1,12 @@
 import React from "react";
+import FadeInSection from "../components/FadeInSection";
 
 function Hero() {
   return (
+
+    <FadeInSection>
+   
+
     <section
       className="hero-container"
       id="hero-container"
@@ -59,6 +64,7 @@ function Hero() {
 
       </div>
     </section>
+    </FadeInSection>
   );
 }
 

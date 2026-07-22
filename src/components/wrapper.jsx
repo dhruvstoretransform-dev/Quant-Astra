@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-
+import FadeInSection from "../components/FadeInSection";
 function About() {
   const sectionRef = useRef(null);
 
@@ -83,6 +83,8 @@ function About() {
   }, []);
 
   return (
+
+      <FadeInSection>
     <section
       className="wrapper"
       id="wrapper"
@@ -171,6 +173,7 @@ function About() {
         </div>
       </div>
     </section>
+    </FadeInSection>
   );
 }
 

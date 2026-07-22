@@ -1,7 +1,9 @@
 import React from "react";
+import FadeInSection from "../components/FadeInSection";
 
 const CTA = () => {
   return (
+    <FadeInSection>
     <section className="CTASection" id="CTASection">
   <div className="CTAContainer">
 
@@ -42,6 +44,8 @@ const CTA = () => {
 
   </div>
 </section>
+    </FadeInSection>
+
   );
 };
 

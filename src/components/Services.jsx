@@ -1,7 +1,10 @@
 import React from "react";
+import FadeInSection from "../components/FadeInSection";
 
 function Services() {
   return (
+        <FadeInSection>
+
     <section
       className="ServicesSection"
       id="ServicesSection"
@@ -332,6 +335,8 @@ function Services() {
       </div>
 
     </section>
+        </FadeInSection>
+
   );
 }
 
