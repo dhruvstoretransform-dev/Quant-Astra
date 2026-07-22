@@ -177,7 +177,7 @@ function Navbar() {
                 </ul>
 
                 {/* Desktop Button */}
-                <a href="#CTASection">
+                <a href="#AuditSection">
                     <button className="navbar-consult-btn desktop-btn">
                         Book a Consultation
                     </button>
