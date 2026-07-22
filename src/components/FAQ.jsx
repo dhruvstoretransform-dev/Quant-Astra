@@ -74,7 +74,7 @@ const FAQ = () => {
           </h2>
 
           <p className="FAQDescription">
-            Find answers to common questions about our AI, automation, and
+            Find answers to common questions about our AI automation, and
             business transformation solutions for Singapore businesses.
           </p>
         </div>

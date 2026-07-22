@@ -166,7 +166,7 @@ function Navbar() {
                     {/* Mobile Button */}
 
                     <li className="mobile-btn">
-                        <a href="#CTASection">
+                        <a href="#AuditSection">
                             <button className="navbar-consult-btn">
 
                                 Book a Consultation
